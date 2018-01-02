@@ -1,0 +1,5 @@
+<map id="GdiRectToRectF" name="GdiRectToRectF">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#a9b7dd8e9f149c604ad1ab72543a399de" title="CChartContainer::DrawContainer\lToBmp" alt="" coords="174,5,383,46"/>
+<area shape="rect" id="node5" href="$class_c_data_wnd.html#a360debc7262bb7043975518f69a79343" title="CDataWnd::OnPaint" alt="" coords="209,71,349,97"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#ad343bedea4432cba6bac8cf9ba5bc604" title="CChartContainer::OnPaint" alt="" coords="193,121,365,148"/>
+</map>

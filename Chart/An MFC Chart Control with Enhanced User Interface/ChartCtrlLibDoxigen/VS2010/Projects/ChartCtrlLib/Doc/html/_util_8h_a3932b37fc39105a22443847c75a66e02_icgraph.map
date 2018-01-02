@@ -1,0 +1,5 @@
+<map id="RectFToCRect" name="RectFToCRect">
+<area shape="rect" id="node3" href="$class_c_data_wnd.html#a04015296510729a4ef195f6c4eeab7b6" title="CDataWnd::CalcLabelStrRect" alt="" coords="160,31,355,57"/>
+<area shape="rect" id="node5" href="$class_c_data_wnd.html#ad171a9c3b000e3eb87b84cf71af91686" title="CDataWnd::CreateLegend" alt="" coords="417,5,591,32"/>
+<area shape="rect" id="node7" href="$class_c_data_wnd.html#a3325df75e6a4f4b1dc0921ecec3c1864" title="CDataWnd::UpdateDataLegend" alt="" coords="403,56,605,83"/>
+</map>

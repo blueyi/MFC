@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+  <TITLE>CD Options</TITLE>
+  <link rel="stylesheet" href="xtractorhelp.css">
+</HEAD>
+<BODY>
+  <Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="CD Options">
+	<param name="Keyword" value="jitter correction">
+</OBJECT>
+  <!-- Help Item title -->
+  <H2>CD Options</H2>
+  <HR>
+  <CENTER><IMG SRC="cd-options.png" HEIGHT="435" WIDTH="416"></CENTER><BR><BR>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Drive</B></TD>
+      <TD>Selects the CD-rom unit to use.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Read Algorithm</B></TD>
+      <TD>Selects the read algorithm used by the program.  Most users will want to leave this on Autodetect.  If you are unable to rip tracks using autodetect, or if the sound is garbled, experiment and try the other settings for the read algorithm.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Autoscan TOC</B></TD>
+      <TD>When checked, the program will automatically scan the CD in the default drive when the program is started.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Autocheck tracks</B></TD>
+      <TD>When checked, the program will automatically check all tracks after an automatic scan of the TOC or after pressing the "Refresh" button.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Jitter Correction</B></TD>
+      <TD>When set to "Always", the program will always attempt to align the output file by using overlapped reads.  For "On Error", it will attempt jitter correction only after an error is reported by the CD.  "Never" disables jitter correction.  "On Error" gives almost as good results as "Always", and is much faster, since the drive has to seek after every read when in "Always" mode.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Read Tracks</B></TD>
+      <TD>Maximum number of frames that will be read at once.  Some drives can handle larger values, but some can't handle more than 27.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Jitter Check</B></TD>
+      <TD>When using overlapped reads (for Jitter correction modes "always" and "on error"), this is the number of frames that the program will attempt to match.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Overlap</B></TD>
+      <TD>When performing jitter correction, this is the number of frames that will be overlapped.  Overlap must be at least two greater than the value used for Jitter Check.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Reset</B></TD>
+      <TD>Resets the Jitter Correction configuration to default values.</TD>
+    </TR>
+  </TABLE>
+  <HR>
+</BODY>
+</HTML>

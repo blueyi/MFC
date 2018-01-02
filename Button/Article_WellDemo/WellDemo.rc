@@ -1,0 +1,381 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\WellDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\WellDemo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About WellDemo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "WellDemo Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_WELLDEMO_DIALOG DIALOGEX 0, 0, 292, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "WellDemo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,175,195,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,235,195,50,14
+    PUSHBUTTON      "",IDC_SVIZ_LINE_COLOR,72,90,68,15
+    CONTROL         "",IDC_SVIZ_LINEPICKER,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,210,90,65,15
+    EDITTEXT        IDC_SVIZ_LINE_SIZE,72,111,48,15,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SVIZ_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,120,110,11,12
+    PUSHBUTTON      "",IDC_SVIZ_FILL_COLOR,131,30,54,20
+    PUSHBUTTON      "",IDC_SVIZ_ARROW_START,72,149,48,15
+    PUSHBUTTON      "",IDC_SVIZ_ARROW_END,215,150,46,15
+    LTEXT           "Dash Style:",IDC_STATIC,155,90,52,10
+    LTEXT           "Color:",IDC_STATIC,16,91,28,10
+    LTEXT           "Size:",IDC_STATIC,16,112,24,10
+    LTEXT           "Color:",IDC_STATIC,19,32,28,10
+    LTEXT           "Fill",IDC_STATIC,11,15,15,10
+    LTEXT           "Line",IDC_STATIC,9,75,20,10
+    LTEXT           "Arrow ",IDC_STATIC,9,133,28,10
+    LTEXT           "End Style:",IDC_STATIC,150,150,45,14
+    LTEXT           "Begin Style:",IDC_STATIC,16,150,55,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,25,18,260,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,35,80,245,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,40,138,240,1
+END
+
+IDD_SVIZ_FILL_DLG DIALOG DISCARDABLE  0, 0, 269, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Effect"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,222,21,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,39,40,14
+    CONTROL         "Tab1",IDC_SVIZ_FILLTAB,"SysTabControl32",0x0,7,7,207,
+                    257
+END
+
+IDD_SVIZ_FILL_GRADIENT DIALOG DISCARDABLE  0, 0, 200, 224
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Colors",IDC_STATIC,7,5,186,64
+    CONTROL         "O&ne color",IDC_SVIZ_RADIO_1COLOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,23,71,11
+    CONTROL         "&Two colors",IDC_SVIZ_RADIO_2COLOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,15,35,71,11
+    SCROLLBAR       IDC_SVIZ_FIRST_TRANS,41,87,78,12,WS_GROUP
+    EDITTEXT        IDC_SVIZ_TRANS1,139,87,46,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SVIZ_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,181,87,12,
+                    14
+    SCROLLBAR       IDC_SVIZ_SECOND_TRANS,41,107,78,12,WS_GROUP
+    EDITTEXT        IDC_SVIZ_TRANS2,139,108,46,13,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SVIZ_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,181,109,
+                    12,12
+    CONTROL         "Hori&zontal",IDC_SVIZ_GRADIENT_HORI,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,13,146,77,11
+    CONTROL         "&Vertical",IDC_SVIZ_GRADIENT_VERT,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,13,158,77,11
+    CONTROL         "Diagonal &up",IDC_SVIZ_GRADIENT_DGUP,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,13,170,77,11
+    CONTROL         "Diagonal &down",IDC_SVIZ_GRADIENT_DGDN,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,13,182,77,11
+    CONTROL         "&From corner",IDC_SVIZ_GRADIENT_TOCENTER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,13,194,77,11
+    CONTROL         "Fro&m center",IDC_SVIZ_GRADIENT_FROMCENTER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,13,206,77,11
+    PUSHBUTTON      "",IDC_SVIZ_FIRST_COLOR,120,20,64,12,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_SVIZ_SECOND_COLOR,119,38,64,12,NOT WS_VISIBLE
+    GROUPBOX        "Transparency",IDC_STATIC,7,73,186,53
+    GROUPBOX        "Shading style",IDC_STATIC,7,132,92,89
+    GROUPBOX        "Sample:",IDC_STATIC,101,131,92,90
+    LTEXT           "F&rom:",IDC_STATIC,15,89,18,8
+    LTEXT           "T&o:",IDC_STATIC,16,107,12,8
+    SCROLLBAR       IDC_SVIZ_DARKNESS,120,39,64,12,NOT WS_VISIBLE | 
+                    WS_TABSTOP
+    LTEXT           "Dark",IDC_STATIC1,120,53,16,8,NOT WS_VISIBLE
+    LTEXT           "Light",IDC_STATIC2,169,53,16,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_SVIZ_SAMPLE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,109,146,76,66
+END
+
+IDD_SVIZ_FILL_PATTERN DIALOGEX 0, 0, 203, 230
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Pattern:",IDC_STATIC,7,4,26,8
+    CTEXT           "",IDC_STATICNAME,7,133,189,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    LTEXT           "Foreground:",IDC_STATIC,7,155,68,8
+    LTEXT           "Background",IDC_STATIC,7,192,68,8
+    PUSHBUTTON      "",IDC_SVIZ_FIRST_COLOR,7,167,72,15
+    PUSHBUTTON      "",IDC_SVIZ_SECOND_COLOR,7,203,72,15
+    GROUPBOX        "Sample:",IDC_STATIC,101,150,85,78
+    CONTROL         "",IDC_SVIZ_SAMPLE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,107,162,73,59
+    CONTROL         "Button3",IDC_SVIZ_HATCHWELLBTN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,5,15,190,105
+END
+
+IDD_SVIZ_FILL_PICTURE DIALOGEX 0, 0, 202, 211
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Picture:",IDC_STATIC,7,7,25,8
+    CTEXT           "",IDC_STATICNAME,7,121,188,15,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Select Picture...",IDC_SVIZ_PICTURE,119,144,76,14
+    COMBOBOX        IDC_SVIZ_WRAPMODE,119,163,76,97,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SVIZ_SAMPLE,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,7,16,188,97
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "WellDemo MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "WellDemo\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "WellDemo.EXE\0"
+            VALUE "ProductName", "WellDemo Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_WELLDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_SVIZ_FILL_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+
+    IDD_SVIZ_FILL_GRADIENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_SVIZ_FILL_PATTERN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_SVIZ_FILL_PICTURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SVIZ_FILL_PICTURE DLGINIT
+BEGIN
+    IDC_SVIZ_WRAPMODE, 0x403, 5, 0
+0x6954, 0x656c, "\000" 
+    IDC_SVIZ_WRAPMODE, 0x403, 18, 0
+0x6c46, 0x7069, 0x4820, 0x726f, 0x7a69, 0x6e6f, 0x6174, 0x6c6c, 0x0079, 
+
+    IDC_SVIZ_WRAPMODE, 0x403, 16, 0
+0x6c46, 0x7069, 0x5620, 0x7265, 0x6974, 0x6163, 0x6c6c, 0x0079, 
+    IDC_SVIZ_WRAPMODE, 0x403, 34, 0
+0x6c46, 0x7069, 0x4820, 0x726f, 0x7a69, 0x6e6f, 0x6174, 0x6c6c, 0x2079, 
+0x6e61, 0x2064, 0x6556, 0x7472, 0x6369, 0x6c61, 0x796c, 0x0020, 
+    IDC_SVIZ_WRAPMODE, 0x403, 7, 0
+0x6543, 0x746e, 0x7265, "\000" 
+    IDC_SVIZ_WRAPMODE, 0x403, 8, 0
+0x7453, 0x6572, 0x6374, 0x0068, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SVIZ_ARROWS         BITMAP  DISCARDABLE     "res\\arrows.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About WellDemo..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\WellDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

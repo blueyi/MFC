@@ -1,0 +1,228 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resourceppc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resourceppc.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)\r\n"
+    "LANGUAGE 9, 2\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\PeekPocketppc.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCANNER_DLG DIALOG  0, 0, 145, 109
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "",IDC_DEVICE_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_TABSTOP,3,3,135,76
+    LTEXT           "Static",IDC_NUM_ACTIVE,7,79,53,8
+    RTEXT           "Static",IDC_RB_STATIC,66,79,72,8
+END
+
+IDD_OPTIONS_DLG DIALOG  0, 0, 151, 140
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Use adapter:",IDC_STATIC,6,10,50,8
+    COMBOBOX        IDC_ADAPTERS_COMBO,58,7,70,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Scan speed:",IDC_STATIC,6,28,45,8
+    CONTROL         "Custom1",IDC_SCANSPEED_SLIDER,"CustomSliderClass",WS_TABSTOP,57,23,56,18
+    CONTROL         "Hide peers",IDC_HIDE_PEERS,"Button",BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,75,62,67,10
+    CONTROL         "Hide secured",IDC_HIDE_SEC,"Button",BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,3,62,65,10
+    CONTROL         "Sound enabled",IDC_SOUND_OFF,"Button",BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,3,74,69,10
+    LTEXT           "xxx",IDC_SCANTIME,115,28,36,8
+    LTEXT           "List font size:",IDC_STATIC,7,47,44,8
+    CONTROL         "Custom2",IDC_FONTSIZE_SLIDER,"CustomSliderClass",WS_TABSTOP,57,40,56,18
+    PUSHBUTTON      "About",IDC_ABOUT_BTN,81,72,41,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPTIONS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_AP_48               ICON                    "res\\ap.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CHANNEL             BITMAP                  "res\\channel.bmp"
+IDB_THUMBA              BITMAP                  "res\\thumba.bmp"
+IDB_THUMBI              BITMAP                  "res\\thumbi.bmp"
+IDB_LOCK                BITMAP                  "res\\lock1_16x16x8.bmp"
+IDB_LOCK_C              BITMAP                  "res\\lock1_16x16x8_2.bmp"
+IDB_SND_ON              BITMAP                  "res\\vol1_16x16x8.bmp"
+IDB_SND_OFF             BITMAP                  "res\\vol1_16x16x8_2.bmp"
+IDB_HIDE_PEER           BITMAP                  "res\\peer1_16x16x8_2.bmp"
+IDB_PEER                BITMAP                  "res\\peer1_16x16x8.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_SONAR               WAVE                    "res\\sonar.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_GOLARGE MENU 
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        MENUITEM "Go Large",                    ID_POPUP_GOLARGE
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PEEKPOCKET_DLG DIALOG  0, 0, 156, 169
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "PeekPocket"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Suspend",IDC_SUSRES,100,125,49,14,BS_CENTER | NOT WS_TABSTOP
+    ICON            IDI_AP_48,IDC_APICON,68,122,20,20
+    CONTROL         "Tab",IDC_TABCTRL,"CCustomTabCtrl",WS_TABSTOP,7,7,142,104
+    PUSHBUTTON      "Exit",IDC_EXITBTN,7,125,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PEEKPOCKET_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE 9, 2
+#pragma code_page(1252)
+#include "res\PeekPocketppc.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

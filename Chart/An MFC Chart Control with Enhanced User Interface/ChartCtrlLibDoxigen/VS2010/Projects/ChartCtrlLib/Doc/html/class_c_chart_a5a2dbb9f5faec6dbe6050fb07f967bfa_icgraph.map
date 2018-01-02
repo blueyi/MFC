@@ -1,0 +1,5 @@
+<map id="CChart::IsChartSelected" name="CChart::IsChartSelected">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#a838726cafc525dc375200d9f265fc074" title="CChartContainer::ChangeLoc\lScaleYByArrowKeys" alt="" coords="218,5,409,46"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#a4c0ffd714969d05be042613848d46d4a" title="CChartContainer::OnMouse\lWheel" alt="" coords="223,70,404,111"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#afa502e2e5940117d23acf5eda6f7c4b4" title="CChartContainer::ToggleChart\lVisibility" alt="" coords="216,135,411,177"/>
+</map>

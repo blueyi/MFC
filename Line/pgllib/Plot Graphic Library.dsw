@@ -1,0 +1,108 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "AlgoTools"=".\AlgoTools\AlgoTools.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    AlgoTools
+    .\algotools
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IGfx"=".\IGfx\IGfx.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    IGfx
+    .\igfx
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IGfxTest"=".\IGfxTest\IGfxTest.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    IGfxTest
+    .\igfxtest
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name IGfx
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PGL"=".\PGL\PGL.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name OGLTools
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name AlgoTools
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name IGfx
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "testpgl"=".\TestPGL\testpgl.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PGL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name OGLTools
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+    {377B5106-3B4E-4A2D-8520-8767590CAC86}
+}}}
+
+###############################################################################
+

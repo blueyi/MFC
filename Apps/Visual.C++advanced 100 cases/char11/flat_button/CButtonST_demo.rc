@@ -1,0 +1,253 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CBUTTONST_DEMO_DIALOG DIALOGEX 0, 0, 215, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Test for MFC class: CButtonST"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Exit",IDOK,151,111,60,16
+    PUSHBUTTON      "&Zip",IDC_ZIP256,6,9,50,22
+    PUSHBUTTON      "&Hand",IDC_HAND256,6,32,50,22
+    PUSHBUTTON      "&Ok",IDC_OK256,6,55,75,18
+    PUSHBUTTON      "&Cancel",IDC_CANCEL256,6,75,75,18
+    PUSHBUTTON      "",IDC_LAMP256,58,9,23,22
+    PUSHBUTTON      "",IDC_CDGOLD256,58,32,23,22
+    PUSHBUTTON      "&Ok",IDC_OK16,85,9,60,16,WS_DISABLED
+    PUSHBUTTON      "&OkBor",IDC_OKBOR16,85,26,60,16
+    PUSHBUTTON      "E&xplore",IDC_EXPLORE16,85,43,60,16
+    PUSHBUTTON      "&Text",IDC_TEXT16,85,60,60,16
+    PUSHBUTTON      "",IDC_LEFT16,85,77,29,16
+    PUSHBUTTON      "",IDC_RIGHT16,116,77,29,16
+    PUSHBUTTON      "&Cancel",IDC_CANCEL16,147,9,60,16
+    PUSHBUTTON      "&CancelBor",IDC_CANCELBOR16,147,26,60,16
+    PUSHBUTTON      "&View",IDC_VIEW16,147,43,60,16
+    PUSHBUTTON      "&Question",IDC_QUESTION16,147,60,60,16
+    PUSHBUTTON      "&Screw",IDC_SCREW16,147,77,60,16
+    DEFPUSHBUTTON   "&About...",IDC_ABOUT16,21,102,47,27
+    GROUPBOX        "Available effects",IDC_STATIC,3,0,209,98
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CButtonST_demo\0"
+            VALUE "FileVersion", "2, 1, 0, 1\0"
+            VALUE "InternalName", "CButtonST_demo\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "OriginalFilename", "CButtonST_demo.EXE\0"
+            VALUE "ProductName", "CButtonST_demo Application\0"
+            VALUE "ProductVersion", "2, 1, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CBUTTONST_DEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 206, 138
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "CButtonST vx.x",IDC_VERSION,73,24,61,8,SS_NOPREFIX
+    CTEXT           "Copyright (C) 1998 by SoftechSoftware",-1,42,34,123,8
+    DEFPUSHBUTTON   "&Ok!",IDOK,141,115,60,18,WS_GROUP
+    LTEXT           "SoftechSoftware E-Mail",IDC_EMAILLINK,34,114,75,8
+    LTEXT           "SoftechSoftware homepage",IDC_HOMEPAGELINK,34,124,89,8
+    ICON            IDR_MAINFRAME,-1,9,115,20,20
+    GROUPBOX        "Thanks very much to",-1,8,51,191,56
+    LISTBOX         IDC_FRIENDS,13,62,180,40,NOT LBS_NOTIFY | LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\CButtonST_demo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CButtonST_demo.ico"
+IDI_ZIP256              ICON    DISCARDABLE     "res\\32x32x256_Zip.ico"
+IDI_CANCEL16            ICON    DISCARDABLE     "res\\32x32x16_Cancel.ico"
+IDI_OK16                ICON    DISCARDABLE     "res\\32x32x16_Ok.ico"
+IDI_HAND256             ICON    DISCARDABLE     "res\\32x32x256_Hand.ico"
+IDI_CDGOLD256           ICON    DISCARDABLE     "res\\32x32x256_CDGold.ico"
+IDI_OK256               ICON    DISCARDABLE     "res\\32x32x256_Ok.ico"
+IDI_CANCEL256           ICON    DISCARDABLE     "res\\32x32x256_Cancel.ico"
+IDI_LAMP256             ICON    DISCARDABLE     "res\\32x32x256_Lamp.ico"
+IDI_OKBOR16             ICON    DISCARDABLE     "res\\32x32x16_OkBor.ico"
+IDI_CANCELBOR16         ICON    DISCARDABLE     "res\\32x32x16_CancelBor.ico"
+IDI_EXPLORE16           ICON    DISCARDABLE     "res\\32x32x16_Explore.ico"
+IDI_VIEW16              ICON    DISCARDABLE     "res\\32x32x16_View.ico"
+IDI_TEXT16              ICON    DISCARDABLE     "res\\32x32x16_Text.ico"
+IDI_QUESTION16          ICON    DISCARDABLE     "res\\32x32x16_Question.ico"
+IDI_LEFT16              ICON    DISCARDABLE     "res\\32x32x16_Left.ico"
+IDI_RIGHT16             ICON    DISCARDABLE     "res\\32x32x16_Right.ico"
+IDI_SCREW16             ICON    DISCARDABLE     "res\\32x32x16_Screw.ico"
+IDI_EXIT16              ICON    DISCARDABLE     "res\\32x32x16_Exit.ico"
+IDI_ABOUT16             ICON    DISCARDABLE     "res\\32x32x16_About.ico"
+IDI_LAMP2               ICON    DISCARDABLE     "res\\32x32x2_Lamp.ico"
+IDI_OKBOR2              ICON    DISCARDABLE     "res\\32x32x2_OkBor.ico"
+IDI_CANCELBOR2          ICON    DISCARDABLE     "res\\32x32x2_CancelBor.ico"
+IDI_ZIPSMALL256         ICON    DISCARDABLE     "res\\32x32x256_ZipSmall.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR  DISCARDABLE     "res\\hand.cur"
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\CButtonST_demo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

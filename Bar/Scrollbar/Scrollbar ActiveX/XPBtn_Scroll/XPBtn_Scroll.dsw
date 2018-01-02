@@ -1,0 +1,33 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "XPBtn_Scroll"=.\XPBtn_Scroll.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+    {83F9408C-91B9-420E-A642-64CD206AA1EB}
+    {B2135337-D9E9-4226-BB5E-071034B83303}
+    {9076B41A-F995-44DA-9B9F-8601255C7D48}
+    {3C214D38-1EF9-4296-B3B3-656893643AE6}
+}}}
+
+###############################################################################
+

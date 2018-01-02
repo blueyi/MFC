@@ -1,0 +1,10 @@
+<map id="NormalizeString" name="NormalizeString">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#ab68421cc2d27ae20e5eb87da4802bcab" title="CChartContainer::AddChart" alt="" coords="196,15,375,41"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#a4fc12f8cdf42c2d638375560de595bb8" title="CChartContainer::ChangeChartName" alt="" coords="168,132,403,159"/>
+<area shape="rect" id="node15" href="$class_c_chart_container.html#ae68034a75a47391b5f9e10c70603eef7" title="CChartContainer::ChangeChart\lYValName" alt="" coords="185,183,385,225"/>
+<area shape="rect" id="node17" href="$class_c_chart_container.html#aa1f9b269d58d93e936f714797c01bb88" title="CChartContainer::SetAxis\lXName" alt="" coords="200,66,371,107"/>
+<area shape="rect" id="node5" href="$class_c_charts_x_m_l_serializer.html#a951a73bd9b36e566619b5a497ceb1794" title="CChartsXMLSerializer\l::XMLToCharts" alt="" coords="473,5,621,46"/>
+<area shape="rect" id="node9" href="$class_c_charts_x_m_l_serializer.html#a8c8b6b9e1cb84d441872d8e60cf1ee49" title="CChartsXMLSerializer\l::ReplaceChartsFromXMLFile" alt="" coords="451,70,642,111"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a4a108cf29847b286e026e1218cab1f1c" title="CChartContainer::LoadCharts" alt="" coords="691,12,882,39"/>
+<area shape="rect" id="node11" href="$class_c_chart_container.html#a58f734d20645d1812668dd16a01e5d9a" title="CChartContainer::Replace\lContainerCharts" alt="" coords="701,70,873,111"/>
+</map>

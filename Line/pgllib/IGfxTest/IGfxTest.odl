@@ -1,0 +1,42 @@
+// IGfxTest.odl : type library source for IGfxTest.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (IGfxTest.tlb).
+
+[ uuid(DB8C9A99-02EC-4990-AD82-11AD25AACD28), version(1.0) ]
+library IGfxTest
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CIGfxTestDoc
+	
+	[ uuid(B4F0F0E1-F5FF-42B8-B0C4-95A0A72161D4) ]
+	dispinterface IIGfxTest
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CIGfxTestDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CIGfxTestDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CIGfxTestDoc
+	
+	[ uuid(7C219655-BEA2-4F36-8ED4-9704A7CDECD9) ]
+	coclass Document
+	{
+		[default] dispinterface IIGfxTest;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

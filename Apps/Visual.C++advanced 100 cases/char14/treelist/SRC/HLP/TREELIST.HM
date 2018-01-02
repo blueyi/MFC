@@ -1,0 +1,30 @@
+// MAKEHELP.BAT generated Help Map file.  Used by TREELIST.HPJ. 
+ 
+// Commands (ID_* and IDM_*) 
+HID_DELAYTIMER                          0x10065
+HID_MY_SCAN_DISK                        0x10406
+HID_SETTINGS                            0x18003
+HID_ADJUST_DATA                         0x18005
+HID_RESCAN                              0x18006
+HID_SAVE_RESULTS                        0x18008
+HID_REGISTER                            0x18009
+HID_RESULTS                             0x1800A
+HID_SHOW_RESULTS                        0x1800B
+HID_REFRESH                             0x1800D
+ 
+// Prompts (IDP_*) 
+ 
+// Resources (IDR_*) 
+HIDR_POPUPMENU                          0x20068
+HIDR_MAINFRAME                          0x20080
+HIDR_TREELISTTYPE                       0x20081
+ 
+// Dialogs (IDD_*) 
+HIDD_ABOUTBOX                           0x20064
+HIDD_OPTIONSDIALOG                      0x20066
+HIDD_ENDDIALOG                          0x20067
+HIDD_FIND_FILES                         0x2006E
+HIDD_REGISTER2                          0x2006F
+HIDD_RESULTSBOX                         0x20070
+ 
+// Frame Controls (IDW_*) 

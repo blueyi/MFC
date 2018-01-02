@@ -1,0 +1,117 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// File           : $Workfile: $
+// Version        : $Revision: $
+// Function       : Implements CJBListBox.
+//
+// Author         : $Author: $
+// Date           : $Date: $
+//
+// Notes          : A class derived from CListBox that supports the "standard" 
+//                  list box paradigm of "double clicking an item tends to do 
+//                  something with that item" and "we usually have buttons that
+//                  cause processes to occur when items are selected".
+// 
+// Modifications  :
+//
+// $Log: $
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+// Copyright 1997 JetByte Limited.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+// Standard lint options files
+///////////////////////////////////////////////////////////////////////////////
+   
+co-msc50.lnt      // Compiler options for MS VC++
+options.lnt       // Standard lint options
+-si4              // sizeof int = 4 bytes
+-sp4              // sizeof pointer = 4 bytes
+lib-wnt.lnt       // Options for Windows NT
+lib-w32.lnt       // Options for Win32
+lib-mfc.lnt       // Options for MFC
+
+///////////////////////////////////////////////////////////////////////////////
+// Include paths
+///////////////////////////////////////////////////////////////////////////////
+
+-i"g:\Program Files\DevStudio\VC\include" 
+-i"g:\Program Files\\DevStudio\VC\mfc\include" 
+//-ig:\documents\jetbyte\source\TestHarnesses\TemplateMFC\TemplateMFC
+
+// Defines
+
+-d_AFXDLL         // making a DLL
+-d_DLL            // ditto
+-d_MT             // multi-thread
+-dSTRICT
+
+-d_stdcall=       // ignore this construct
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Error and warning customisation
+///////////////////////////////////////////////////////////////////////////////
+
+-esym(1712, TReferenceCounted)	// We don't want a default constructor
+-esym(1712, CCountedRegKey)	
+-esym(1712, CRegKeyIterator)
+-esym(1712, CRegistryKey)
+-esym(1712, CWin32Exception)
+-esym(1712, CComException)
+-esym(1712, CComCatInfo)
+-esym(1712, Exception)
+-esym(1712, Value)
+-esym(1712, SubkeyIteratorImpl)
+-esym(1712, ValueIteratorImpl)
+-esym(1712, IEnumIterator)
+-esym(1712, CIterateCATEGORYINFO)
+-esym(1712, CIterateCATID)
+-esym(1712, TRegKeyIterator)
+-esym(1712, CIterateGUID)
+-esym(1712, COleString)
+-esym(1712, CComGUID)
+-esym(1712, CNonConstOleString)
+-esym(1712, TRegistryList)
+-esym(1712, iterator)
+-esym(1712, CGUIDRegistryList)
+
+-esym(1704, CJBListBox::CJBListBox)			// Private constructor 
+-esym(1704, TReferenceCounted::TReferenceCounted)
+-esym(1704, CRegKeyIterator::CRegKeyIterator) 
+-esym(1704, CComCatInformation::CComCatInformation)
+-esym(1704, CCountedRegKey::CCountedRegKey)
+-esym(1704, Exception::Exception)
+
+-esym(764, CRegistryKey)		// Redundant redeclaration
+
+
+//-elib(509)        // extern used with definition (afxdllx.h, 44)
+
+//-e605             // Increased pointer capability, when initialising a 
+                  // const member from a const reference to a variable...
+                  // Strange, I dont understand why, when someone does, 
+                  // they can fix it if it needs fixing...
+
+// We tend to ignore the return values of the following functions...
+
+
+-esym(534, RegCloseKey)
+-esym(534, CDialog::DoModal)
+-esym(534, CWnd::MessageBoxA)
+
+
+// Complaints about not deleting or assigning NULL to these function pointers 
+// in the destructor. However, we can't assign NULL to them since they're 
+// constant!
+
+//-esym(1540, CComManager::m_pfCreateFactory)
+
+//-e655 
+
+///////////////////////////////////////////////////////////////////////////////
+// End of file
+///////////////////////////////////////////////////////////////////////////////

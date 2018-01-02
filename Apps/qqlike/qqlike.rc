@@ -1,0 +1,294 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BKG                 BITMAP  DISCARDABLE     "res\\bkg.bmp"
+IDB_MENUBKG             BITMAP  DISCARDABLE     "res\\menubkg.bmp"
+IDB_MENUSEL             BITMAP  DISCARDABLE     "res\\menusel.bmp"
+IDB_UICOLOR             BITMAP  DISCARDABLE     "res\\uicolor.bmp"
+IDB_UICOLORDEF          BITMAP  DISCARDABLE     "res\\uidefault.bmp"
+IDB_UITATOO             BITMAP  DISCARDABLE     "res\\uitatoo.bmp"
+IDB_TATOONONE           BITMAP  DISCARDABLE     "res\\uitatoo_none.bmp"
+IDB_ADJHUE              BITMAP  DISCARDABLE     "res\\adj_hue.bmp"
+IDB_ADJLUM              BITMAP  DISCARDABLE     "res\\adj_lum.bmp"
+IDB_ADJSUM              BITMAP  DISCARDABLE     "res\\adj_sum.bmp"
+IDB_ADJTHUMB            BITMAP  DISCARDABLE     "res\\adj_thumb.bmp"
+IDB_ADJTRANS            BITMAP  DISCARDABLE     "res\\adj_trans.bmp"
+IDB_TATOO5              BITMAP  DISCARDABLE     "res\\5.bmp"
+IDB_TATOO1              BITMAP  DISCARDABLE     "res\\1.bmp"
+IDB_TATOO2              BITMAP  DISCARDABLE     "res\\2.bmp"
+IDB_TATOO3              BITMAP  DISCARDABLE     "res\\3.bmp"
+IDB_TATOO4              BITMAP  DISCARDABLE     "res\\4.bmp"
+IDB_TOOLBOT1            BITMAP  DISCARDABLE     "res\\toolbot.bmp"
+IDB_ARRBTN              BITMAP  DISCARDABLE     "res\\arrbtn.bmp"
+IDB_QQBTN               BITMAP  DISCARDABLE     "res\\qqbtn.bmp"
+IDB_SIDETOOL            BITMAP  DISCARDABLE     "res\\sidetool.bmp"
+IDB_SIDEBTNBORDER       BITMAP  DISCARDABLE     "res\\sidebtnstatebig.bmp"
+IDB_SIDEBTNSTATE        BITMAP  DISCARDABLE     "res\\sidebtnstate.bmp"
+IDB_TABBKG              BITMAP  DISCARDABLE     "res\\tabbkg.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDG_SYSBTN              GIF     DISCARDABLE     "res\\ncbuttons.gif"
+IDG_USER                GIF     DISCARDABLE     "res\\user.gif"
+IDG_HOVERMENU           GIF     DISCARDABLE     "res\\hoverbtn.gif"
+IDG_TOOLTOP             GIF     DISCARDABLE     "res\\tooltop.gif"
+IDG_SYSBTNADJ           GIF     DISCARDABLE     "res\\ncbtnadj.gif"
+IDG_SEARCHBAR           GIF     DISCARDABLE     "res\\searchbar.gif"
+IDG_TABICON             GIF     DISCARDABLE     "res\\tabicon.gif"
+IDG_LISTTITLE           GIF     DISCARDABLE     "res\\listtile.gif"
+IDG_LISTARR             GIF     DISCARDABLE     "res\\listarr.gif"
+IDG_USERS               GIF     DISCARDABLE     "res\\users.gif"
+IDG_MAIL                GIF     DISCARDABLE     "res\\mail.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDP_QQ2009              PNG     DISCARDABLE     "res\\caption.png"
+IDP_SEA                 PNG     DISCARDABLE     "res\\sea.png"
+IDP_WALL                PNG     DISCARDABLE     "res\\wall.png"
+IDP_FOX                 PNG     DISCARDABLE     "res\\fox.png"
+IDP_TREE                PNG     DISCARDABLE     "res\\tree.png"
+IDP_GIRL                PNG     DISCARDABLE     "res\\girl.png"
+IDP_QQ                  PNG     DISCARDABLE     "res\\qq.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_QQ                  ICON    DISCARDABLE     "res\\qq.ico"
+IDI_STOP                ICON    DISCARDABLE     "res\\stop.ico"
+IDI_BUSY                ICON    DISCARDABLE     "res\\busy.ico"
+IDI_HIDE                ICON    DISCARDABLE     "res\\hide.ico"
+IDI_LEAVE               ICON    DISCARDABLE     "res\\leave.ico"
+IDI_LOCK                ICON    DISCARDABLE     "res\\lock.ico"
+IDI_OFFLINE             ICON    DISCARDABLE     "res\\offline.ico"
+IDI_ONLINE              ICON    DISCARDABLE     "res\\online.ico"
+IDI_QME                 ICON    DISCARDABLE     "res\\qme.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "我在线上",                    CM_ONLINE
+        MENUITEM "Q我吧",                       CM_QME
+        MENUITEM "离开",                        CM_LEAVE
+        MENUITEM "忙碌",                        CM_BUSY
+        MENUITEM "请勿打扰",                    CM_STOP
+        MENUITEM "隐身",                        CM_HIDE
+        MENUITEM "离线",                        CM_OFFLINE
+        MENUITEM SEPARATOR
+        MENUITEM "关闭所有声音",                ID_MENUITEM40008
+        MENUITEM SEPARATOR
+        MENUITEM "锁定QQ\tCtrl + Alt + L",      CM_LOCK
+        MENUITEM SEPARATOR
+        MENUITEM "打开主面板",                  CM_SHOWMAIN
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        CM_EXIT
+    END
+END
+
+IDR_SEARCHMENU MENU DISCARDABLE 
+BEGIN
+    POPUP " "
+    BEGIN
+        MENUITEM "使用SOSO网页搜索",            CM_SEARCH
+    END
+END
+
+IDR_TABMENU MENU DISCARDABLE 
+BEGIN
+    POPUP " "
+    BEGIN
+        POPUP "头像显示"
+        BEGIN
+            MENUITEM "大头像",                      ID_MENUITEM40013
+            , CHECKED
+            MENUITEM "小头像",                      ID_MENUITEM40014
+            MENUITEM "标准头像",                    ID_MENUITEM40015
+            MENUITEM SEPARATOR
+            MENUITEM "选中时显示大头像",            ID_MENUITEM40016, GRAYED
+            MENUITEM SEPARATOR
+            MENUITEM "显示我的头像",                ID_MENUITEM40017
+            , CHECKED
+        END
+        POPUP "名称显示"
+        BEGIN
+            MENUITEM "显示名称和昵称",              ID_MENUITEM40018
+            , CHECKED
+            MENUITEM "只显示备注",                  ID_MENUITEM40019
+            MENUITEM "只显示昵称",                  ID_MENUITEM40020
+        END
+        POPUP "列表显示"
+        BEGIN
+            MENUITEM "单列显示",                    ID_MENUITEM40021
+            , CHECKED
+            MENUITEM "多列平铺",                    ID_MENUITEM40022
+            MENUITEM SEPARATOR
+            MENUITEM "显示清爽资料",                ID_MENUITEM40023
+            MENUITEM SEPARATOR
+            MENUITEM "滑动效果",                    ID_MENUITEM40024
+            , CHECKED
+        END
+        MENUITEM SEPARATOR
+        POPUP "排序显示"
+        BEGIN
+            MENUITEM "按身份标识排序",              ID_MENUITEM40025
+            , CHECKED
+            MENUITEM "按服务更新排序",              ID_MENUITEM40026
+            MENUITEM "按名称排序",                  ID_MENUITEM40027
+        END
+        MENUITEM "刷新好友列表",                ID_MENUITEM40028
+        MENUITEM SEPARATOR
+        MENUITEM "显示在线联系人",              ID_MENUITEM40029
+        MENUITEM SEPARATOR
+        MENUITEM "显示陌生人分组",              ID_MENUITEM40030, CHECKED
+        MENUITEM "显示黑名单",                  ID_MENUITEM40031, CHECKED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_UICONFIG DIALOG DISCARDABLE  0, 0, 97, 113
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         124,IDC_COLOR1,"Static",SS_BITMAP | SS_NOTIFY,10,6,15,14
+    CONTROL         "",IDC_COLOR2,"Static",SS_BITMAP | SS_NOTIFY,31,6,15,14
+    CONTROL         "",IDC_COLOR3,"Static",SS_BITMAP | SS_NOTIFY,52,6,15,14
+    CONTROL         "",IDC_COLOR4,"Static",SS_BITMAP | SS_NOTIFY,73,6,15,14
+    CONTROL         "",IDC_COLOR5,"Static",SS_BITMAP | SS_NOTIFY,10,27,15,14
+    CONTROL         "",IDC_COLOR6,"Static",SS_BITMAP | SS_NOTIFY,32,27,15,14
+    CONTROL         "",IDC_COLOR7,"Static",SS_BITMAP | SS_NOTIFY,52,27,15,14
+    CONTROL         "",IDC_COLOR8,"Static",SS_BITMAP | SS_NOTIFY,74,27,15,14
+    CONTROL         "",IDC_ADJHUE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,0,47,97,11
+    CONTROL         "",IDC_ADJSUM,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,0,62,97,11
+    CONTROL         "",IDC_ADJLUM,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | 
+                    WS_TABSTOP,0,77,97,11
+    LTEXT           "透明度",IDC_STATIC,9,90,25,8
+    CONTROL         "",IDC_ADJALPHA,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,0,100,97,11
+END
+
+IDD_TATOOCONFIG DIALOG DISCARDABLE  0, 0, 97, 113
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         126,IDC_BKG1,"Static",SS_BITMAP | SS_NOTIFY,6,13,21,21
+    CONTROL         126,IDC_BKG2,"Static",SS_BITMAP | SS_NOTIFY,38,13,21,21
+    CONTROL         126,IDC_BKG3,"Static",SS_BITMAP | SS_NOTIFY,70,13,21,21
+    CONTROL         126,IDC_BKG4,"Static",SS_BITMAP | SS_NOTIFY,6,42,21,21
+    CONTROL         126,IDC_BKG5,"Static",SS_BITMAP | SS_NOTIFY,38,42,21,21
+    CONTROL         126,IDC_BKG6,"Static",SS_BITMAP | SS_NOTIFY,70,42,21,21
+    CONTROL         126,IDC_BKG7,"Static",SS_BITMAP | SS_NOTIFY,6,71,21,21
+    CONTROL         126,IDC_BKG8,"Static",SS_BITMAP | SS_NOTIFY,38,71,21,21
+    CONTROL         126,IDC_BKG9,"Static",SS_BITMAP | SS_NOTIFY,70,71,21,21
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TOOL1               "手机生活"
+    IDS_TOOL2               "QQ游戏"
+    IDS_TOOL3               "QQ软件管理"
+    IDS_TOOL4               "QQ宠物"
+    IDS_TOOL5               "QQ音乐"
+    IDS_TOOL6               "QQLive网络电视"
+    IDS_TOOL7               "打开系统设置"
+    IDS_TOOL8               "打开消息管理器"
+    IDS_TOOL9               "查找联系人"
+    IDS_SIDETOOL1           "QQ好友面板"
+    IDS_SIDETOOL2           "网络硬盘"
+    IDS_SIDETOOL3           "QQ空间"
+    IDS_SIDETOOL4           "界面管理器"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

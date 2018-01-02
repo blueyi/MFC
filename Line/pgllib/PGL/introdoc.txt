@@ -1,0 +1,206 @@
+/*
+Plot Graphic Library,
+a C++/MFC charting library.
+
+  Copyright (C) 2001  de Halleux Jonathan
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Contact: de Halleux Jonathan, pglinfo@patabelgos.org
+*/
+
+/*!
+\mainpage Plot Graphic Library
+
+\author Jonathan de Halleux, peli@patabelgos.org
+\version 2.2, see lastest snapshot at
+<A href="http://sourceforge.net"> <IMG src="http://sourceforge.net/sflogo.php?group_id=39540" width="88" height="31" border="0" alt="SourceForge Logo"></A>
+
+\section intro What is PGL ?
+PGL is a dll-library developped for MFC and Visual C++ 6.0. It is designed to be fully
+integrated in a MFC project. PGL is licensed under LPGL (see Section \ref slic)
+
+\image html pglmfclib.png "An example of  PGL dialog"
+\image latex pglmfclib.eps "An example of  PGL dialog"
+
+Why another plot library ? Well, there are no (correct me if I'm wrong) free MFC plot library
+available. PGL is designed to be used with a MFC application so you don't have to worry about porting
+a plot library for Unix to windows. If you want a mutli-platform library use ROOT (root.cern.ch).
+
+The aim of PGL is not to have a user-friendly environement but rather being able to generate
+any plot from the source code.
+
+PGL is hosted at
+<A href="http://sourceforge.net"> <IMG src="http://sourceforge.net/sflogo.php?group_id=39540" width="88" height="31" border="0" alt="SourceForge Logo"></A>
+
+A pdf version of this doc is available <a href="refman.pdf">here</a>.
+
+\section ssFeatures Features
+<ul>
+<li>line strip, fully customisable (color, line type, point type, line width,etc...),
+<li>line strip with level of detail capabilities (based on Douglas-Peukler line simplification algorithm),
+<li>Vector map,
+<li>Height map,
+<li>Text,
+<li>Export to EPS, SVG, JPEG, TIFF, GIF, PNG, 
+<li>CView derived class for fast integration in existing project,
+<li>CDialog derived class,
+<li>etc...
+</ul>
+
+\section ssInstall Installation
+
+To use PGL in one of your projects :
+<ol>
+<li>Install GDI+ (part of Microsoft SDK).
+<li>Download Gdiplus.dll and make sure it is in the path,
+<li>Install PGL using the Microsoft installer package (.msi) available at sourceforge,
+<li>Add the directory with PGL binaries to your path. (by default it is C:\Program Files\PGL\bin)
+<li>Add the include directory and lib directory to Visual C++ include/lib directories.
+</ol>
+
+That's it!
+
+
+\section download Download
+You can download the source/binaries at the source forge site :
+<A href="http://www.sourceforge.net/project/pglmfclib"> <IMG src="http://sourceforge.net/sflogo.php?group_id=39540" width="210" height="62" border="0" alt="SourceForge Logo"></A>
+
+\subsection ssbin Binaries
+A Microsoft installer package is available at sourceforge. 
+
+\subsection sscompile Compiling the sources
+The sources of PGL are provided.
+Open the workspace "Plot Graphic Library.dsw"
+It contains 3 projects :
+<ul>
+<li>AlgoTools. Collection of Algorithmic classes.
+<li>IGfx. Graphic library used by PGL
+<li>IGfxTest. Test project for IGfx
+<li>OGLTools. A useful library to handle OpenGL with Windows. Not used anymore but useful anyway.
+<li>PGL. The graphic library
+<li>Testpgl. An demo application.
+</ul>
+
+\section sStart Getting your project started
+<ol>
+<li>Add the following in your StdAfx.h file :
+\code
+#include "PGL.h"
+\endcode
+<li>Since PGL is using GDI+, you must initialize it :
+	<ul>
+	<li>Add the following variable to your CWinApp derived class
+	\code
+		ULONG_PTR m_ulGdiplusToken;
+	\endcode
+	<li>Add the following to the CWinApp::OnInitInstance() function to initialize GDI+
+	\code
+	// initialize gdi+ (gdi+ is in Gdiplus namespace)
+	Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+	Gdiplus::GdiplusStartup(&m_ulGdiplusToken, &gdiplusStartupInput, NULL);
+	\endcode
+	<li>Add the following to the CWinApp::OnExitInstance() function to clean up GDI+.
+	\code
+	// shutdown GDI+
+	Gdiplus::GdiplusShutdown(m_ulGdiplusToken);
+	\endcode
+	</ul>
+</li>
+</ol>
+Your project should work fine now.
+
+\section sExamples Examples
+
+\section sLic License
+
+Plot Graphic Library,
+a C++/MFC charting library.
+
+Copyright (C) 2001  de Halleux Jonathan
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+Contact: de Halleux Jonathan, pglinfo@patabelgos.org
+
+\section sextlib External Libraries and external code:
+Special thanks to
+<ul>
+<il>The Code Project (www.codeproject.com) for great coding examples,
+<il>Oskar Wieland (oskar.wieland@gmx.de) for getting rid of STL warnings 
+<il>Jason Hattingh for nice class CGDIRect
+<il>And many others...
+</ul>
+
+\subsection ssIJPEG The Independent JPEG Group's JPEG software
+
+Altough not used anymore in PGL, OGLTools is using
+<em>The Independent JPEG Group's JPEG software</em>
+
+This software is the work of Tom Lane, Philip Gladstone, Jim Boucher,
+Lee Crocker, Julian Minguillon, Luis Ortiz, George Phillips, Davide Rossi,
+Guido Vollbeding, Ge' Weijers, and other members of the Independent JPEG
+Group.
+Details are accesible at <a href="http://www.ijg.org">www.ijg.org</a> .
+
+\subsection sszlib zlib
+
+ zlib.h -- interface of the 'zlib' general purpose compression library
+  version 1.1.4, March 11th, 2002
+
+  Copyright (C) 1995-2002 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu
+
+
+  The data format used by the zlib library is described by RFCs (Request for
+  Comments) 1950 to 1952 in the files ftp://ds.internic.net/rfc/rfc1950.txt
+  (zlib format), rfc1951.txt (deflate format) and rfc1952.txt (gzip format).
+
+\section sfaq Frequently Asked Questions
+No questions yet !
+
+\section hist History
+See CVS
+*/

@@ -1,0 +1,26 @@
+<map id="CChart::IsChartVisible" name="CChart::IsChartVisible">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#a1a0b0defb032d04167b752946ef9abf8" title="CChartContainer::AllowChartPnts" alt="" coords="211,5,426,32"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#aa0a543ecfc0021ce768048e838a7b0ee" title="CChartContainer::AppendChartData" alt="" coords="205,56,432,83"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a838726cafc525dc375200d9f265fc074" title="CChartContainer::ChangeLoc\lScaleYByArrowKeys" alt="" coords="223,107,414,149"/>
+<area shape="rect" id="node9" href="$class_c_charts_x_m_l_serializer.html#a711af25b8293ad91a0a7c3b967c92995" title="CChartsXMLSerializer\l::ChartDataToXML" alt="" coords="245,173,393,214"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#a9b7dd8e9f149c604ad1ab72543a399de" title="CChartContainer::DrawContainer\lToBmp" alt="" coords="214,238,423,279"/>
+<area shape="rect" id="node15" href="$class_c_chart_container.html#a5b2370283c4e79de59fc14546b5c8f7f" title="CChartContainer::DrawData\lViewPntsD" alt="" coords="228,303,409,345"/>
+<area shape="rect" id="node17" href="$class_c_chart_container.html#a5d52ec68d73bdb730648857d3304c3a8" title="CChartContainer::GetChart" alt="" coords="230,369,407,396"/>
+<area shape="rect" id="node19" href="$class_c_chart_container.html#a570814ede6edab2bac09a8a8f2071d2f" title="CChartContainer::GetVisible\lChart" alt="" coords="226,421,411,462"/>
+<area shape="rect" id="node21" href="$class_c_chart_container.html#a419723dac14082e5d811cb1443d37c29" title="CChartContainer::HasChart\lDifferentPnts" alt="" coords="229,486,408,527"/>
+<area shape="rect" id="node23" href="$class_c_chart_container.html#a6add2f68ca7f3ee07e4f7c8f99347856" title="CChartContainer::HasVisible\lPntsDInYBand" alt="" coords="225,551,412,593"/>
+<area shape="rect" id="node25" href="$class_c_chart_container.html#a4c0ffd714969d05be042613848d46d4a" title="CChartContainer::OnMouse\lWheel" alt="" coords="228,617,409,658"/>
+<area shape="rect" id="node27" href="$class_c_chart_container.html#ad343bedea4432cba6bac8cf9ba5bc604" title="CChartContainer::OnPaint" alt="" coords="233,683,405,709"/>
+<area shape="rect" id="node29" href="$class_c_chart_container.html#acaaea0a253cc4013aded7380d2a2643c" title="CChartContainer::Prepare\lDataLegend" alt="" coords="233,734,404,775"/>
+<area shape="rect" id="node31" href="$class_c_chart_container.html#a99f1268f20a5a887359bdd4490621d81" title="CChartContainer::PrintCharts" alt="" coords="223,800,414,827"/>
+<area shape="rect" id="node33" href="$class_c_chart_container.html#a81f2538d28834c9a993509108f41f07a" title="CChartContainer::ResetCharts" alt="" coords="220,851,417,877"/>
+<area shape="rect" id="node35" href="$class_c_chart_container.html#a4b386abcf30b63aa14ff11c28db8442e" title="CChartContainer::SelectChart\lByMouseClick" alt="" coords="222,902,415,943"/>
+<area shape="rect" id="node37" href="$class_c_chart_container.html#af72b1f9ea24b68b50dda85c34c332d29" title="CChartContainer::SetChart\lColor" alt="" coords="231,967,407,1009"/>
+<area shape="rect" id="node39" href="$class_c_chart_container.html#a73fbe333877c40a298c040bec7595cd1" title="CChartContainer::SetChart\lDashStyle" alt="" coords="231,1033,407,1074"/>
+<area shape="rect" id="node41" href="$class_c_chart_container.html#a04f27b71881bc52b285a9c7f7f2bebdd" title="CChartContainer::ShowChart\lPoints" alt="" coords="225,1098,413,1139"/>
+<area shape="rect" id="node43" href="$class_c_chart_container.html#afa84cfd5cc9415b3b74f169305bed55d" title="CChartContainer::UpdateChart\lLocScaleY" alt="" coords="220,1163,417,1205"/>
+<area shape="rect" id="node45" href="$class_c_chart_container.html#a8f4fc4d50388416edbfb203da31e6606" title="CChartContainer::UpdateChart\lPenWidth" alt="" coords="220,1229,417,1270"/>
+<area shape="rect" id="node47" href="$class_c_chart_container.html#abe60584f910936dc7fef695c30c87271" title="CChartContainer::UpdateData\lLegend" alt="" coords="222,1294,415,1335"/>
+<area shape="rect" id="node49" href="$class_c_chart_container.html#ad4034e8dc50b6f0551088ca44f01cd64" title="CChartContainer::UpdateDataView" alt="" coords="208,1360,429,1387"/>
+<area shape="rect" id="node11" href="$class_c_chart_container.html#af07be5bd92e8a5d5e829fef6b221f5b5" title="CChartContainer::SaveChartData" alt="" coords="480,180,691,207"/>
+</map>

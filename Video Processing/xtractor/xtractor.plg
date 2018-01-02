@@ -1,0 +1,249 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: akrip32 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/akrip32.res" /d "_DEBUG" "E:\restore\xwork\akrip\akrip32.rc"" 
+Creating temporary file "e:\temp\RSP9102.TMP" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "AKRIP32_EXPORTS" /Fp"Debug/akrip32.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\restore\xwork\akrip\aspilib.c"
+"E:\restore\xwork\akrip\atapi.c"
+"E:\restore\xwork\akrip\cdcache.c"
+"E:\restore\xwork\akrip\handles.c"
+"E:\restore\xwork\akrip\read10.c"
+"E:\restore\xwork\akrip\readd4.c"
+"E:\restore\xwork\akrip\readd8.c"
+"E:\restore\xwork\akrip\scsipt.c"
+]
+Creating command line "cl.exe @e:\temp\RSP9102.TMP" 
+Creating temporary file "e:\temp\RSP9103.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib wsock32.lib /nologo /dll /incremental:yes /pdb:"Debug/akrip32.pdb" /debug /machine:I386 /def:".\akrip32.def" /out:"../bin/Debug/akrip32.dll" /implib:"Debug/akrip32.lib" /pdbtype:sept 
+.\Debug\aspilib.obj
+.\Debug\atapi.obj
+.\Debug\cdcache.obj
+.\Debug\handles.obj
+.\Debug\read10.obj
+.\Debug\readd4.obj
+.\Debug\readd8.obj
+.\Debug\scsipt.obj
+.\Debug\akrip32.res
+]
+Creating command line "link.exe @e:\temp\RSP9103.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+aspilib.c
+atapi.c
+cdcache.c
+handles.c
+read10.c
+readd4.c
+readd8.c
+scsipt.c
+Linking...
+   Creating library Debug/akrip32.lib and object Debug/akrip32.exp
+<h3>
+--------------------Configuration: cdcache - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "e:\temp\RSP9262.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "CDCACHE_EXPORTS" /D "_MAKING_DLL" /Fp"Debug/cdcache.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\restore\xwork\cdcache\cddbentry.cpp"
+"E:\restore\xwork\cdcache\growstring.cpp"
+"E:\restore\xwork\cdcache\parsecddb.cpp"
+]
+Creating command line "cl.exe @e:\temp\RSP9262.TMP" 
+Creating temporary file "e:\temp\RSP9263.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/cdcache.pdb" /debug /machine:I386 /out:"../bin/Debug/cdcache.dll" /implib:"Debug/cdcache.lib" /pdbtype:sept 
+.\Debug\cddbentry.obj
+.\Debug\growstring.obj
+.\Debug\parsecddb.obj
+]
+Creating command line "link.exe @e:\temp\RSP9263.TMP"
+<h3>Output Window</h3>
+Compiling...
+cddbentry.cpp
+growstring.cpp
+parsecddb.cpp
+Linking...
+   Creating library Debug/cdcache.lib and object Debug/cdcache.exp
+<h3>
+--------------------Configuration: xtenc - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "e:\temp\RSP9334.TMP" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "XTENC_EXPORTS" /Fp"Debug/xtenc.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\restore\xwork\enc\BladeStream.cpp"
+"E:\restore\xwork\enc\encbase.cpp"
+"E:\restore\xwork\enc\LameStream.cpp"
+"E:\restore\xwork\enc\MP3Stream.cpp"
+"E:\restore\xwork\enc\RawStream.cpp"
+"E:\restore\xwork\enc\test.c"
+"E:\restore\xwork\enc\utf8.c"
+"E:\restore\xwork\enc\VorbisStream.cpp"
+"E:\restore\xwork\enc\WavStream.cpp"
+"E:\restore\xwork\enc\xtenc.cpp"
+]
+Creating command line "cl.exe @e:\temp\RSP9334.TMP" 
+Creating temporary file "e:\temp\RSP9335.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/xtenc.pdb" /debug /machine:I386 /def:".\xtenc.def" /out:"../bin/Debug/xtenc.dll" /implib:"Debug/xtenc.lib" /pdbtype:sept 
+.\Debug\BladeStream.obj
+.\Debug\encbase.obj
+.\Debug\LameStream.obj
+.\Debug\MP3Stream.obj
+.\Debug\RawStream.obj
+.\Debug\test.obj
+.\Debug\utf8.obj
+.\Debug\VorbisStream.obj
+.\Debug\WavStream.obj
+.\Debug\xtenc.obj
+]
+Creating command line "link.exe @e:\temp\RSP9335.TMP"
+<h3>Output Window</h3>
+Compiling...
+BladeStream.cpp
+encbase.cpp
+LameStream.cpp
+MP3Stream.cpp
+RawStream.cpp
+test.c
+utf8.c
+VorbisStream.cpp
+e:\restore\xwork\enc\vorbisstream.cpp(151) : warning C4065: switch statement contains 'default' but no 'case' labels
+WavStream.cpp
+xtenc.cpp
+Linking...
+   Creating library Debug/xtenc.lib and object Debug/xtenc.exp
+<h3>
+--------------------Configuration: controls - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "e:\temp\RSPA1E3.TMP" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "CONTROLS_EXPORTS" /Fp"Debug/controls.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\restore\xwork\controls\treeopt.c"
+]
+Creating command line "cl.exe @e:\temp\RSPA1E3.TMP" 
+Creating temporary file "e:\temp\RSPA1E4.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib /nologo /dll /incremental:yes /pdb:"Debug/xtrctl32.pdb" /debug /machine:I386 /def:".\xtrctl32.def" /out:"../bin/Debug/xtrctl32.dll" /implib:"Debug/xtrctl32.lib" /pdbtype:sept 
+.\Debug\treeopt.obj
+]
+Creating command line "link.exe @e:\temp\RSPA1E4.TMP"
+<h3>Output Window</h3>
+Compiling...
+treeopt.c
+e:\restore\xwork\controls\treeopt.c(753) : warning C4244: '=' : conversion from 'long ' to 'short ', possible loss of data
+e:\restore\xwork\controls\treeopt.c(754) : warning C4244: '=' : conversion from 'long ' to 'short ', possible loss of data
+e:\restore\xwork\controls\treeopt.c(196) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(196) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(200) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(200) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(204) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(204) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(223) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(228) : warning C4761: integral size mismatch in argument; conversion supplied
+e:\restore\xwork\controls\treeopt.c(228) : warning C4761: integral size mismatch in argument; conversion supplied
+Linking...
+   Creating library Debug/xtrctl32.lib and object Debug/xtrctl32.exp
+<h3>
+--------------------Configuration: xtractor - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/xtractor.res" /d "_DEBUG" "E:\restore\xwork\xtractor.rc"" 
+Creating temporary file "e:\temp\RSPA225.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/xtractor.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\restore\xwork\about.c"
+"E:\restore\xwork\cddbdlg.c"
+"E:\restore\xwork\cddbsubmit.c"
+"E:\restore\xwork\cddlg.c"
+"E:\restore\xwork\config.c"
+"E:\restore\xwork\dirsel.c"
+"E:\restore\xwork\gauge.c"
+"E:\restore\xwork\globals.c"
+"E:\restore\xwork\id3.c"
+"E:\restore\xwork\miscdlg.c"
+"E:\restore\xwork\mp3dlg.c"
+"E:\restore\xwork\outdlg.c"
+"E:\restore\xwork\rangeslider.c"
+"E:\restore\xwork\ripseg.c"
+"E:\restore\xwork\riptracks.c"
+"E:\restore\xwork\statusbar.c"
+"E:\restore\xwork\trackwnd.c"
+"E:\restore\xwork\vorbdlg.c"
+"E:\restore\xwork\wrqueue.c"
+"E:\restore\xwork\XTRACTOR.C"
+]
+Creating command line "cl.exe @e:\temp\RSPA225.TMP" 
+Creating temporary file "e:\temp\RSPA226.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib wsock32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/xtractor.pdb" /debug /machine:I386 /out:"bin/Debug/xtractor.exe" /pdbtype:sept 
+.\Debug\about.obj
+.\Debug\cddbdlg.obj
+.\Debug\cddbsubmit.obj
+.\Debug\cddlg.obj
+.\Debug\config.obj
+.\Debug\dirsel.obj
+.\Debug\gauge.obj
+.\Debug\globals.obj
+.\Debug\id3.obj
+.\Debug\miscdlg.obj
+.\Debug\mp3dlg.obj
+.\Debug\outdlg.obj
+.\Debug\rangeslider.obj
+.\Debug\ripseg.obj
+.\Debug\riptracks.obj
+.\Debug\statusbar.obj
+.\Debug\trackwnd.obj
+.\Debug\vorbdlg.obj
+.\Debug\wrqueue.obj
+.\Debug\XTRACTOR.OBJ
+.\Debug\xtractor.res
+.\akrip\Debug\akrip32.lib
+.\cdcache\Debug\cdcache.lib
+.\enc\Debug\xtenc.lib
+.\controls\Debug\xtrctl32.lib
+]
+Creating command line "link.exe @e:\temp\RSPA226.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+about.c
+cddbdlg.c
+cddbsubmit.c
+cddlg.c
+config.c
+dirsel.c
+gauge.c
+globals.c
+id3.c
+miscdlg.c
+mp3dlg.c
+outdlg.c
+rangeslider.c
+ripseg.c
+riptracks.c
+statusbar.c
+trackwnd.c
+vorbdlg.c
+wrqueue.c
+XTRACTOR.C
+Linking...
+
+
+
+<h3>Results</h3>
+xtractor.exe - 0 error(s), 12 warning(s)
+</pre>
+</body>
+</html>

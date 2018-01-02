@@ -1,0 +1,96 @@
+/////////////////////////////////////////////////////////////////////
+// To Add a Menu...
+/////////////////////////////////////////////////////////////////////
+
+// 1) Use the Menu Editor to create a new menu, or copy one from another
+// project.
+//
+// 2) Use the Dialog Editor to add this menu to your dialog app's template.
+//
+// 3) Use the ClassWizard to add command handlers to your dialog class.
+
+/////////////////////////////////////////////////////////////////////
+// To Add a Toolbar...
+/////////////////////////////////////////////////////////////////////
+
+// 1) Use the Toolbar Editor to create a new toolbar, or copy one from another
+// project.
+//
+// 2) Use the Dialog Editor to add a long skinny static control where you'd like
+// the toolbar to go in your dialog template.
+//
+// 3) Embed a CToolbar class variable in your dialog class:
+
+	CToolbar m_wndToolBar;
+
+// 4) In the dialog class's OnInitDialog() message handler, create the toolbar
+// and position it inside the static control:
+
+	if (!m_wndToolBar.Create(this) ||
+	!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
+	{
+		TRACE0("Failed to create toolbar\n");
+		return -1;      // fail to create
+	}
+
+	// move toolbar and status bar over static controls
+	CRect rect;
+	GetDlgItem(IDC_TOOLBAR_STATIC)->GetWindowRect(&rect);
+	ScreenToClient(&rect);
+	m_wndToolBar.MoveWindow(&rect);
+
+// 5) You must also manually update the status of these toolbars (gray them out, etc.)
+
+/////////////////////////////////////////////////////////////////////
+// To Add a Status Bar...
+/////////////////////////////////////////////////////////////////////
+
+// 1) Use the String Table Editor to define your status bar panes:
+
+    ID_INDICATOR_ONE        "xxx"
+    ID_INDICATOR_TWO        "yyy"
+
+// 2) Use the Dialog Editor to add a static control where you want your status
+// bar to appear in your dialog template.
+
+// 3) Embed a status bar control in your dialog class:
+
+	CStatusBar  m_wndStatusBar;
+
+// 4) Add a list of status pane definitions to the top of your dialog class:
+
+static UINT indicators[] =
+{
+	ID_SEPARATOR,           // status line indicator
+	ID_INDICATOR_ONE,
+	ID_INDICATOR_TWO,
+};
+
+// 5) Create the status bar and position it over the static control:
+
+	if (!m_wndStatusBar.Create(this,WS_CHILD|WS_VISIBLE|WS_BORDER) ||
+		!m_wndStatusBar.SetIndicators(indicators,
+		  sizeof(indicators)/sizeof(UINT)))
+	{
+		TRACE0("Failed to create status bar\n");
+		return -1;      // fail to create
+	}
+
+	GetDlgItem(IDC_STATUSBAR_STATIC)->GetWindowRect(&rect);
+	ScreenToClient(&rect);
+	m_wndStatusBar.MoveWindow(&rect);
+
+// 6) Indent the first status bar pane so that it shows:
+
+	UINT nID,nStyle;
+	int nWidth;
+	m_wndStatusBar.GetPaneInfo(0, nID, nStyle, nWidth) ;
+	m_wndStatusBar.SetPaneInfo(0, nID, SBPS_STRETCH, nWidth) ;
+
+// 7) You must now manually update the status panes in this bar.
+
+/////////////////////////////////////////////////////////////////////
+// From: Visual C++ MFC Programming by Example by John E. Swanke
+// Copyright (C) 1999 jeswanke. All rights reserved.
+/////////////////////////////////////////////////////////////////////
+

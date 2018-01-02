@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<XML>
+    <Items>
+        <Item Title="This">
+            <Item Title="is">
+                <Item Title="a">
+                    <Item Title="little test!" />
+                </Item>
+            </Item>
+        </Item>
+        <Item Title="Developed by Andreas Loeffler in 2006">
+            <Item Title="Website: http://www.unitedbytes.de"/>
+        </Item>
+        <Item Title="CodeProject rocks!"/>
+    </Items>
+</XML>

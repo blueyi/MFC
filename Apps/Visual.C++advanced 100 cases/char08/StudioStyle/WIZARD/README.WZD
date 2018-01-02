@@ -1,0 +1,33 @@
+/////////////////////////////////////////////////////////////////////
+// Example files...
+/////////////////////////////////////////////////////////////////////
+
+WzdTlBar.cpp -- a toolbar class with a command bar appearance
+WzdTlBar.h
+
+/////////////////////////////////////////////////////////////////////
+// Modify the MainFrame Class.
+/////////////////////////////////////////////////////////////////////
+
+// 1) use CWzdToolBar in MainFrm.h
+	CWzdToolBar    m_wndToolBar;
+
+
+// 2) use LoadToolBarEx() in MainFrm.cpp
+int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+	if (CMDIFrameWnd::OnCreate(lpCreateStruct) == -1)
+		return -1;
+	
+	if (!m_wndToolBar.Create(this) ||
+		!m_wndToolBar.LoadToolBarEx(IDR_MAINFRAME))	   <<<<<<
+	{
+		TRACE0("Failed to create toolbar\n");
+		return -1;      // fail to create
+	}
+
+/////////////////////////////////////////////////////////////////////
+// From: Visual C++ MFC Programming by Example by John E. Swanke
+// Copyright (C) 1999 jeswanke. All rights reserved.
+/////////////////////////////////////////////////////////////////////
+

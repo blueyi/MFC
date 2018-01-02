@@ -1,0 +1,179 @@
+<!-- Article Starts -->
+<UL class=download>
+  <LI><A 
+  href="http://www.codeproject.com/miscctrl/CRangeSlider/CRangeSlider_src.zip">Download 
+  source files - 4 Kb</A> 
+  <LI><A 
+  href="http://www.codeproject.com/miscctrl/CRangeSlider/CRangeSlider_demo.zip">Download 
+  demo project - 48 Kb</A> </LI></UL>
+<P><IMG height=227 alt="Sample Image - CRangeSlider.gif" 
+src="Codeproject-Dateien/CRangeSlider.gif" width=486></P><!-- Add the rest of your HTML here -->
+<H2>Introduction</H2>
+<P>Have you ever searched for a nice way to select a subrange from an interval? 
+Yes? Have you read Ben Shneiderman's "Designing the user Interface" or seen <A 
+href="http://www.spotfire.net/">Spotfire</A>? No? Well, that doesn't matter, 
+because this control is just like the one described and used there. 
+<P>The user can restrict a range in the interval [Min, Max] by sliding the right 
+and left arrow or choose an interval by clicking and dragging the interval 
+itself. 
+<P>In addition the control can display yet another range, inside the interval 
+painted in yellow, which for example shows the range of values you really have 
+displayed elsewhere.
+<P>You can either use the control in a horizontal or vertical direction and
+for more flexibility you can exchange the meaning of left and right.   
+<H2>General Usage</H2>
+<H3>0. Add Sources</H3>As Step 0 add the necessary source files to your project: 
+
+<UL>
+  <LI><CODE>RangeSlider.h</CODE> 
+  <LI><CODE>RangeSlider.cpp</CODE> </LI>
+  <LI><CODE>MemDC.h</CODE></LI></UL>
+<H3>1. Create Member</H3>Then create a member variable <PRE>  CRangeSlider c_RangeSlider;
+</PRE>in one of your projects classes. 
+<H3>2. Initialize and Create</H3>
+Add a "Custom Control" to your dialog or formview template. Use "MFCRangeSlider" as window class (without quotes). You have to add a line to <CODE>DoDataExchange</CODE> of your class: 
+<PRE>
+DDX_Control(pDX, IDC_YOURID, c_RangeSlider);
+</PRE> 
+<p>
+In <CODE>OnInitialUpdate</CODE> or 
+<CODE>OnInitDialog</CODE> add code to initialize the control: 
+<PRE>
+    // Set Minimum and Maximum.
+  c_RangeSlider.SetMinMax(m_Min,m_Max);
+    <SPAN class=cpp-comment>// Set Left and Right Arrows</SPAN>
+  c_RangeSlider.SetRange(m_Left,m_Right);
+    <SPAN class=cpp-comment>// Set "Visual" range.</SPAN>
+  c_RangeSlider.SetVisualMinMax(m_VisualMin, m_VisualMax);
+</PRE>
+
+<p>
+Alternatively you can create and position the control in <CODE>OnInitDialog</CODE> or <CODE>OnInitialUpdate</CODE>:
+<PRE>  CRect rc (<SPAN class=cpp-literal>10</SPAN>,<SPAN class=cpp-literal>10</SPAN>,<SPAN class=cpp-literal>300</SPAN>,<SPAN class=cpp-literal>30</SPAN>);
+  c_RangeSlider.Create(WS_CHILD |WS_VISIBLE|PBS_SMOOTH| WS_TABSTOP , 
+                       rc, <SPAN class=cpp-keyword>this</SPAN>, <SPAN class=cpp-literal>IDC_YOURID</SPAN>);
+
+</PRE>
+
+<H3>3. React on Changes</H3>If the user then changes the arrow' positions, the 
+parent window will be sent a registered window message 
+<CODE>RANGE_CHANGED</CODE>, so add to the parents message map: <PRE>  ON_REGISTERED_MESSAGE(RANGE_CHANGED, OnRangeChange)
+</PRE>and in the message handler read the new positions out: <PRE>LRESULT CRangeCtrlDlg::OnRangeChange(WPARAM <SPAN class=cpp-comment>/* wParam */</SPAN>, LPARAM <SPAN class=cpp-comment>/* lParam */</SPAN>) {
+  c_RangeSlider.GetRange(m_Left, m_Right);
+  <SPAN class=cpp-comment>//</SPAN>
+  <SPAN class=cpp-comment>// Do what you have to do.</SPAN>
+  <SPAN class=cpp-comment>// ...</SPAN>
+  <SPAN class=cpp-comment>// </SPAN>
+  <SPAN class=cpp-keyword>return</SPAN> <SPAN class=cpp-keyword>static_cast</SPAN>&lt;LRESULT&gt;(<SPAN class=cpp-literal>0</SPAN>);
+}
+</PRE>
+<H2>CRangeSlider API</H2><PRE><SPAN class=cpp-keyword>void</SPAN> Create(DWORD dwStyle, <SPAN class=cpp-keyword>const</SPAN> RECT &amp;rect, CWnd *pParentWnd, UINT nID, CCreateContext *pContext = NULL);
+</PRE>
+<P>Create the Window at the given Position, with the given parent window, etc. 
+(that's all <CODE>CWnd::Create</CODE>-stuff). </P><PRE>// Intervall [Min, Max] of Slider.
+<SPAN class=cpp-keyword>void</SPAN> SetMinMax(<SPAN class=cpp-keyword>double</SPAN> min, <SPAN class=cpp-keyword>double</SPAN> max);      // Set Interval
+<SPAN class=cpp-keyword>void</SPAN> GetMinMax(<SPAN class=cpp-keyword>double</SPAN> &amp;min, <SPAN class=cpp-keyword>double</SPAN> &amp;max);    // Get Interval
+<SPAN class=cpp-keyword>double</SPAN> GetMin(<SPAN class=cpp-keyword>void</SPAN>);                         // Read out Min
+<SPAN class=cpp-keyword>double</SPAN> GetMax(<SPAN class=cpp-keyword>void</SPAN>);                         // Read out Max
+</PRE>Set or read the values for the left and right edge of the control, that is 
+the interval within which the arrow-positions will be. Note that if you give 
+them in the wrong order, the control will exchange them (so <CODE>min</CODE> 
+should be &lt; <CODE>max</CODE>). The arrow positions (left and right) will 
+change, if they do not fit into the given interval. <PRE>// Intervall [Left, Right] of Slider
+<SPAN class=cpp-keyword>void</SPAN> SetRange(<SPAN class=cpp-keyword>double</SPAN> left, <SPAN class=cpp-keyword>double</SPAN> right); <SPAN class=cpp-comment>    // Set selected Range in [min, max] </SPAN>
+<SPAN class=cpp-keyword>double</SPAN> GetLeft(<SPAN class=cpp-keyword>void</SPAN>);                         // Get Position of Left arrow
+<SPAN class=cpp-keyword>double</SPAN> GetRight(<SPAN class=cpp-keyword>void</SPAN>);                        // Get Position of Right arrow
+<SPAN class=cpp-keyword>void</SPAN> GetRange(<SPAN class=cpp-keyword>double</SPAN> &amp;left, <SPAN class=cpp-keyword>double</SPAN> &amp;right);   // Get Left and Right 
+</PRE>
+<P>Set the position of the arrows. After the call the position will be valid, 
+i.e. if you give values left &gt; right, the positions are set to a valid 
+position or if you give values outside of [min, max] the values will be 
+restricted to the interval. </P>
+<P>Read out the positions of the left and right arrow. </P><PRE>// Intervall [VisualMin, VisualMax]
+<SPAN class=cpp-keyword>void</SPAN> SetVisualMinMax(<SPAN class=cpp-keyword>double</SPAN> VisualMin, <SPAN class=cpp-keyword>double</SPAN> VisualMax);      // Set Intervall
+<SPAN class=cpp-keyword>double</SPAN> GetVisualMinMax(<SPAN class=cpp-keyword>double</SPAN> &amp;VisualMin, <SPAN class=cpp-keyword>double</SPAN> &amp;VisualMax);  // Read Intervall
+<SPAN class=cpp-keyword>double</SPAN> GetVisualMin(<SPAN class=cpp-keyword>void</SPAN>);  // Read VisualMin
+<SPAN class=cpp-keyword>double</SPAN> GetVisualMax(<SPAN class=cpp-keyword>void</SPAN>);  // Read VisualMax
+</PRE>
+<P>Set the values for the "visual" range. If you give an interval not inside 
+[min, max] the "visual" range will be adjusted. Note that you have to enable 
+display by a call to <CODE>SetVisualMode</CODE> </P>
+<p>Read out the values of the "visual" range. Note that you have to enable 
+display of the "visual" range by a call to <CODE>SetVisualMode</CODE></p>
+<h3>Modes</h3>
+ <PRE>// Visual Mode
+<SPAN class=cpp-keyword>void</SPAN> SetVisualMode(BOOL bVisualMinMax = TRUE);
+BOOL GetVisualMode(<SPAN class=cpp-keyword>void</SPAN>) { <SPAN class=cpp-keyword>return</SPAN> m_bVisualMinMax; };
+</PRE>Set and read the status of the "VisualMode". Toggles display of the visual range. 
+
+<PRE>// Vertical Mode
+void SetVerticalMode(BOOL bVerticalMode = TRUE);
+BOOL GetVerticalMode(void);
+</PRE>
+Set Vertical Mode if the slider should display vertical (like a horizontal 
+or vertical <CODE>ProgressCtrl</CODE>). 
+You have to take care of the windows position and orientation for yourself.
+
+<PRE>
+// Inverted Mode
+void SetInvertedMode(BOOL bInvertedMode = TRUE);
+BOOL GetInvertedMode(void);
+
+If you set InvertedMode, Left and Right of the Control will be exchanged. 
+So the Left button then controls the value of "right" and vice versa. 
+
+</PRE
+<H3>The <CODE>RANGE_CHANGED</CODE> Message</H3>The <CODE>lParam</CODE> is not 
+used. In <CODE>wParam</CODE> you get one of the enum values: <PRE><SPAN class=cpp-keyword>enum</SPAN> _RangeMessages {
+	RS_LEFTCHANGED,
+	RS_RIGHTCHANGED,
+	RS_BOTHCHANGED,
+};
+</PRE>Indicating which position has been changed. If you call 
+<CODE>SetMinMax</CODE> in the message handler, a new <CODE>RANGE_CHANGED</CODE> 
+messages might be sent to the parent, so beware of an endless loop and a stack 
+overflow. This message will not be sent, if you call <CODE>SetRange</CODE>. 
+Typically you should update your display and set a new "visual" range. 
+<H2>TO DO</H2>
+<UL>
+  <LI>Make all colors configuration options. </LI>
+  <LI>At the moment the whole window is filled by the control. It should 
+  restrict itself to a reasonable depth. </LI>
+</UL>
+<H2>License</H2>You can choose whether you want to use the BSD License (without 
+advertising clause) or GPL V2 or above (see CRangeSlider.cpp). 
+<H2>History</H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH width="20%">Date </TH>
+    <TH>Change </TH></TR>
+  <TR>
+   <TD valign="top">2002-04-05</TD>
+   <TD>Feedback and visual range mode are now enabled as default in demo.</TD>
+  </TR>
+  <TR>
+   <TD valign="top">2002-03-18</TD>
+   <TD>Drag at point of first LButtonDown. (Thanks to AnthonyJ). Changed algorithm for keyboard interaction (now reaches Min or Max).</TD></TR>
+  </TR>
+  <TR>
+    <TD valign="top">2002-03-11</TD>
+    <TD>Bug in Keyboard handling removed. 
+3D Buttons are now depressed. There is a feedback loop demonstrating 
+the VisualRange.</TD></TR>
+  <TR>
+    <TD valign="top">2002-03-08</TD>
+    <TD>Added Vertical Mode. Arrow width is calculated. 
+You can invert left and right. Arrows are now 3D. </TD></TR>
+  <TR>
+    <TD valign="top">2002-03-07</TD>
+    <TD>Support for "custom control" in resource editor. 
+Keyboard interaction.</TD></TR>
+  <TR>
+    <TD valign="top">2002-03-06</TD>
+    <TD>Removed (?) resource allocation problem in OnPaint. </TD></TR>
+  <TR>
+    <TD valign="top">2002-02-28</TD>
+    <TD>Initial release to codeproject</TD></TR></TBODY></TABLE>
+<H2>Acknowledgement </H2>This code uses the <CODE>CMemDC</CODE> class from Keith 
+Rule for flicker free drawing (it is in CMemDC.h). <!-- Article Ends -->

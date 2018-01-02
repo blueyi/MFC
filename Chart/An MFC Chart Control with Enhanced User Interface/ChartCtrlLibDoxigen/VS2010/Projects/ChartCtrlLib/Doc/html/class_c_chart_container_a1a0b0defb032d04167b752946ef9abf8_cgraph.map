@@ -1,0 +1,5 @@
+<map id="CChartContainer::AllowChartPnts" name="CChartContainer::AllowChartPnts">
+<area shape="rect" id="node3" href="$class_c_chart.html#acd04e20df9f809db7da4d615f0ea85f4" title="CChart::AllowPnts" alt="" coords="287,5,415,32"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#a352aafeff66a658bfbaddd8ce0e21fa1" title="CChart::ArePntsAllowed" alt="" coords="269,56,432,83"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#a89628f49307611cd81ec50b14c718586" title="CChart::IsChartVisible" alt="" coords="275,107,426,133"/>
+</map>

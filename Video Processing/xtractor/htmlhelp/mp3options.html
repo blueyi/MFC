@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+  <TITLE>MP3 Options</TITLE>
+  <link rel="stylesheet" href="xtractorhelp.css">
+</HEAD>
+<BODY>
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="Blade">
+	<param name="Keyword" value="Lame">
+	<param name="Keyword" value="MP3">
+	<param name="Keyword" value="VBR">
+                <param name="Keyword" value="Bitrate">
+	<param name="Keyword" value="ID3">
+</OBJECT>
+  <!-- Help Item title -->
+  <H2>MP3 Options</H2>
+  <HR>
+  <CENTER><IMG SRC="mp3-options.png" HEIGHT="435" WIDTH="416"></CENTER><BR><BR>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TD ALIGN="top" COLSPAN="2"><B>General Options:</B></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Bitrate</B></TD>
+      <TD>Selects the constant bitrate for the MP3 file in kbit/sec.  Note: when using VBR(Variable Bit Rate) under LAME_ENC, this represents the minimum bitrate.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Enable ID3 Tags</B></TD>
+      <TD>When checked, an ID3v1 tag will be added to the MP3 file.  If no ID3 information was input for the current CD in the drive, no tag will be written,even if the item is checked.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Generate CRC</B></TD>
+      <TD>When checked, a CRC will be generated for each MP3 frame.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Original</B></TD>
+      <TD>Sets the "Original" flag in the MP3 file.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Copyright</B></TD>
+      <TD>Sets the Copyright flag in the MP3 file.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Private</B></TD>
+      <TD>Sets the Private flag in the MP3 file.</TD>
+    </TR>
+  </TABLE>
+  
+  <BR><BR>
+  <TABLE WIDTH="100%">
+    <TR>
+      <TD ALIGN="top" COLSPAN="2"><B>Lame Encoder Options:</B></TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>VBR Quality</B></TD>
+      <TD>A value from 0 to 9.  While 0 represents the highest quality, it increases the overall encoding time.  According to the LAME documentation, for the highest quality files, values for VBR Quality should be 4 or less.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>VBR Max. Bitrate</B></TD>
+      <TD>The maximum bitrate used when VBR is enabled.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>MPEG Quality</B></TD>
+      <TD>The overall quality of the MP3 file: Normal, Low, High, Voice</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Enable VBR</B></TD>
+      <TD>When checked, the VBR (Variable Bit Rate) option is enabled.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Write VBR Header</B></TD>
+      <TD>Causes the VBR header to be written to the MP3 file.  When using VBR, this header will allow MP3 players to determine the proper length of the file.</TD>
+    </TR>
+  </TABLE>
+  <HR>
+</BODY>
+</HTML>

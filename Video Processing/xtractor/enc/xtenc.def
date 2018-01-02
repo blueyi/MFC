@@ -1,0 +1,15 @@
+EXPORTS
+xtGetEncoder
+xtSetAsciiOption
+xtSetIntOption
+xtOpenOutputFile
+xtCheckOutputFileExists
+xtEncode
+xtClose
+xtFlush
+xtInit
+xtFormatAvail
+xtEncoderAvail
+xtGetExtension
+xtGetFilename
+xtGetOutputFileName

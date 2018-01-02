@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by DemoFLB.rc
+//
+#define HIDC_NB_FONTS_FNTDLG            0x808103ea    // IDD_PP_STYLES

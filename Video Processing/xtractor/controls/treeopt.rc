@@ -1,0 +1,10 @@
+#include "windows.h"
+
+
+RipTrackDialog DIALOG 0, 0, 180, 130
+STYLE DS_MODALFRAME | WS_CAPTION
+CAPTION "Rip Tracks"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "", 9191, "SysTreeView32", WS_CHILD | WS_VISIBLE, 51, 38, 99, 12
+END

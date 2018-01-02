@@ -1,0 +1,34 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=xtractor.chm
+Contents file=Table of Contents.hhc
+Default Font=Arial,9,0
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Help for CD-DA X-Tractor
+
+
+[FILES]
+cddboptions.html
+cdoptions.html
+credits.html
+faq.html
+features.html
+id3.html
+intro.html
+license.html
+menuitems.html
+miscoptions.html
+mp3options.html
+outputoptions.html
+quickstart.html
+ripsegment.html
+toolbar.html
+vorbisoptions.html
+
+[INFOTYPES]
+

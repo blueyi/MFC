@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ListCtrlDemo", "ListCtrlDemo.vcproj", "{76C92E1D-CFB7-49A2-BD1D-A40A34B9A35A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76C92E1D-CFB7-49A2-BD1D-A40A34B9A35A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76C92E1D-CFB7-49A2-BD1D-A40A34B9A35A}.Debug|Win32.Build.0 = Debug|Win32
+		{76C92E1D-CFB7-49A2-BD1D-A40A34B9A35A}.Release|Win32.ActiveCfg = Release|Win32
+		{76C92E1D-CFB7-49A2-BD1D-A40A34B9A35A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

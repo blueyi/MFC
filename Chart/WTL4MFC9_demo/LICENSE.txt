@@ -1,0 +1,29 @@
+This code accompanied the article:
+  WTL for MFC Programmers, Part IX - GDI Classes, Common Dialogs, and Utility Classes
+available at this URL:
+  http://www.codeproject.com/wtl/wtl4mfc9.asp
+written by:
+  Michael Dunn (acidhelm@gmail.com)
+Release date:
+  February 8, 2006
+
+With the exception of the files ColorButton.cpp and ColorButton.h,
+this demo code is released to the public domain.
+I release it this way so that the code can benefit everyone. (I don't make the
+article itself public domain because having the article available only on
+CodeProject helps both my own visibility and the CodeProject site.)
+If you use this demo code in your own application, an email letting me know
+would be appreciated (just to satisfy my curiosity about whether folks are
+benefitting from my code) but is not required. Attribution in your own source
+code is also appreciated but not required.
+
+The files ColorButton.cpp and ColorButton.h come from:
+  "Color Picker for WTL with XP themes" by Tim Smith 
+  http://www.codeproject.com/wtl/wtlcolorbutton.asp
+They are not covered by the above license statement; see the comments in those
+files for their license.
+
+If you have other questions about using this code in your own work, see the
+CodeProject FAQ at:
+  http://www.codeproject.com/info/faq.asp
+specifically question 4 in the section "Articles".

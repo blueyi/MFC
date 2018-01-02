@@ -1,0 +1,6 @@
+; BulkRename.def : Declares the module parameters for the DLL.
+
+LIBRARY      "BulkRename"
+
+EXPORTS
+    ; Explicit exports can go here

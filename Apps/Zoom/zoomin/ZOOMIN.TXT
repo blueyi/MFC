@@ -1,0 +1,115 @@
+________________________________________________________________ 
+ZoomIn (VERSION 1.00)
+Copyright (c) 1997 Ziff-Davis Publishing Company
+Written by Steve Zimmerman and Brent Zimmerman
+First Published in PC Magazine, US Edition, September 9 1997.
+________________________________________________________________ 
+About  ZoomIn...
+
+ZoomIn lets you use a hotkey to pop up a zoomed window. 
+Since the keyboard and mouse remain fully functional, it is 
+especially useful within paint programs. When the zoom window 
+is displayed, the mouse is slowed to facilitate bitmap editing. 
+
+ZoomIn is application-independent, and lets you configure the 
+hotkey as well as the zoom factor and the pixel width. It runs 
+under Windows 95 and Windows NT 4.0 or higher.
+
+USAGE:
+
+To install ZoomIn, copy its program files-ZoomIn.exe and 
+KeyHook.dll-to a directory on your hard drive, and add a shortcut 
+to ZoomIn.exe to your Startup menu. If you find that you use 
+ZoomIn often, put the shortcut in your StartUp group so it's 
+loaded automatically each time you start Windows.
+
+When you run ZoomIn, it places its magnifying-glass icon in the 
+system tray. To toggle the zoom window on an off, double-click 
+the tray icon or press the ZoomIn hotkey. The hotkey is set to 
+Ctrl+` by default because this is an uncommon key combination 
+that you can press with your left hand (the opposite hand that 
+most people use to maneuver the mouse). You can change the 
+hotkey if you'd prefer something else.
+
+The zoom window is a thinly outlined square containing a 
+magnified copy of the area surrounding the mouse pointer. The 
+small flashing square inside the window represents the location 
+of mouse pointer. To zoom in on a specific area of the screen, 
+simply move the mouse to that location. The ZoomIn window will 
+follow your movements, typically staying at the lower right of 
+the mouse pointer. If you move the mouse pointer to the extreme 
+bottom or right side of the screen, the ZoomIn window will 
+automatically move to the other side of the pointer to avoid 
+moving off the edge of the screen.
+
+What makes ZoomIn much more than a simple magnifier utility is 
+that when the zoom window is displayed, you can still perform 
+all of the usual mouse and keyboard functions. This is partic-
+ularly useful in bitmap editors that require the use of the 
+mouse. To exit ZoomIn, right-click its tray icon and choose 
+Exit ZoomIn from the context menu.
+
+ZoomIn lets you control four settings: the hotkey combination, 
+the zoom factor, the zoom area, and the hotkey behavior. 
+To change any of these properties, right-click the ZoomIn tray 
+icon and choose Properties. Due to programming constraints, 
+the hotkey is disabled while the ZoomIn Properties dialog box 
+is visible, but you can bring up a test zoom window by clicking 
+on the image of the globe.
+
+To change the hotkey, put the cursor in the Hotkey edit box, 
+then press the desired key combination. You must use key com-
+binations that include Shift, Alt or Ctrl, and single keys 
+cannot be used.
+
+The Zoom Factor control lets you change the magnification of 
+the ZoomIn window. A zoom factor of three means that one pixel 
+on the screen will appear three pixels wide and three pixels 
+high in the ZoomIn window. You can set the zoom factor to any 
+value from two to six.
+
+The Zoom Area control determines the size of the area that will 
+be magnified in the zoom window. For example, if you set the 
+zoom area to 25, the zoom window will magnify an area of the 
+screen 25 pixels wide and 25 pixels high. You can set the zoom 
+area to any value between 20 and 60.
+
+The "Only display while hotkey is held down" checkbox lets you 
+change the behavior of the hotkey. When unchecked (the default), 
+the hotkey acts like a toggle; the zoom window stays visible 
+until you press the hotkey again. If you check this option, 
+the ZoomIn window will only remain visible while the hotkey is 
+held down.
+
+Note: The file ZOOM_SRC.ZIP contained in ZOOMIN.ZIP is the 
+source code for ZoomIn.  This will only be of interest to you 
+if you are a programmer, and can be discarded if you choose.
+
+Support for ZoomIn:
+Support for the free utilities offered by PC Magazine can be 
+obtained electronically in the discussion area of 
+PC Magazine's Web site and in the Utilities section of ZD Net's 
+TIPS Forum on CompuServe.
+
+For PC Magazine's Web site go to the 
+URL http://www.pcmag.com/discuss/ and select the Utilities 
+area. You can also access the Utilities discussion area from 
+the utility's download page. The authors of current utilities 
+generally monitor the discussion area every day. You may find 
+an answer to your question simply by reading the messages 
+previously posted. If the author is not available and you have
+a question that the sysops can't answer, the editor of the 
+Utilities column, who also checks the area each day, will 
+contact the author for you.
+
+For ZD Net's TIPS Forum (GO ZNT:TIPS). The authors of current 
+utilities generally visit this forum daily. You may find an 
+answer to your question by reading the messages already posted 
+in the forum. If the author is not available and the forum 
+sysops can't answer your question, the Utilities column editor, 
+who checks this forum each day, will contact the author for you.
+
+ZoomIn was cowritten by Steve Zimmerman and Brent Zimmerman, 
+brothers and Windows programmers based in Utah.
+_____________________________________________________________
+

@@ -1,0 +1,224 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "&Show Zoom Window",           ID_TRAY_ACTIVATE
+        MENUITEM "E&xit ZoomIn",                ID_TRAY_EXITZOOMIN
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties..",               ID_TRAY_CHANGESETTINGS
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_APPMENU_RESOURCES\r\n"
+    "#define  _AFX_NO_FILECMD_RESOURCES\r\n"
+    "#define _AFX_NO_CFILE_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_MAPI_RESOURCES\r\n"
+    "#define _AFX_NO_OCC_RESOURCES\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_NEWTYPEDLG_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPERTIES_DIALOG DIALOGEX 0, 0, 277, 137
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "ZoomIn Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "&Hotkey:",IDC_STATIC_HOTKEY,7,21,54,8
+    CONTROL         "Hotkey1",IDC_HOTKEY,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,66,18,79,14,0,HIDC_HOTKEY
+    RTEXT           "Zoom &Area:",IDC_STATIC_ZOOMAREA,7,44,54,8
+    EDITTEXT        IDC_WIDTH,66,42,24,14,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_WIDTH
+    CONTROL         "Spin1",IDC_WIDTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,89,42,8,
+                    14
+    LTEXT           "(20 - 60 pixels)",IDC_STATIC_AREAPIXELS,100,45,55,8
+    RTEXT           "Zoom &Factor:",IDC_STATIC_ZOOMFACTOR,7,67,54,8
+    EDITTEXT        IDC_FACTOR,66,65,24,14,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_FACTOR
+    CONTROL         "Spin1",IDC_FACTOR_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,89,65,8,14
+    LTEXT           "(2 - 6 times)",IDC_STATIC_FACTORPIXELS,100,68,63,8
+    CONTROL         "&Only display while hotkey is held down",
+                    IDC_CHECK_PERSIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    18,92,143,10,0,HIDC_CHECK_PERSIST
+    CTEXT           "Click on image to test:",IDC_STATIC_CLICKIMAGE,154,7,
+                    116,8
+    CONTROL         106,IDC_BITMAP,"Static",SS_BITMAP | SS_CENTERIMAGE,167,
+                    26,101,104,0,HIDC_BITMAP
+END
+
+IDD_ABOUT_DIALOG DIALOGEX 0, 0, 277, 137
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "About ZoomIn"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Copyright © 1997\nZiff Davis Publishing Company\nAll Rights Reserved\n\nFirst appeared in PC MAGAZINE,\nUS Edition 07-October-97",
+                    IDC_STATIC,150,43,119,60
+    CONTROL         107,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE,7,7,
+                    144,123,0,HIDC_STATIC
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PROPERTIES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 270
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ZOOMIN_ENABLED      ICON    DISCARDABLE     "enabled.ico"
+IDI_ZOOMIN_DISABLED     ICON    DISCARDABLE     "disabled.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WORLD               BITMAP  DISCARDABLE     "world.bmp"
+IDB_ABOUT               BITMAP  DISCARDABLE     "about.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPSHEET_TITLE     "ZoomIn Properties"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "ZoomIn"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SHOWWINDOW          "&Show Zoom Window"
+    IDS_HIDEWINDOW          "&Hide Zoom Window"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_APPMENU_RESOURCES
+#define  _AFX_NO_FILECMD_RESOURCES
+#define _AFX_NO_CFILE_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_MAPI_RESOURCES
+#define _AFX_NO_OCC_RESOURCES
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_NEWTYPEDLG_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#include "afxres.rc"         // Standard components
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

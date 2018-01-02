@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThumbViewer", "ThumbViewer.vcproj", "{93CB5A85-0154-4DC4-AACD-6A02C304F424}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Unicode|Win32 = Debug_Unicode|Win32
+		Debug|Win32 = Debug|Win32
+		Release_Unicode|Win32 = Release_Unicode|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Debug|Win32.ActiveCfg = Debug|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Debug|Win32.Build.0 = Debug|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Release|Win32.ActiveCfg = Release|Win32
+		{93CB5A85-0154-4DC4-AACD-6A02C304F424}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

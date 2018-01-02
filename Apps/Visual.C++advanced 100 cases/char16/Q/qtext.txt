@@ -1,0 +1,25 @@
+SnapShot ComboBox
+In many cases, a SnapShot(quick) ComboBox control is useful. When number of items exceds 10.000 items, filling a combobox will take a long time, and in that case a QComboBox is welcome. I am working in Windows CE environment, where the speed is a real requirement.
+It's a very easy to understand how this control works. The idea is to load only items that I need. When, nothing is happen in the system, one of the alive QComboBox controls, will take this time as useful, and it will load a number of lines for each alive controls, and so on. If you want to find more details, you can feel free ask me, or to study the given implementation of CQComboBox class.
+
+For using this kind of ComboBox, user must provide two mandatory things:
+ - a function Line, which must return line from a given position.
+ - count of lines in the QComboBox control.
+ - If control must provide, "search for" option, user must provide a function LinePartial, that will return position line which start with a given text(string).
+How user can use this control? Any other user's way is not prohibited:)
+ - First step, is to put a custom control, with "QComboBox" as class name, in resource editor. If user want to create dynamically, he can call CreateEx function with class name "QComboBox", and with others required parameters to create a normaly window.
+ - The second step, is to allocate member variables into dialog(form) class of CQComboBox type for each custom controls put in editor resource.
+ - User must to call constructor of each CQComboBox member variables, with three arguments. The first, indicates the Line function, the second, LinePartial function, and the third a user data. 
+ "Line" function has the following type:
+     LPCTSTR LineFunction(int iLine, LPARAM& lParamItem, LPARAM lParam = 0);
+where iLine represent position of required line , lParamItem represents a user data for each line, and lParam is passed to this function with same value set in the third argument of CQComboBox constructor.
+ "LinePartial" function has the following type:
+     int LinePartialFunction (LPCTSTR lpszItemPartial, LPARAM lParam = 0);
+where lpszItemPartial is the string to looking for in lines, lParam has the same specification like in "Line" function.
+ - In OnInitDialog, or OnInitialUpdate(from case to case), user must to call SubclassDlgItem, or CreateEx function, to subclass(create) all needed custom controls. The next pass is to call SetCountItems of CQComboBox, for each QComboBox control. This function needs for updating the vertical scroll bar QComboBox object. If this function, is not called, then vertical scroll  bar in dropped listbox, will not exists, but you can access to all lines, throw keys left, down, pgup, pgdn,...
+How user will know when something is happening in the QComboBox control?
+ It exists three important (for me) messages, that parent of QCOmboBox object will receive. Parent window will receive QCBN_SELCHANGE registered message, when user changed the selection in control. The wParam parameter will containt the ID identifier of combo box, which sends the message, lParam will retrieve the handle of same window.  To find the value of a registered message feel free to call RegisterWindowMessage. If the message is already registered, the function will return , a UINT value of message.
+Also, the parent window of QComboBox will receive the QCBN_LOADING, and QCBN_LOADED messages. These messages are received, before and after the QComboBox control load a number of items. wParam parameter, in that case, will have the handle to qcombobox control. To find which are the items that will be loaded, the lParam parameters passed by these messages, in the QCBN_LOADING message case, represents the first line that will be loaded, and in QCBN_LOADED message, the count of loaded lines.
+QSnapLoader class is a general class for load snippet of lines. This implements a double linked list for manages all loaded lines.
+Sincerely, Mihai Filimon
+

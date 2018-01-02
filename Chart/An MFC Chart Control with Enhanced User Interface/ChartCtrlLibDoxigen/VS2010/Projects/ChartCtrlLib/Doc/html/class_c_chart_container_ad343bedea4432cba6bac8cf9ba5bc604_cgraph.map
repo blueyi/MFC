@@ -1,0 +1,14 @@
+<map id="CChartContainer::OnPaint" name="CChartContainer::OnPaint">
+<area shape="rect" id="node3" href="$class_matrix_d.html#ab6c04f314c91f54dc3053107d9b0c3eb" title="MatrixD::Clone" alt="" coords="254,31,362,57"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#aa8faa11c7ea0059d8dad686eae6d2578" title="CChart::DrawChartCurve" alt="" coords="227,93,389,120"/>
+<area shape="rect" id="node19" href="$_util_8h.html#ad4241dcbd92007f79c6b005879616616" title="GdiRectToRectF" alt="" coords="249,144,367,171"/>
+<area shape="rect" id="node21" href="$class_c_chart.html#a89628f49307611cd81ec50b14c718586" title="CChart::IsChartVisible" alt="" coords="233,195,383,221"/>
+<area shape="rect" id="node23" href="$class_matrix_d.html#a2f3e66f0094fca9ce5a11b34c53e7341" title="MatrixD::Scale" alt="" coords="254,245,362,272"/>
+<area shape="rect" id="node25" href="$class_matrix_d.html#aa73c0644b339b6494a20893f49661b75" title="MatrixD::Translate" alt="" coords="244,296,372,323"/>
+<area shape="rect" id="node5" href="$class_matrix_d.html#aec0626095a88c89e34389c73f9b2023b" title="MatrixD::MatrixD" alt="" coords="463,5,583,32"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a0b411e3506e858e6445dbafe714a8499" title="CChart::ConvertChartData" alt="" coords="437,56,608,83"/>
+<area shape="rect" id="node15" href="$_util_8h.html#ad12a28f5ed37de8eceb17c2bfc099de8" title="RectFFromCenterF" alt="" coords="456,107,589,133"/>
+<area shape="rect" id="node17" href="$_util_8h.html#a68596bdfd7bfb50647b3df02d9ae2e3b" title="SetAlpha" alt="" coords="485,157,560,184"/>
+<area shape="rect" id="node11" href="$class_c_chart.html#af24f5990f1ad41fc0e426bfbe16d3700" title="CChart::GetStartEndDataIterators" alt="" coords="656,56,872,83"/>
+<area shape="rect" id="node13" href="$_util_8h.html#afdb2319561cb5e462e1608318f504f7e" title="find_border_pnts" alt="" coords="920,56,1037,83"/>
+</map>

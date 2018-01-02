@@ -1,0 +1,5 @@
+<map id="CChartContainer::ResetCharts" name="CChartContainer::ResetCharts">
+<area shape="rect" id="node3" href="$class_c_chart.html#a89628f49307611cd81ec50b14c718586" title="CChart::IsChartVisible" alt="" coords="270,5,421,32"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#a97e56feceb121673a9ab33ca8eea4469" title="CChart::SetLocScaleY" alt="" coords="269,56,422,83"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#a512877c17fe6cb989050c4d3ad65b0b9" title="CChart::ToggleChartVisibility" alt="" coords="251,107,439,133"/>
+</map>

@@ -1,0 +1,26 @@
+// USEdgeObj.cpp: implementation of the CUSEdgeObj class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "USEdgeObj.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CUSEdgeObj::CUSEdgeObj()
+{
+
+}
+
+CUSEdgeObj::~CUSEdgeObj()
+{
+
+}

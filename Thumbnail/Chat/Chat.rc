@@ -1,0 +1,496 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文（中华人民共和国） resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Chat.rc2""  // 非 Microsoft Visual C++ 编辑资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "face\\level.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 178, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 Chat"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ICON1,IDC_STATIC,11,17,20,20,0,WS_EX_TRANSPARENT
+    LTEXT           "Chat 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX,
+                    WS_EX_TRANSPARENT
+    LTEXT           "版权所有　楚天追梦　 (C) 2004",IDC_STATIC,40,25,119,8,0,
+                    WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "确定",IDOK,63,50,37,14,WS_GROUP,WS_EX_TRANSPARENT
+    LTEXT           "Email : lcd5@163.com",IDC_STATIC,101,36,70,8,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_CHAT_DIALOG DIALOGEX 0, 0, 82, 229
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Chat"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_AUTOARRANGE | WS_BORDER | 
+                    WS_TABSTOP,12,15,58,189
+    PUSHBUTTON      "系统功能",IDC_BUTTON1,35,208,40,14
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 267, 207
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_RICHEDIT22,"RichEdit20A",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,6,39,253,79,WS_EX_STATICEDGE
+    PUSHBUTTON      "发送信息",IDC_BUTTON1,32,126,50,14
+    PUSHBUTTON      "关闭",IDC_BUTTON2,168,126,50,14
+    GROUPBOX        "",IDC_STATIC2,7,7,253,193
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_DISABLED | 
+                    WS_TABSTOP,74,16,100,15
+    LTEXT           "对方IP:",IDC_STATIC,42,19,31,8
+    LTEXT           "端口：",IDC_STATIC,188,18,27,8
+    EDITTEXT        IDC_EDIT2,216,16,36,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "",IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,12,13,
+                    15,13
+    PUSHBUTTON      "聊天记录",IDC_BUTTON3,100,127,50,14
+    GROUPBOX        "",IDC_STATIC3,7,143,246,57
+    LISTBOX         IDC_LIST1,7,149,253,51,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 209, 116
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT2,130,22,50,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,77,61,100,
+                    13
+    PUSHBUTTON      "确定",IDC_BUTTON1,35,89,50,14
+    PUSHBUTTON      "取消",IDC_BUTTON2,123,89,50,14
+    CONTROL         "",IDC_COMBOBOXEX1,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,43,22,48,50
+    LTEXT           "ＩＰ地址：",IDC_STATIC,24,62,41,8
+    LTEXT           "昵称：",IDC_STATIC,105,25,25,8
+    GROUPBOX        "用户信息",IDC_STATIC,7,7,195,102
+    LTEXT           "头像：",IDC_STATIC,17,24,25,8
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 186, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_RICHEDIT21,"RichEdit20A",ES_AUTOHSCROLL | 
+                    WS_BORDER | WS_TABSTOP,7,7,161,78
+    DEFPUSHBUTTON   "确定",IDOK,33,93,50,14
+    PUSHBUTTON      "取消",IDCANCEL,113,93,50,14
+END
+
+IDD_DIALOG4 DIALOGEX 0, 0, 118, 4
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+END
+
+IDD_DIALOG5 DIALOGEX 0, 0, 326, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Mac扫描"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,207,23,11,
+                    14
+    EDITTEXT        IDC_EDIT1,177,23,42,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "",IDC_STATIC,7,7,312,185
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,17,26,100,
+                    15
+    CONTROL         "",IDC_IPADDRESS2,"SysIPAddress32",WS_TABSTOP,17,49,100,
+                    15
+    GROUPBOX        "扫描范围",IDC_STATIC,14,15,111,55
+    GROUPBOX        "",IDC_STATIC,131,16,180,54
+    LTEXT           "设定超时：",IDC_STATIC,133,25,41,8
+    LTEXT           "毫秒",IDC_STATIC,223,25,17,8
+    PUSHBUTTON      "开始扫描",IDC_BUTTON1,254,22,50,14
+    PUSHBUTTON      "结束扫描",IDC_BUTTON2,254,51,50,14
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,138,51,99,
+                    14
+    GROUPBOX        "",IDC_STATIC,16,71,296,114
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,19,76,287,105
+END
+
+IDD_DIALOG6 DIALOGEX 0, 0, 498, 346
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "五子棋"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC2,7,7,401,301,BS_LEFT
+    GROUPBOX        "模式选择",IDC_STATIC3,7,308,401,31,BS_LEFT
+    GROUPBOX        "",IDC_STATIC1,413,7,78,332,BS_LEFT
+    PUSHBUTTON      "悔棋",IDC_BUTTON2,426,28,50,14
+    PUSHBUTTON      "网络对战设置",IDC_BUTTON3,120,318,52,14
+    LTEXT           "发送消息：",IDC_STATIC,181,322,40,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT1,224,318,109,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "发送",IDC_BUTTON5,350,318,50,14
+    GROUPBOX        "聊天记录",IDC_STATIC,415,255,74,84
+    LISTBOX         IDC_LIST1,415,264,72,75,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "和棋",IDC_BUTTON6,426,57,50,14,WS_DISABLED
+    PUSHBUTTON      "认输",IDC_BUTTON7,426,87,50,14,WS_DISABLED
+    PUSHBUTTON      "人机对战开始",IDC_BUTTON4,10,318,50,14
+    COMBOBOX        IDC_COMBO1,65,318,48,44,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG7 DIALOGEX 0, 0, 186, 98
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,23,74,50,14
+    PUSHBUTTON      "取消",IDCANCEL,109,74,50,14
+    GROUPBOX        "静态",IDC_STATIC,7,7,172,84
+    CONTROL         "服务器端",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,19,20,
+                    48,10
+    CONTROL         "客户端",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,82,21,51,
+                    10
+    LTEXT           "服务器IP:",IDC_STATIC6,15,36,34,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",NOT WS_VISIBLE | 
+                    WS_DISABLED | WS_TABSTOP,51,33,100,15
+    EDITTEXT        IDC_EDIT1,53,53,38,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "端口：",IDC_STATIC,21,56,25,8
+END
+
+IDD_DIALOG8 DIALOGEX 0, 0, 150, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "对战模式选择"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,19,52,50,14
+    PUSHBUTTON      "取消",IDCANCEL,83,51,50,14
+    CONTROL         "人机对战",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,19,24,
+                    48,10
+    CONTROL         "网络对战",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,84,24,
+                    48,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Chat.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "Chat.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "翻译", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 171
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_CHAT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 75
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 111
+    END
+
+    IDD_DIALOG5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DIALOG6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 491
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 339
+    END
+
+    IDD_DIALOG7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_DIALOG8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\Chat.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+//IDR_HTML_USERINFODLG    HTML                    "UserInfoDlg.htm"
+//IDR_HTML_CHESSDLG       HTML                    "ChessDlg.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "用户菜单"
+    BEGIN
+        MENUITEM "更改用户信息",                ID_140
+        MENUITEM "传送文件",                    ID_141
+        MENUITEM "删除好友",                    ID_149
+        MENUITEM "添加好友",                    ID_150
+    END
+END
+
+IDR_MENU2 MENU 
+BEGIN
+    POPUP "系统菜单"
+    BEGIN
+        MENUITEM "添加好友",                    ID_147
+        MENUITEM "消息群发",                    ID_148
+        MENUITEM "MAC扫描",                     ID_169
+        MENUITEM "五子棋",                      ID_172
+        MENUITEM "关于本系统",                  ID_167
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "face\\1.bmp"
+IDB_BITMAP2             BITMAP                  "face\\2.bmp"
+IDB_BITMAP3             BITMAP                  "face\\3.bmp"
+IDB_BITMAP4             BITMAP                  "face\\4.bmp"
+IDB_BITMAP5             BITMAP                  "face\\5.bmp"
+IDB_BITMAP6             BITMAP                  "face\\6.bmp"
+IDB_BITMAP7             BITMAP                  "face\\7.bmp"
+IDB_BITMAP8             BITMAP                  "face\\8.bmp"
+IDB_BITMAP9             BITMAP                  "face\\9.bmp"
+IDB_BITMAP10            BITMAP                  "face\\10.bmp"
+IDB_BITMAP11            BITMAP                  "face\\11.bmp"
+IDB_BITMAP12            BITMAP                  "face\\12.bmp"
+IDB_BITMAP13            BITMAP                  "face\\13.bmp"
+IDB_BITMAP14            BITMAP                  "face\\14.bmp"
+IDB_BITMAP15            BITMAP                  "face\\15.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG6 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0xf5b3, 0xb6bc, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0xdfb8, 0xb6bc, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Chat(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 套接字初始化失败。"
+END
+
+#endif    // 中文（中华人民共和国） resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Chat.rc2"  // 非 Microsoft Visual C++ 编辑资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,7 @@
+; PGL.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PGLd"
+DESCRIPTION  'PGL Windows Dynamic Link Library, Debug Version'
+
+EXPORTS
+    ; Explicit exports can go here

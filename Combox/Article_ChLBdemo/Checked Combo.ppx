@@ -1,0 +1,8 @@
+[Debugger]
+[CheckedCombo.c]
+Foldings=61,193,344,452,594
+[main.c]
+[Windows]
+File1=CheckedCombo.c,-4,-23,918,526,1,1
+File2=CheckedCombo.h,22,22,886,413,0,0
+File3=main.c,-4,-23,918,526,1,0

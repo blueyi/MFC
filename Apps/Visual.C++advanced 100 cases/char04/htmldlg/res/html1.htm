@@ -1,0 +1,108 @@
+<HTML style="width : 350; height: 300">
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>CHtmlDialog Demo</TITLE>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+var g_bFifthArg;
+
+function window_onload() 
+{
+	var strArgs = window.dialogArguments;
+
+	var args = new Array();
+	if (strArgs)
+		args = strArgs.split(";");
+	
+	if (args.length == 4)
+	{
+		ProductId.innerText= args[0];
+		ProductVer.innerText= args[1];
+		CompName.innerText= args[2];
+		UserName.innerText= args[3];
+		demo2.style.display = "";
+	} else if (args.length == 5) {
+		ProductId.innerText= args[0];
+		ProductVer.innerText= args[1];
+		CompName.style.display="none";
+		UserName.style.display="none";
+		CompNameEdit.style.display="";
+		UserNameEdit.style.display="";
+		CompNameEdit.value=args[2];
+		UserNameEdit.value=args[3];
+		g_bFifthArg = args[4];
+		demo3.style.display = "";
+	} else 	{
+		demo1.style.display = "";
+	}
+	
+	dlgimg.filters.item(0).enabled = false;
+	Animate();
+
+}
+
+function window_onunload() 
+{
+if (g_bFifthArg )
+	window.returnValue = CompNameEdit.value + ";" + UserNameEdit.value;
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY LANGUAGE=javascript onload="return window_onload()" onunload="return window_onunload()" background=circuit.jpg text=WhiteSmoke>
+<!-- Image to be animated -->
+<Marquee id=demo1 scrolldelay=200 style="display: none">CHtmlDialog Demo1 - No parameters have been passed to the dialog the screen shows default values</marquEE>
+<Marquee id=demo2 scrolldelay=200 style="display: none">CHtmlDialog Demo2 - The parameters passed from the main application are shown</marquEE>
+<Marquee id=demo3 scrolldelay=200 style="display: none">CHtmlDialog Demo3 - Edit the Username and the Company name this will replace the values shown in Demo2</marquEE>
+<!-- The Main Table for dispaly -->
+<TABLE id=MainTable border=0 cellPadding=1 cellSpacing=1 width=75% style="LEFT: 47px; POSITION: absolute; TOP: 99px; Z-INDEX: 102">
+   <TR>
+        <TD>Product ID</TD>
+        <TD>:</TD>
+        <TD id=ProductId>000-0000</TD>
+        </TR>
+    <TR>
+        <TD>Product Version</TD>
+        <TD>:</TD>
+        <TD id=ProductVer>1.0</TD>
+        </TR>
+    <TR>
+        <TD>Company Name</TD>
+        <TD>:</TD>
+        <TD><SPAN ID=CompName>CAE Solutions</SPAN><INPUT id=CompNameEdit name=text1 style="DISPLAY: none; HEIGHT: 25px; WIDTH: 120px"></TD></TR>
+    <TR>
+        <TD>User Name</TD>
+        <TD>:</TD>
+        <TD ><SPAN id=UserName>V. Rama Krishna</SPAN><INPUT id=UserNameEdit name=text2 style="DISPLAY: none; HEIGHT: 25px; WIDTH: 120px"></TD>
+        </TR>
+</TABLE>
+
+<!-- OK Button -->
+<DIV STYLE="HEIGHT: 27px; LEFT: 148px; POSITION: absolute; TOP: 220px; WIDTH: 58px; Z-INDEX: 100"><INPUT type="submit" value=OK id=button1 name=OK style="CURSOR: hand; HEIGHT: 25px; WIDTH: 57px" onclick="window.close()"> 
+ </DIV><IMG alt="" src="htmldlg.gif" 
+	onmouseover="dlgimg.filters.item(0).enabled = true;"
+	onmouseout = "dlgimg.filters.item(0).enabled = false;"
+	style="LEFT: 60px; POSITION: absolute; TOP: 210px; Z-INDEX: 103; filter: invert"  id=dlgimg> 
+
+</BODY><SCRIPT LANGUAGE=javascript>
+<!--
+var PosY = 210;
+var timeoutid;
+function Animate()
+{
+	PosY-= 5;
+	if (PosY > 40)
+	{
+		dlgimg.style.top = PosY;
+		timeoutid = window.setTimeout("Animate()", 50);
+	}
+	else
+	{
+		window.clearTimeout(timeoutid);
+	}		
+}
+//-->
+</SCRIPT>
+
+</HTML>

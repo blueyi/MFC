@@ -1,0 +1,406 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 12, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DemoFLB.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.fra\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\DemoFLB.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "A propos de DemoFLB"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DemoFLB version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PP_STYLES DIALOGEX 0, 0, 329, 263
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Styles"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST2,7,10,136,155,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Expanded item height",IDC_CHECK_HEIGHT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,27,83,9
+    CONTROL         "Graphic item list",IDC_CHECK_GRAPHIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,38,65,8
+    CONTROL         "List with tooltip",IDC_CHECK_HASTOOLTIP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,49,62,8
+    CONTROL         "Has MRU List",IDC_CHECK_MRU,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,164,60,62,8
+    CONTROL         "Local",IDC_RADIO_MRU0,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,178,70,114,8
+    CONTROL         "Custom",IDC_RADIO_MRU2,"Button",BS_AUTORADIOBUTTON,178,
+                    81,40,8
+    EDITTEXT        IDC_EDT_MRUNAME,221,79,89,12,ES_AUTOHSCROLL
+    CONTROL         "Application",IDC_RADIO_MRU1,"Button",BS_AUTORADIOBUTTON,
+                    178,91,114,8
+    CONTROL         "Mouse pointer tracking",IDC_CHECK_TRACKING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,134,131,9
+    LTEXT           "Show :",IDC_STATIC,164,145,71,8
+    CONTROL         "Font name",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,178,156,103,8
+    CONTROL         "Sample",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,178,168,
+                    37,8
+    EDITTEXT        IDC_EDIT1,218,166,91,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Apply changes",IDC_APPLY,155,223,101,15
+    PUSHBUTTON      "Add selected item to MRU list",IDC_BTN_MRUADD,7,161,100,
+                    15,WS_DISABLED
+    PUSHBUTTON      "Show FontDialog",IDC_BTN_SHOWFNTDLG,7,223,100,15
+    GROUPBOX        "Font list",IDC_STATIC,155,7,157,111
+    GROUPBOX        "ToolTips",IDC_STATIC,155,120,157,99
+    LTEXT           "0 fonts loaded",IDC_NB_FONTS,7,249,61,9
+    LTEXT           "0 fonts loaded",IDC_NB_FONTSMRU,72,249,78,9
+    COMBOBOX        IDC_CMB_LISTSTYLE,246,15,64,55,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Selection mode :",IDC_STATIC,176,17,59,8
+    PUSHBUTTON      "Clear selection",IDC_BTN_CLEARSEL,7,177,100,15,
+                    WS_DISABLED
+    CONTROL         "Office 2003 font bitmaps",IDC_CHECK_BMP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,103,98,9
+    CONTROL         "Show selected fonts",IDC_CHK_SELECTED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,184,146,8
+    PUSHBUTTON      "Clear MRU list",IDC_BTN_CLEARMRU,7,193,100,15,
+                    WS_DISABLED
+    LTEXT           "Max tooltip items :",IDC_STATIC,164,195,57,9
+    EDITTEXT        IDC_TT_MAXITEMS,231,193,37,12,ES_RIGHT | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_TT_MAXITEMS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,269,193,10,12
+    LTEXT           "",IDC_NB_FONTS_FNTDLG,149,249,101,9,0,0,
+                    HIDC_NB_FONTS_FNTDLG
+END
+
+IDD_PP_MANUAL DIALOG DISCARDABLE  0, 0, 329, 260
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Manual FontListBox"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,10,136,127,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "The left FontListBox has a custom Mru (connected to the custom Mru of the listbox of the previous tab).  The right FontListBox is manually created with a style which allow manual adding and removing of fonts.",
+                    IDC_STATIC,7,226,313,27
+    PUSHBUTTON      ">>",IDC_BTN_ADD,149,30,29,13
+    PUSHBUTTON      "<<",IDC_BTN_REMOVE,150,49,29,13
+    PUSHBUTTON      "Clear selection",IDC_BTNCLEARSEL,9,140,125,14
+    PUSHBUTTON      "Clear list",IDC_BTNCLEARLIST,197,140,125,14
+    PUSHBUTTON      "Add selected item to MRU list",IDC_BTN_MRUADD,9,158,125,
+                    15,WS_DISABLED
+    PUSHBUTTON      "Clear MRU list",IDC_BTN_MRUCLEAR,9,177,125,15,
+                    WS_DISABLED
+    PUSHBUTTON      "Remove selected item from MRU list",IDC_BTN_MRUREMOVE,9,
+                    196,125,15,WS_DISABLED
+    PUSHBUTTON      "Post a WM_FONTCHANGE message to all top winodws",
+                    IDC_BUTTON1,197,176,125,35,BS_MULTILINE
+END
+
+IDD_PP_MRUSYNC DIALOG DISCARDABLE  0, 0, 329, 215
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "MRU lists synchronization"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,22,136,138,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_LIST2,186,22,136,138,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add selected item to MRU list",IDC_BTN_MRUADD,7,174,136,
+                    15,WS_DISABLED
+    PUSHBUTTON      "Clear MRU list",IDC_BTN_MRUCLEAR1,7,193,136,15,
+                    WS_DISABLED
+    PUSHBUTTON      "Remove selected item from MRU list",IDC_BTN_MRUREMOVE,
+                    186,174,136,15,WS_DISABLED
+    PUSHBUTTON      "Clear MRU list",IDC_BTN_MRUCLEAR2,186,193,136,15,
+                    WS_DISABLED
+END
+
+IDD_PP_PERSISTENCE DIALOG DISCARDABLE  0, 0, 329, 215
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Persistence"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST,7,7,136,130,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add selected item to MRU list",IDC_BTN_MRUADD,186,7,136,
+                    15,WS_DISABLED
+    PUSHBUTTON      "Clear MRU list",IDC_BTN_MRUCLEAR,186,25,136,15,
+                    WS_DISABLED
+    PUSHBUTTON      "Remove selected item from MRU list",IDC_BTN_MRUREMOVE,
+                    186,43,136,15,WS_DISABLED
+    PUSHBUTTON      "Save MRU list to profile settings",IDC_BTN_MRUSAVE,186,
+                    123,136,15
+    PUSHBUTTON      "Load MRU list from profile settings",IDC_BTN_MRULOAD,
+                    186,141,136,15
+    PUSHBUTTON      "Set MRU list persistence = FALSE",
+                    IDC_BTN_MRUPERSISTENCE,186,159,136,15
+    PUSHBUTTON      "ClearSelection",IDC_BTN_CLEARSEL,186,61,136,15,
+                    WS_DISABLED
+END
+
+IDD_PP_TRANSPARENT DIALOGEX 0, 0, 387, 215
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Transparency"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST,65,28,136,146,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_TRANSPARENT
+    CONTROL         137,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,7,7,
+                    267,185
+    PUSHBUTTON      "Change image",IDC_BTNCHANGEIMAGE,289,7,90,14
+    PUSHBUTTON      "Clear selection",IDC_BTNCLEARSEL,289,25,90,14
+    LTEXT           "The list box is connected to the same MRU font list as the ""Persistence"" tab CFontListBox one",
+                    IDC_STATIC,7,198,350,10
+    PUSHBUTTON      "Set List style to Graphic",IDC_BTNGRAPHIC,289,43,90,14
+    PUSHBUTTON      "Post a WM_FONTCHANGE message to all top winodws",
+                    IDC_BUTTON1,289,157,90,35,BS_MULTILINE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040C04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Application MFC DemoFLB\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DemoFLB\0"
+            VALUE "LegalCopyright", "Copyright (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "DemoFLB.EXE\0"
+            VALUE "ProductName", "Application DemoFLB\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x40c, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PP_STYLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_PP_MANUAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_PP_MRUSYNC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_PP_PERSISTENCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 322
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_PP_TRANSPARENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PP_STYLES DLGINIT
+BEGIN
+    IDC_CMB_LISTSTYLE, 0x403, 7, 0
+0x6953, 0x676e, 0x656c, "\000" 
+    IDC_CMB_LISTSTYLE, 0x403, 9, 0
+0x754d, 0x746c, 0x7069, 0x656c, "\000" 
+    IDC_CMB_LISTSTYLE, 0x403, 9, 0
+0x7845, 0x6574, 0x646e, 0x6465, "\000" 
+    IDC_CMB_LISTSTYLE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_OFF11           BITMAP  DISCARDABLE     "res\\office11.bmp"
+IDB_BITMAP0             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&A propos de DemoFLB..."
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE 12, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DemoFLB.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.fra\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

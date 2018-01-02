@@ -1,0 +1,7 @@
+; DllEdgeInteraction.def : Declares the module parameters for the DLL.
+
+LIBRARY      "DllEdgeInteraction"
+DESCRIPTION  'DllEdgeInteraction Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

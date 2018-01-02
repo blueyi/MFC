@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HistogramDemo", "HistogramDemo.vcproj", "{95E12108-2273-453C-99E7-37EB7F7F2A61}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HistogramMatlab", "HistogramMatlab\HistogramMatlab.vcproj", "{BBDBC8CA-0661-4358-BEF6-D776862864AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UNICODE Debug|Win32 = UNICODE Debug|Win32
+		UNICODE Release|Win32 = UNICODE Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.Debug|Win32.ActiveCfg = Debug|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.Debug|Win32.Build.0 = Debug|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.Release|Win32.ActiveCfg = Release|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.Release|Win32.Build.0 = Release|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.UNICODE Debug|Win32.ActiveCfg = Debug|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.UNICODE Debug|Win32.Build.0 = Debug|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.UNICODE Release|Win32.ActiveCfg = Release|Win32
+		{95E12108-2273-453C-99E7-37EB7F7F2A61}.UNICODE Release|Win32.Build.0 = Release|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.Debug|Win32.ActiveCfg = UNICODE Debug|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.Debug|Win32.Build.0 = UNICODE Debug|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.Release|Win32.ActiveCfg = UNICODE Release|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.Release|Win32.Build.0 = UNICODE Release|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.UNICODE Debug|Win32.ActiveCfg = UNICODE Debug|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.UNICODE Debug|Win32.Build.0 = UNICODE Debug|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.UNICODE Release|Win32.ActiveCfg = UNICODE Release|Win32
+		{BBDBC8CA-0661-4358-BEF6-D776862864AA}.UNICODE Release|Win32.Build.0 = UNICODE Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

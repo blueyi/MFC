@@ -1,0 +1,270 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ValidatingEditDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ValidatingEditDemo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ValidatingEditDemo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,11,20,20
+    LTEXT           "ValidatingEditDemo - Version 2.0",IDC_STATIC,40,10,119,
+                    8,SS_NOPREFIX
+    LTEXT           "By Alvaro Mendez",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "Cool!",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_VALIDATING_EDIT_DEMO DIALOGEX 0, 0, 231, 284
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Validating Edit Demo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Numeric",IDC_STATIC_NUMERIC,7,5,103,134,BS_FLAT
+    EDITTEXT        IDC_EDIT_NUMERIC_DATA_ENTRY,13,16,90,15,ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    GROUPBOX        "Digits from Decimal Point",IDC_STATIC,13,37,90,50
+    LTEXT           "Left:",IDC_STATIC,19,52,15,8
+    EDITTEXT        IDC_EDIT_NUMERIC_LEFT_DIGITS,41,50,56,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_NUMERIC_LEFT_DIGITS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,89,48,11,14
+    LTEXT           "Right:",IDC_STATIC,19,70,20,8
+    EDITTEXT        IDC_EDIT_NUMERIC_RIGHT_DIGITS,41,68,56,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_NUMERIC_RIGHT_DIGITS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,89,66,11,14
+    CONTROL         "Cannot be negative:     ",
+                    IDC_CHECK_NUMERIC_CANNOT_BE_NEGATIVE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,13,94,90,10
+    LTEXT           "Value as a Double:",IDC_STATIC,13,109,61,8
+    EDITTEXT        IDC_EDIT_NUMERIC_AS_DOUBLE,13,119,90,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "Currency",IDC_STATIC_CURRENCY,7,146,103,62,BS_FLAT
+    EDITTEXT        IDC_EDIT_CURRENCY_DATA_ENTRY,13,157,90,15,ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "Value as a Double:",IDC_STATIC,13,179,61,8
+    EDITTEXT        IDC_EDIT_CURRENCY_AS_DOUBLE,13,189,90,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "Masked Numeric",IDC_STATIC_MASKED_NUMERIC,7,215,103,62,
+                    BS_FLAT
+    EDITTEXT        IDC_EDIT_MASKED_NUMERIC_DATA_ENTRY,13,226,90,15,
+                    ES_AUTOHSCROLL,WS_EX_DLGMODALFRAME
+    LTEXT           "Mask (# = digit):",IDC_STATIC,13,247,52,8
+    EDITTEXT        IDC_EDIT_MASKED_NUMERIC_MASK,13,257,90,12,ES_AUTOHSCROLL
+    GROUPBOX        "Alphanumeric",IDC_STATIC_ALPHANUMERIC,119,5,103,90,
+                    BS_FLAT
+    EDITTEXT        IDC_EDIT_ALPHANUMERIC_DATA_ENTRY,125,16,90,15,
+                    ES_AUTOHSCROLL,WS_EX_DLGMODALFRAME
+    GROUPBOX        "Characters",IDC_STATIC,125,36,90,51
+    LTEXT           "Invalid:",IDC_STATIC,131,51,24,8
+    EDITTEXT        IDC_EDIT_ALPHANUMERIC_INVALID_CHARACTERS,158,49,50,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "Max:",IDC_STATIC,131,70,16,8
+    EDITTEXT        IDC_EDIT_ALPHANUMERIC_MAX_CHARACTERS,158,68,50,12,
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_ALPHANUMERIC_MAX_CHARACTERS,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,201,68,
+                    11,14
+    GROUPBOX        "Date",IDC_STATIC_DATE,119,99,103,90,BS_FLAT
+    EDITTEXT        IDC_EDIT_DATE_DATA_ENTRY,125,110,90,15,ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "Minimum:",IDC_STATIC,125,132,30,8
+    CONTROL         "Custom1",IDC_DATE_MIN,"SysDateTimePick32",WS_TABSTOP,
+                    125,142,90,12
+    LTEXT           "Maximum:",IDC_STATIC,125,160,32,8
+    CONTROL         "Custom1",IDC_DATE_MAX,"SysDateTimePick32",WS_TABSTOP,
+                    125,169,90,12
+    GROUPBOX        "Time",IDC_STATIC_TIME,119,194,103,61,BS_FLAT
+    EDITTEXT        IDC_EDIT_TIME_DATA_ENTRY,125,205,90,15,ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Exit",IDCANCEL,173,263,50,14
+    CONTROL         "Use 24-Hour format:",IDC_CHECK_TIME_24HOUR_FORMAT,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,125,
+                    225,90,10
+    CONTROL         "Show seconds:",IDC_CHECK_TIME_SHOW_SECONDS,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,125,239,90,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Alvaro Mendez\0"
+            VALUE "FileDescription", "ValidatingEditDemo MFC Application\0"
+            VALUE "FileVersion", "2, 0, 0, 1\0"
+            VALUE "InternalName", "ValidatingEditDemo\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ValidatingEditDemo.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "ValidatingEditDemo Application\0"
+            VALUE "ProductVersion", "2, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VALIDATING_EDIT_DEMO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 277
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ValidatingEditDemo..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ValidatingEditDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

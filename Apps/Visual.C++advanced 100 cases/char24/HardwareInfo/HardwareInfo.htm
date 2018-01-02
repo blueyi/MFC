@@ -1,0 +1,15 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>System Hardware Information Finder</TITLE>
+</HEAD>
+<BODY>
+
+<B><FONT SIZE=4><P ALIGN="CENTER">System Hardware Information Finder</P>
+</B></FONT><FONT SIZE=2>
+<P>This is another of utility applications which can be used as an tool to get and report information about your system CPU, memory page size, mouse installation, etc.</P>
+<P>GetProcessorInfo function in ChardwareInfoDlg makes use of <B><I>GetProcessorInfo</B></I> API call to get al the information about the type of CPU installed on your machine. The information is returned in SYSTEM_INFO data structure. It contains the data about chip architecture, number of processors installed, page size, minimum and maximum memory address available on your machine, etc.  This information is converted into string format and displayed in the dialog box.</P>
+<P>The information about mouse, if any, installed on your system can be obtained by using <B><I>GetSystemMetrics </B></I>API call. The information specific to mouse speed can be obtained by using <B><I>SystemParametersInfo</B></I> API call. The information obtained by these API calls is converted in string format to show in dialog box.</P>
+<P>The sample application has been compiled and tested using VC ++5.0/6.0 compilers on Windows NT 4.0 OS.</P></FONT></BODY>
+</HTML>

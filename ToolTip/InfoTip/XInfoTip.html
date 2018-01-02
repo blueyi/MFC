@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>The Code Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<Style>
+BODY, P, TD { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt }
+H2,H3,H4,H5 { color: #ff9900; font-weight: bold; }
+H2 { font-size: 13pt; }
+H3 { font-size: 12pt; }
+H4 { font-size: 10pt; color: black; }
+PRE { BACKGROUND-COLOR: #FBEDBB; FONT-FAMILY: "Courier New", Courier, mono; 
+      WHITE-SPACE: pre; }
+CODE { COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono; }
+</style>
+</head>
+<body bgcolor="#FFFFFF" color=#000000>
+
+<h2>Introduction</h2>
+
+<p>If you use Windows 2000, you may have noticed a special tooltip that is used in some instances.  At least one spot where it is displayed is after making a dial-up network connection.</p>
+
+<p><b>CXInfoTip</b> is a simple control that attempts to reproduce this tooltip.  It supports multi-line text (seperated with a '\n') and an icon.  
+The control can be used as a normal tooltip for controls or as an immediate popup data tip. It is not a direct replacement for CTooltipCtrl.
+The control itself is in the source files: CXInfoTip.h and CXInfoTip.cpp.</p>
+
+<p> To use the control, create it and either call the immediate Show() method or add tools using AddTool().  If AddTool() is used 
+then the RelayEvent() method must be called from the parent window's overridden PreTranslateMessage().</p>
+
+<p> To use the control, add a <b>CXInfoTip</b> member variable to the class.</p>
+<pre>
+	CXInfoTip m_Tip;	
+</pre>
+
+<p>For dialogs, create it in OnInitDialog().  For other windows create it in OnCreate().</p>
+<pre>
+	m_Tip.Create(this);
+</pre>
+<p>To show an immediate tooltip, call the Show() method.></p>
+<pre>
+	m_Tip.Show(_T("This is a toolip!"), CPoint(100, 100));	
+</pre>
+<p>To show normal tooltips, use AddTool() for each control and call RelayEvent() from PreTranslateMessage().
+<pre>
+	m_Tip.AddTool(GetDlgItem(IDOK), _T("This is the OK button!"), m_TooltipIcon);
+	....
+	BOOL CInfoTipTestDlg::PreTranslateMessage(MSG* pMsg) 
+	{
+		m_Tip.RelayEvent(pMsg);
+		...
+	}
+</pre>
+
+<h2>Methods</h2>
+
+<H3>CInfoTip::Create</H3>
+<p><code>BOOL Create (CWnd * pParentWnd)</code></p>
+Creates the tooltip control.
+
+<H4>Return Value</H4>
+TRUE on success, FALSE otherwise
+
+<H4>Parameters</H4>
+<p><code>pParentWnd</code></p>
+<p>Pointer to the parent window.</p>
+
+<H3>CInfoTip::AddTool</H3>
+<p><code>void AddTool(CWnd *pWnd, LPCTSTR szTooltipText, HICON hIcon = NULL)</code></p>
+Adds a tool.
+
+<H4>Return Value</H4>
+<p>None</p>
+
+<H4>Parameters</H4>
+<p><code>pWnd</code></p>
+<p>Pointer to the tool window.</p>
+
+<p><code>szTooltipText</code></p>
+<p>Text to display in the tooltip for the window. Seperate mutiple lines with a '\n'.</p>
+
+<p><code>hIcon</code></p>
+<p>Icon to display in the tooltip or NULL for no icon.</p>
+
+<H3>CInfoTip::RemoveTool</H3>
+<p><code>void RemoveTool(CWnd *pWnd)</code></p>
+Removes a tool.
+
+<H4>Return Value</H4>
+<p>None</p>
+
+<H4>Parameters</H4>
+<p><code>pWnd</code></p>
+<p>Pointer to the tool window to remove.</p>
+
+<H3>CInfoTip::SetIcon</H3>
+<p><code>void SetIcon(HICON hIcon)</code></p>
+Sets the icon to show for immediate tooltips.
+
+<H4>Return Value</H4>
+<p>None</p>
+
+<H4>Parameters</H4>
+<p><code>hIcon</code></p>
+<p>Handle to the icon to display.</p>
+
+<H3>CInfoTip::SetShowDelay</H3>
+<p><code>void SetShowDelay(int nDelay)</code></p>
+Adjusts the delay before a tooltip is displayed.
+
+<H4>Return Value</H4>
+<p>None</p>
+
+<H4>Parameters</H4>
+<p><code>nDelay</code></p>
+<p>Delay in milliseconds.</p>
+
+<H3>CInfoTip::SetFont</H3>
+<p><code>void SetFont(CFont *pFont)</code></p>
+Sets the tooltip text font.
+
+<H4>Return Value</H4>
+<p>None</p>
+
+<H4>Parameters</H4>
+<p><code>pFont</code></p>
+<p>Pointer to the font.</p>
+
+<H3>CInfoTip::RelayEvent</H3>
+<p><code>void RelayEvent(LPMSG lpMsg)</code></p>
+Relays mouse events to the control. If AddTool() is used, then this method must be called from PreTranslateMessage().
+
+<H4>Return Value</H4>
+<p>None</p>
+
+<H4>Parameters</H4>
+<p><code>lpMsg</code></p>
+<p>Pointer to the message structure.</p>
+
+
+
+
+
+<!-------------------------------    That's it!   --------------------------->
+</body>
+</html>

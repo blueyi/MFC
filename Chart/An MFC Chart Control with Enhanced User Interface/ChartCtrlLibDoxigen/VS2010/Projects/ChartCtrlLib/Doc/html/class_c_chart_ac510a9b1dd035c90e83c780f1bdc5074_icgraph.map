@@ -1,0 +1,8 @@
+<map id="CChart::GetChartName" name="CChart::GetChartName">
+<area shape="rect" id="node3" href="$class_c_charts_x_m_l_serializer.html#a711af25b8293ad91a0a7c3b967c92995" title="CChartsXMLSerializer\l::ChartDataToXML" alt="" coords="242,5,390,46"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#ab1ffb11582b667d9b21115b2cf462370" title="CChartContainer::GetSelVal\lString" alt="" coords="224,70,408,111"/>
+<area shape="rect" id="node11" href="$class_c_chart_data_view.html#a179b8bd25442dbec2c247dd3b3879b6a" title="CChartDataView::InitParams" alt="" coords="223,136,409,163"/>
+<area shape="rect" id="node13" href="$class_c_chart_data_view.html#a2f8dca7bd2d4f82c4a539badf7e39bed" title="CChartDataView::UpdateParams" alt="" coords="211,187,421,213"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#af07be5bd92e8a5d5e829fef6b221f5b5" title="CChartContainer::SaveChartData" alt="" coords="469,12,680,39"/>
+<area shape="rect" id="node9" href="$class_c_chart_container.html#a99f1268f20a5a887359bdd4490621d81" title="CChartContainer::PrintCharts" alt="" coords="479,77,670,104"/>
+</map>

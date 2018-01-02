@@ -1,0 +1,6 @@
+<map id="CChartContainer::ChangeLocScaleYByArrowKeys" name="CChartContainer::ChangeLocScaleYByArrowKeys">
+<area shape="rect" id="node3" href="$class_c_chart.html#a1a28581c6a6a53a95302d89f7889954f" title="CChart::GetChartIdx" alt="" coords="257,5,396,32"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#a5a2dbb9f5faec6dbe6050fb07f967bfa" title="CChart::IsChartSelected" alt="" coords="245,56,408,83"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#a89628f49307611cd81ec50b14c718586" title="CChart::IsChartVisible" alt="" coords="251,107,402,133"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a97e56feceb121673a9ab33ca8eea4469" title="CChart::SetLocScaleY" alt="" coords="250,157,403,184"/>
+</map>

@@ -1,0 +1,72 @@
+/////////////////////////////////////////////////////////////////////
+// Create Popup Menu Dialog Class...
+/////////////////////////////////////////////////////////////////////
+
+// 1) Create a popup menu resource with the menu items you require.
+
+// 2) Create a dialog box resource with a picture control on one side and
+// a static control on the other. Configure the picture control to hold a
+// bitmap to appear along the side of the static control.
+
+// 3) Size the static control and dialog template to conform to the size 
+// of the popup menu. You will need to perform the next steps to be able
+// to see the final result.
+
+// 4) Use the ClassWizard to create a dialog class that uses this template.
+
+// 5) Add a WM_INITDIALOG message handler to position the dialog where the
+// mouse was clicked:
+
+BOOL CWzdDialog::OnInitDialog() 
+{
+	CDialog::OnInitDialog();
+
+	// position where mouse button was clicked
+	CPoint pt;
+	GetCursorPos(&pt); 
+	SetWindowPos(NULL,pt.x,pt.y,0,0,SWP_NOSIZE);
+	
+	return TRUE;  // return TRUE unless you set the focus to a control
+	              // EXCEPTION: OCX Property Pages should return FALSE
+}
+
+// 6) Add a WM_PAINT handler to display the popup menu:
+void CWzdDialog::OnPaint() 
+{
+	CDialog::OnPaint();
+
+	// load up menu
+	CMenu menu;
+	menu.LoadMenu(IDR_WZD_MENU);
+	CMenu* pPopup = menu.GetSubMenu(0);
+
+	// get location of static control and display popup menu there
+	CRect rect;
+	GetDlgItem(IDC_MENU_STATIC)->GetWindowRect(&rect);
+	int nLeft=rect.right+2;
+	GetWindowRect(&rect);
+	pPopup->TrackPopupMenu(TPM_RIGHTBUTTON, nLeft, rect.top, GetParent());
+
+	// cancel this dialog
+	PostMessage(WM_CLOSE);
+}
+
+/////////////////////////////////////////////////////////////////////
+// Modify View Class...
+/////////////////////////////////////////////////////////////////////
+
+// 1) Add message handler for right mouse button down to create dialog box.
+void CWzdView::OnRButtonDown(UINT nFlags, CPoint point) 
+{
+	CWzdDialog dlg;
+	dlg.DoModal();
+
+	CView::OnRButtonDown(nFlags, point);
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// From: Visual C++ MFC Programming by Example by John E. Swanke
+// Copyright (C) 1999 jeswanke. All rights reserved.
+/////////////////////////////////////////////////////////////////////
+

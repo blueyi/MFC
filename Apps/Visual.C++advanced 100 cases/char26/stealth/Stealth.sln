@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stealth", "Stealth.vcproj", "{9FF4DAC3-1C95-4158-AECA-E5731AA69F29}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ticktest", "..\cputicker\ticktest.vcproj", "{B753663E-E697-44C6-A099-8EE9462B86C9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TaskBar", "..\appbar\TaskBar.vcproj", "{688756E2-8ADD-44FA-BC2E-AC71CE70464A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FF4DAC3-1C95-4158-AECA-E5731AA69F29}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9FF4DAC3-1C95-4158-AECA-E5731AA69F29}.Debug|Win32.Build.0 = Debug|Win32
+		{9FF4DAC3-1C95-4158-AECA-E5731AA69F29}.Release|Win32.ActiveCfg = Release|Win32
+		{9FF4DAC3-1C95-4158-AECA-E5731AA69F29}.Release|Win32.Build.0 = Release|Win32
+		{B753663E-E697-44C6-A099-8EE9462B86C9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B753663E-E697-44C6-A099-8EE9462B86C9}.Debug|Win32.Build.0 = Debug|Win32
+		{B753663E-E697-44C6-A099-8EE9462B86C9}.Release|Win32.ActiveCfg = Release|Win32
+		{B753663E-E697-44C6-A099-8EE9462B86C9}.Release|Win32.Build.0 = Release|Win32
+		{688756E2-8ADD-44FA-BC2E-AC71CE70464A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{688756E2-8ADD-44FA-BC2E-AC71CE70464A}.Debug|Win32.Build.0 = Debug|Win32
+		{688756E2-8ADD-44FA-BC2E-AC71CE70464A}.Release|Win32.ActiveCfg = Release|Win32
+		{688756E2-8ADD-44FA-BC2E-AC71CE70464A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

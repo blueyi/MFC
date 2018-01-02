@@ -1,0 +1,8 @@
+<map id="CChartContainer::SelectChartByMouseClick" name="CChartContainer::SelectChartByMouseClick">
+<area shape="rect" id="node3" href="$class_c_chart.html#a0b411e3506e858e6445dbafe714a8499" title="CChart::ConvertChartData" alt="" coords="248,5,419,32"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a1a28581c6a6a53a95302d89f7889954f" title="CChart::GetChartIdx" alt="" coords="264,56,403,83"/>
+<area shape="rect" id="node11" href="$class_c_chart.html#ad438e7ec02b96c556dae346cae29bf17" title="CChart::HasData" alt="" coords="273,107,393,133"/>
+<area shape="rect" id="node13" href="$class_c_chart.html#a89628f49307611cd81ec50b14c718586" title="CChart::IsChartVisible" alt="" coords="258,157,409,184"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#af24f5990f1ad41fc0e426bfbe16d3700" title="CChart::GetStartEndDataIterators" alt="" coords="467,5,683,32"/>
+<area shape="rect" id="node7" href="$_util_8h.html#afdb2319561cb5e462e1608318f504f7e" title="find_border_pnts" alt="" coords="731,5,848,32"/>
+</map>

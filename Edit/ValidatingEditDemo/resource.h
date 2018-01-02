@@ -1,0 +1,49 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by ValidatingEditDemo.rc
+//
+#define IDM_ABOUTBOX                    0x0010
+#define IDD_ABOUTBOX                    100
+#define IDS_ABOUTBOX                    101
+#define IDD_VALIDATINGEDITDEMO_DIALOG   102
+#define IDR_MAINFRAME                   128
+#define IDD_VALIDATING_EDIT_DEMO        136
+#define IDD_VALIDATING_EDIT_DEMO1       137
+#define IDC_CHECK_TIME_24HOUR_FORMAT    1000
+#define IDC_CHECK_TIME_SHOW_SECONDS     1001
+#define IDC_DATE_MAX                    1038
+#define IDC_DATE_MIN                    1039
+#define IDC_EDIT_ALPHANUMERIC_DATA_ENTRY 1040
+#define IDC_EDIT_NUMERIC_DATA_ENTRY     1041
+#define IDC_EDIT_MASKED_NUMERIC_MASK    1042
+#define IDC_EDIT_ALPHANUMERIC_INVALID_CHARACTERS 1044
+#define IDC_CHECK_NUMERIC_CANNOT_BE_NEGATIVE 1045
+#define IDC_EDIT_MASKED_NUMERIC_DATA_ENTRY 1047
+#define IDC_EDIT_CURRENCY_DATA_ENTRY    1051
+#define IDC_EDIT_CURRENCY_AS_DOUBLE     1052
+#define IDC_EDIT_DATE_DATA_ENTRY        1053
+#define IDC_EDIT_TIME_DATA_ENTRY        1054
+#define IDC_EDIT_NUMERIC_RIGHT_DIGITS   1055
+#define IDC_SPIN_NUMERIC_RIGHT_DIGITS   1056
+#define IDC_EDIT_ALPHANUMERIC_MAX_CHARACTERS 1057
+#define IDC_SPIN_ALPHANUMERIC_MAX_CHARACTERS 1058
+#define IDC_EDIT_NUMERIC_LEFT_DIGITS    1059
+#define IDC_SPIN_NUMERIC_LEFT_DIGITS    1060
+#define IDC_EDIT_NUMERIC_AS_DOUBLE      1061
+#define IDC_STATIC_NUMERIC              1100
+#define IDC_STATIC_CURRENCY             1101
+#define IDC_STATIC_MASKED_NUMERIC       1102
+#define IDC_STATIC_ALPHANUMERIC         1103
+#define IDC_STATIC_DATE                 1104
+#define IDC_STATIC_TIME                 1105
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        129
+#define _APS_NEXT_COMMAND_VALUE         32771
+#define _APS_NEXT_CONTROL_VALUE         1002
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

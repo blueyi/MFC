@@ -1,0 +1,361 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CDR.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CDR.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CDR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "UDF CDR Version 1.02",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C)  2002, Hongfeng Wang",IDC_STATIC,40,22,
+                    119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "http://hongfeng.myetang.com",IDC_STATIC,40,35,119,8
+END
+
+IDD_CDR_DIALOG DIALOGEX 0, 0, 390, 323
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CDR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Read",ID_READ,258,109,33,14,WS_GROUP
+    PUSHBUTTON      "Eject",ID_EJECT,242,35,33,14
+    PUSHBUTTON      "Close Tray",ID_CLOSE,202,35,40,14
+    RTEXT           "LogicBlockAddress(HEX)",IDC_STATIC,11,109,83,12,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    EDITTEXT        IDC_EDIT1,101,109,39,12,ES_AUTOHSCROLL | NOT WS_BORDER | 
+                    WS_GROUP,WS_EX_STATICEDGE
+    RTEXT           "Blocks(HEX)",IDC_STATIC,147,109,48,12,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    EDITTEXT        IDC_EDIT2,200,110,36,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT3,7,124,377,179,ES_MULTILINE | NOT WS_BORDER | 
+                    WS_GROUP,WS_EX_STATICEDGE
+    LTEXT           "SCSI Adpter",IDC_STATIC,11,19,39,12,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "SCSI ID",IDC_STATIC,85,19,26,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_HA,54,19,23,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER | WS_GROUP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_ID,114,19,23,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Logical Unit",IDC_STATIC,149,19,40,12,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    EDITTEXT        IDC_LUN,190,19,23,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    GROUPBOX        "Select SCSI(ATAPI) Device",IDC_STATIC,7,7,377,46
+    DEFPUSHBUTTON   "Browse",IDC_BROWSE,200,63,46,15,WS_GROUP
+    PUSHBUTTON      "Write Files",IDC_WRITE_FILES,200,78,46,15
+    PUSHBUTTON      "Format Disk",ID_FORMAT_DISC,252,63,60,15,BS_MULTILINE
+    PUSHBUTTON      "Close Session",ID_CLOSE_SESSION,252,78,60,15,
+                    BS_MULTILINE
+    LTEXT           "Track",IDC_STATIC,252,19,21,12,SS_CENTERIMAGE | NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_TRACK,273,19,23,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Header",IDC_HEADER,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,335,110,35,10
+    COMBOBOX        IDC_COMBO1,61,37,119,112,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "SCSI Devices",IDC_STATIC,11,36,47,12,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    PUSHBUTTON      "List Files",IDC_CONTENT,317,63,49,15
+    PUSHBUTTON      "Save Files",IDC_SAVE,317,78,49,15
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | LVS_ALIGNLEFT | 
+                    LVS_NOCOLUMNHEADER | WS_TABSTOP,7,57,181,43,
+                    WS_EX_ACCEPTFILES | WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,7,102,377,23
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 173, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,36,33
+    EDITTEXT        IDC_EDIT1,7,24,101,15,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    LTEXT           "Please enter a label for this disc.",IDC_HINT,7,11,106,
+                    10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,2,1
+ PRODUCTVERSION 1,0,2,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CDR MFC Application\0"
+            VALUE "FileVersion", "1, 0, 2, 1\0"
+            VALUE "InternalName", "CDR\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CDR.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CDR Application\0"
+            VALUE "ProductVersion", "1, 0, 2, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CDR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 383
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 316
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+CG_IDR_POPUP_HEX_EDIT MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Undo",                       ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM "&Delete",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+    END
+END
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "SCSI Bus"
+    BEGIN
+        MENUITEM "Devic Inquiry",               ID_INQUIRY
+        MENUITEM "Bus Scan",                    ID_BUS_SCAN
+    END
+    POPUP "Disk Info"
+    BEGIN
+        MENUITEM "ATIP",                        ID_ATIP
+        MENUITEM "PMA",                         ID_PMA
+        MENUITEM "TOC",                         ID_TOC
+        MENUITEM "Disk Info",                   ID_READ_DISK_INFO
+        MENUITEM SEPARATOR
+        MENUITEM "Track Info",                  ID_READ_TRACK_INFO
+    END
+    POPUP "Write Mode"
+    BEGIN
+        MENUITEM "Get Write Mode",              ID_WRITE_PARAMETERS
+        MENUITEM "Variable Packet",             ID_SET_MODE2
+        MENUITEM "TAO",                         ID_SET_MODE1
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_FILE_IMAGES TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_TOOLBARBUTTON
+    BUTTON      ID_TOOLBARBUTTON
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_FILE_IMAGES         BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CDR..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOC                  "Table Of Content"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PMA                  "Program Management Area"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CDR.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

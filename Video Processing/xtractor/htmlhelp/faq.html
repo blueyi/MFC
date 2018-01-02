@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+  <TITLE>FAQ</TITLE>
+  <link rel="stylesheet" href="xtractorhelp.css">
+</HEAD>
+<BODY>
+  <!-- Help Item title -->
+  <H2>Frequently Asked Questions</H2>
+  <HR>
+  <B>Q: </B>What's an ASPI manager, and how do I know if I have one?<BR>
+  <B>A: </B>ASPI is an interface created by <A HREF="http://www.adaptec.com/" TARGET="adaptec">Adaptec</A>, and is used by CD-DA X-Tractor to access the CD-ROM hardware.  Windows 95 comes with the ASPI manager pre-installed, while NT does not.  To tell if you have an ASPI manager installed, look for a file called WNASPI32.DLL in your Windows system directory (c:\windows\system or c:\winnt\system32 are common locations).  For NT, it is usually supplied by the manufacturer of your SCSI adapter or devices -- unfortunately, not usually supplied for IDE devices under NT.  Some ATAPI CD-R and CD-RW devices do however supply the ASPI manager, specifically so that it can interface with the CD-R and CD-RW burning software.<BR>
+  <HR>
+  <B>Q: </B>Does CD-DA X-Tractor work without an ASPI manager?<BR>
+  <B>A: </B>Under Windows NT (SP 4+) and Windows 2000, CD-DA X-Tractor can use the SCSI pass through interface to gain low-level access to the CD unit.  The preferred method is still via the ASPI manager, but since neither Windows 2000 nor NT has a built-in ASPI manager, this method is provided as a fall-back.<BR>
+  <HR>
+  <B>Q: </B>What is "jitter", and just how does "jitter correction" work?<BR>
+  <B>A: </B>"Jitter" is a term used for the inherent uncertaintly in most CD-rom units, which is caused by the way audio is stored on a CD.  Although one logical block on a CD takes up 2352 bytes, the amount of data stored in the block varies.  For a data block, 2052 bytes are actual data, and the remaining 300 bytes are information used to accurately find the block.  For audio, however, all 2352 bytes contain audio data -- there is no positioning information returned in the block read.  When CDs first came out, they were used for audio, and it didn't matter if a CD player got within +/- 1/75 of a second of the intended start position.  After it started, as long as the player kept reading, it could accurately read the data -- the problem only came about when initially seeking the start position.<BR><BR>
+"Jitter correction" is the process of trying to compensate for "jitter" in software.  Generally, it involves using overlapping reads, and attempting to match the end of one read with the beginning of the next, so that there are no gaps in the data read.  These gaps cause clicks and pops in the resulting WAV or MP3 file produced.  For instance, the program might begin reading a track at block 1000 and read 27 blocks total.  On the next read, it would issue a read command starting at 1024, and would try to match the end of the first read in the beginning of the second read.  Once it finds a match, it would cut off the beginning of the second read, and use only the part after the match.  In this way, you can eliminate the clicks and pops.<BR><BR>
+CD-DA X-Tractor has an additional, more sophisticated mode for jitter correction.  It will attempt to issue many read commands quickly and buffer the output.  When ripping with CD-DA X-Tractor, you can see this happening in the "Read buffer" gauge on the rip dialog -- it will attempt to buffer as much as it can quickly, and then wait for the encoder to process it.  When the buffer is almost empty, it starts reading again.  It only performs jitter correction after an error is reported by the CD unit.  Most drives will read audio correctly as long as the drive doesn't stop reading for too long, and read commands are issued sequentially, ie. the next read starts immediately where the last read left off.  Using this method results in a vast speed improvement over brute-force jitter correction.<BR><BR>
+Most of the time the "On Error" jitter correction mode will produce good results.  However, if you still get clicks and pops using this setting, try using the "Always" setting.  Some (higher-end) drives support a feature known as "Stream is Accurate" -- this means that consecutive reads are guaranteed to start where the last one left off.<BR><BR>
+  <HR>
+  <B>Q: </B>I can't seem to rip any tracks at all.  Help!<BR>
+  <B>A: </B>Try resetting the jitter correction values to their defaults in the CD Options dialong (click on the "Reset" button).  If that doesn't work, In the CD Options dialog, try using the "Autodetect" read algorithm.  If it still doesn't work, try the others individually.  If none of this helps, send an email to <A HREF="mailto:akey@users.sourceforge.net">akey@users.sourceforge.net</A> with the make and model of your CD rom, operating system (Win95/98/NT,2000), whether it's a SCSI, ATAPI, CD-R, etc. and a description of the problem.  It's also possible that your drive simply doesn't support digital audio extraction -- while most SCSI drives support digital audio extraction, not all IDE drives do.<BR>
+  <HR>
+  <B>Q: </B>I can rip, but it seems to rip very slowly.<BR>
+  <B>A: </B>Try checking the "On Error" jitter correction in the "CD Options" page.  This mode is faster than the "Always" setting, and should produce results comparable to "Always".<BR>
+  <HR>
+  <B>Q: </B>How can I tell if my CD supports digital audio extraction?<BR>
+  <B>A: </B>If CD-DA X-Tractor doesn't seem to work with your CD, try a different program -- you can find many shareware and freeware programs at <A HREF="http://www.dailymp3.com/" TARGET="dailymp3">www.dailymp3.com</A>.  MP3.com has also been known to maintain a list of drives known to work or not work for DAE.<BR>
+  <HR>
+  <B>Q: </B>I'm still getting clicks and pops in the ripped tracks.  What can I do?<BR>
+  <B>A: </B>Go to the <A HREF="cdoptions.html">CD Options</A> page by selecting the Options->CD Settings menu item.  Try using the "Always" setting for jitter correction -- this setting will attempt to correct inaccuracies in the positioning of the read regardless of whether the CD reported an error or not.  If you receive errors, try increasing the overlap a little; this will increase the size of the buffer that is used to align the read, and so increases the chances for successful alignment.<BR>
+  <HR>
+  <B>Q: </B>Can I get the source code to CD-DA X-Tractor?<BR>
+  <B>A: </B>Yes.  And you don't even have to say "pretty please"... CD-DA X-Tractor is released under the <A HREF="license.html">GNU Public License</A>, and as such comes with full source code.  The source code is currently located at <A HREF="http://xtractor.sourceforge.net/" TARGET="xsforge">xtractor.sourceforge.net</A>.  The ripping code itself is encapsulated in akrip32.dll, which has been moved into its own project at <A HREF="http://akrip.sourceforge.net/" target="akripsourceforge">akrip.sourceforge.net</A>.  The source code to the DLL is included in the source distribution for CD-DA X-Tractor.  Although written in C, the DLL functions can be called from other Windows programming environments -- an interface for Delphi is currently available.<BR>
+  <HR>
+  <B>Q: </B>Open Source is great!  How can I help?<BR>
+  <B>A: </B>Just send your changes, or even your ideas for changes to <A HREF="mailto:akey@users.sourceforge.net">users.sourceforge.net</A>.<BR>
+  <HR>
+</BODY>
+</HTML>

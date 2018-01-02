@@ -1,0 +1,49 @@
+Application type of $$SHEET_TITLE$$:
+$$IF(MODAL)
+    Modal property sheet based targeting:
+$$ELSE
+    Modeless property sheet based targeting:
+$$ENDIF	//MODAL
+        +Win32
+
+
+Classes to be created:
+    Application: C$$Safe_root$$App in $$Root$$.h and $$Root$$.cpp
+    Main sheet:  CMainSheet in MainSheet.h and MainSheet.cpp
+    Pages:
+$$BEGINLOOP(NUM_PAGES)
+        +$$PAGE_CLASS$$ in $$PAGE_FILE$$.h and $$PAGE_FILE$$.cpp
+$$ENDLOOP	//NUM_PAGES
+
+
+Features:
+$$IF(SMALL_PAGE)
+    + Small size pages
+$$ENDIF	//SMALL_PAGE
+$$IF(MEDIUM_PAGE)
+    + Medium size pages
+$$ENDIF	//MEDIUM_PAGE
+$$IF(LARGE_PAGE)
+    + Large size pages
+$$ENDIF	//LARGE_PAGE
+$$IF(ABOUT_BOX)
+    + About box on system menu
+$$ENDIF	//ABOUT_BOX
+$$IF(TOOLTIPS)
+    + Tooltips for the controls in the pages
+$$ENDIF	//TOOLTIPS
+$$IF(STANDARD_BUTTONS)
+    + Has standard buttons (Ok, Cancel, Apply, Help)
+$$ENDIF	//STANDARD_BUTTONS
+$$IF(MINIMIZEBOX)
+    + Minimize box
+$$ENDIF	//MINIMIZEBOX
+$$IF(SEND_TO_TASKBAR)
+    + Minimizing sends the application to the system taskbar
+$$ENDIF	//SEND_TO_TASKBAR
+$$IF(START_ON_TASKBAR)
+    + Application can start on the system taskbar
+$$ENDIF	//START_ON_TASKBAR
+$$IF(MFCDLL)
+    + Uses shared DLL implementation (MFC4x.DLL)
+$$ENDIF	//MFCDLL

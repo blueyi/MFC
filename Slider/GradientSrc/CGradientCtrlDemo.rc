@@ -1,0 +1,300 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CGradientCtrlDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CGradientCtrlDemo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CGRADIENTCTRLDEMO_DIALOG DIALOGEX 0, 0, 568, 217
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CGradientCtrl 2.0 Demo"
+MENU IDR_MENU
+FONT 8, "Tahoma"
+BEGIN
+    GROUPBOX        "Add New CPeg",IDC_STATIC,85,7,115,53
+    PUSHBUTTON      "<= Add",IDC_ADD_PEG,90,40,50,14
+    EDITTEXT        IDC_NEWPEG_POSITION,126,22,50,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Position",IDC_STATIC,92,24,26,8
+    PUSHBUTTON      "Colour...",IDC_NEWPEG_COLOUR,145,40,50,14
+    GROUPBOX        "Selected CPeg",IDC_SELPEG,85,60,115,75
+    EDITTEXT        IDC_SELPEG_POSITION,125,75,50,14,ES_AUTOHSCROLL
+    LTEXT           "Position",IDC_STATIC,95,78,26,8
+    PUSHBUTTON      "Colour...",IDC_SELPEG_COLOUR,125,95,50,14
+    GROUPBOX        "CGradient",IDC_STATIC,207,6,223,70
+    PUSHBUTTON      "Colour...",IDC_BACKGROUND_COLOUR,261,18,50,14
+    PUSHBUTTON      "Delete",IDC_DEL_PEG,125,115,50,14
+    LTEXT           "Background",IDC_STATIC,213,22,38,8
+    LTEXT           "Fire",IDC_FIRE,444,17,112,109,SS_SUNKEN
+    GROUPBOX        "Fire - A Paletization Demonstration",IDC_STATIC,436,5,
+                    125,128
+    CONTROL         "Gradient",IDC_GRADIENT,"MFCGradientCtrl",WS_TABSTOP,7,7,
+                    71,203,WS_EX_CLIENTEDGE
+    CONTROL         "Use background in the 0'th\npalette entry",
+                    IDC_USE_BACKGROUND,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    BS_TOP | BS_MULTILINE | WS_TABSTOP,211,35,100,20
+    COMBOBOX        IDC_METHOD_COMBO,257,57,60,108,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Interpolation\nMethod",IDC_STATIC,211,54,42,18
+    GROUPBOX        "Quantization",IDC_STATIC,325,18,97,53
+    EDITTEXT        IDC_QUANTIZATION_ENTRIES,377,50,40,14,ES_AUTOHSCROLL
+    LTEXT           "Entry Count",IDC_STATIC,333,54,40,8
+    CONTROL         "Enable Quantization",IDC_ENABLE_QUANTIZATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,333,34,80,10
+    GROUPBOX        "CGradientCtrl",IDC_STATIC,205,80,225,55
+    CONTROL         "Show Tooltips",IDC_SHOWTOOLTIPS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,213,92,60,10
+    CONTROL         "Vertical",IDC_VERTICAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,279,95,39,10
+    CONTROL         "Horizontal",IDC_HORIZONTAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,279,104,48,10
+    GROUPBOX        "Orientation",IDC_STATIC,273,85,60,35
+    CONTROL         "On Right/Top",IDC_RIGHT_TOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,346,95,59,10
+    CONTROL         "On Left/Bottom",IDC_LEFT_BOTTOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,346,107,65,10
+    GROUPBOX        "Peg Side",IDC_STATIC,339,85,81,35
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 186, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,128,7,50,14
+    CTEXT           "CGradientCtrl Demo 2.0\n\nThis is a demonstration project to go with my two classes CGradient and CGradientCtrl. The project is licence-less; you can do what you like with the code and this demo - I don't care. It's not like I can do anything about it!\n",
+                    IDC_STATIC,7,7,112,77
+    CTEXT           "Portions of code in this demo belong to:\nJan Sorensen with the fire control\nJames Wight && Chris Maunder for the Colour Buttons",
+                    IDC_STATIC,7,84,114,47
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "CGradientCtrl Demo MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CGradientCtrl Demo\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CGradientCtrlDemo.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CGradientCtrl Demo Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CGRADIENTCTRLDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 561
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+        HORZGUIDE, 84
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",                    ID_OPEN
+        MENUITEM "Save &As...",                 ID_SAVEAS
+    END
+    MENUITEM "&About",                      ID_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CGRADIENTCTRLDEMO_DIALOG DLGINIT
+BEGIN
+    IDC_METHOD_COMBO, 0x403, 7, 0
+0x694c, 0x656e, 0x7261, "\000" 
+    IDC_METHOD_COMBO, 0x403, 11, 0
+0x6c46, 0x7461, 0x5320, 0x6174, 0x7472, "\000" 
+    IDC_METHOD_COMBO, 0x403, 12, 0
+0x6c46, 0x7461, 0x4d20, 0x6469, 0x6c64, 0x0065, 
+    IDC_METHOD_COMBO, 0x403, 9, 0
+0x6c46, 0x7461, 0x4520, 0x646e, "\000" 
+    IDC_METHOD_COMBO, 0x403, 7, 0
+0x6f43, 0x6973, 0x656e, "\000" 
+    IDC_METHOD_COMBO, 0x403, 14, 0
+0x5348, 0x204c, 0x6c43, 0x636f, 0x776b, 0x7369, 0x0065, 
+    IDC_METHOD_COMBO, 0x403, 19, 0
+0x5348, 0x204c, 0x6e41, 0x6974, 0x432d, 0x6f6c, 0x6b63, 0x6977, 0x6573, 
+"\000" 
+    IDC_METHOD_COMBO, 0x403, 13, 0
+0x5348, 0x204c, 0x6853, 0x726f, 0x6574, 0x7473, "\000" 
+    IDC_METHOD_COMBO, 0x403, 12, 0
+0x5348, 0x204c, 0x6f4c, 0x676e, 0x7365, 0x0074, 
+    IDC_METHOD_COMBO, 0x403, 8, 0
+0x6552, 0x6576, 0x7372, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+BEGIN
+    "+",            ID_ACCEL32777,          ASCII,  NOINVERT
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CGradientCtrlDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,10 @@
+<map id="CChartDataView::InitParams" name="CChartDataView::InitParams">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#ac85451973ca22c8a61cb7cae7c168e3b" title="CChartContainer::GetAxis\lXName" alt="" coords="255,5,427,46"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#adea2bc93c2e78fadd258593ccaca1c93" title="CChart::GetAxisYName" alt="" coords="261,71,421,97"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#a1a28581c6a6a53a95302d89f7889954f" title="CChart::GetChartIdx" alt="" coords="272,121,411,148"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#ac510a9b1dd035c90e83c780f1bdc5074" title="CChart::GetChartName" alt="" coords="263,172,419,199"/>
+<area shape="rect" id="node11" href="$class_c_chart_container.html#a896f1aa1f1bf027558a938a00c7b1d8c" title="CChartContainer::GetContainer\lPrecisionX" alt="" coords="241,223,442,265"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#acbaac5a12d541ed3087eddffe7396ba6" title="CChartContainer::GetLabXVal\lStrFnPtr" alt="" coords="245,289,438,330"/>
+<area shape="rect" id="node15" href="$class_c_chart.html#ab41e08993b17ba950a6314d74e31faaf" title="CChart::GetLabYValStrFnPtr" alt="" coords="247,355,436,381"/>
+<area shape="rect" id="node17" href="$class_c_chart.html#a5057e6da6bb4b43fd883084a20c2c1c5" title="CChart::GetPrecisionY" alt="" coords="264,405,419,432"/>
+</map>

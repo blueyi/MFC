@@ -1,0 +1,37 @@
+$$// newproj.inf = template for list of template files
+$$//  format is 'sourceResName' \t 'destFileName'
+$$//    The source res name may be preceded by any combination of '=', '+', and/or '*'
+$$//       '=' => the resource is binary
+$$//       '+' => the file should be added to the project
+$$//       '*' => bypass the custom AppWizard's resources when loading
+$$//	if name starts with / => create new subdir
+
+
++PropSheetTemplate.cpp	$$Root$$.cpp
+PropSheetTemplate.h	$$Root$$.h
++stdafx.cpp	StdAfx.cpp
+stdafx.h	StdAfx.h
++PropSheetTemplate.rc	$$Root$$.rc
+resource.h	Resource.h
+PropSheetTemplate.clw	$$Root$$.clw
++readme.txt	ReadMe.txt
++MainSheet.cpp	MainSheet.cpp
+MainSheet.h	MainSheet.h
+
+$$// Copy pages
+$$BEGINLOOP(NUM_PAGES)
++Page.cpp	$$PAGE_FILE$$.cpp
+Page.h	$$PAGE_FILE$$.h
+$$ENDLOOP //NUM_PAGES
+
+$$// Icon for the sheet
+/res
+=PropSheetTemplate.ico	res\$$Root$$.ico
+=PropSheetTemplate.rc2	res\$$Root$$.rc2
+
+$$// Bitmaps for the pages
+$$BEGINLOOP(NUM_PAGES)
+$$IF(BITMAP_PAGES)
+=PageIcon.bmp	res\$$PAGE_FILE$$.bmp
+$$ENDIF(BITMAP_PAGES)
+$$ENDLOOP //NUM_PAGES

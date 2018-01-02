@@ -1,0 +1,258 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\inc\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About RenameUtility"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "RenameUtility Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_RENAMEUTILITY_DIALOG DIALOGEX 0, 0, 320, 239
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Bulk Rename Utility"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,199,216,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,263,216,50,16
+    LTEXT           "Root Folder",IDC_STATIC,27,26,41,8
+    EDITTEXT        IDC_EDIT_ROOTFOLDER,71,22,198,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "...",IDC_BUT_ROOTFOLDER_DIR,273,21,15,14
+    GROUPBOX        "Rename all the files in the selected Folder",IDC_STATIC,
+                    17,7,287,168
+    PUSHBUTTON      "&Change Case",IDC_BUT_UPPERCASE,211,58,50,14
+    CONTROL         "Rename SubFolders",IDC_CHECK_FOLDER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,30,50,84,10
+    GROUPBOX        "Rename Options",IDC_STATIC,122,39,173,47
+    CONTROL         "&Lower Case",IDC_RAD_LOWERCASE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,132,51,53,10,
+                    WS_EX_ACCEPTFILES
+    CONTROL         "&Upper Case",IDC_RAD_UPPERCASE,"Button",
+                    BS_AUTORADIOBUTTON,132,62,53,10
+    CONTROL         "&Title Case",IDC_RAD_TITELCASE,"Button",
+                    BS_AUTORADIOBUTTON,132,73,47,10
+    LTEXT           "",IDC_STATIC_PROGRESS,32,186,235,9
+    LTEXT           "",IDC_STATIC_PROGRESSBAR,32,200,235,11
+    GROUPBOX        "Options",IDC_STATIC,24,39,92,47
+    EDITTEXT        IDC_EDIT_FIND,80,99,91,14,ES_AUTOHSCROLL
+    LTEXT           "Find What",IDC_STATIC_REMOVETXT,30,102,47,8
+    LTEXT           "ReplaceWith",IDC_STATIC,30,118,41,8
+    EDITTEXT        IDC_EDIT_REPLACE,79,117,92,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Rename",IDC_BUT_REPLACE_RENAME,115,146,50,14
+    GROUPBOX        "Replace",IDC_STATIC,24,88,153,83
+    GROUPBOX        "Add Suffix or Prefix",IDC_STATIC,183,88,113,57
+    EDITTEXT        IDC_EDIT_ADDSUFFIX,226,98,65,14,ES_AUTOHSCROLL
+    LTEXT           "Enter Text",IDC_STATIC,188,100,35,8
+    CONTROL         "&Add Suffix",IDC_RAD_SUFFIX,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,190,117,49,10
+    CONTROL         "&Add Prefix",IDC_RAD_PREFIX,"Button",BS_AUTORADIOBUTTON,
+                    190,130,49,10
+    PUSHBUTTON      "&Rename",IDC_BUT_SUFFIX,245,122,45,15
+    CONTROL         "Include Extension",IDC_RAD_INCEXT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,28,134,71,10
+    CONTROL         "Exclude Extention",IDC_RAD_EXCL_EXT,"Button",
+                    BS_AUTORADIOBUTTON,28,146,71,10
+    CONTROL         "&Remove Text",IDC_RAD_RMV_TXT,"Button",
+                    BS_AUTORADIOBUTTON,28,158,59,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Mangla Corp."
+            VALUE "FileDescription", "Bulk Rename Utility"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "RenameUtility.exe"
+            VALUE "LegalCopyright", "Mangla Corp.  All rights reserved."
+            VALUE "OriginalFilename", "RenameUtility.exe"
+            VALUE "ProductName", "Bulk Rename Utility"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_RENAMEUTILITY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 232
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "RenameUtility.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About RenameUtility..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\inc\\resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\RenameUtility.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "icon\\RenameUtility.ico"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\RenameUtility.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

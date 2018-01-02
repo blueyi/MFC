@@ -1,0 +1,8 @@
+<map id="CChart::SetMaxValX" name="CChart::SetMaxValX">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#ab68421cc2d27ae20e5eb87da4802bcab" title="CChartContainer::AddChart" alt="" coords="195,44,373,71"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#a32ebaec264ffed98a945aa1a53f823e1" title="CChartContainer::Replace\lChartData" alt="" coords="198,95,370,137"/>
+<area shape="rect" id="node5" href="$class_c_charts_x_m_l_serializer.html#a951a73bd9b36e566619b5a497ceb1794" title="CChartsXMLSerializer\l::XMLToCharts" alt="" coords="443,5,591,46"/>
+<area shape="rect" id="node9" href="$class_c_charts_x_m_l_serializer.html#a8c8b6b9e1cb84d441872d8e60cf1ee49" title="CChartsXMLSerializer\l::ReplaceChartsFromXMLFile" alt="" coords="422,70,613,111"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a4a108cf29847b286e026e1218cab1f1c" title="CChartContainer::LoadCharts" alt="" coords="662,12,853,39"/>
+<area shape="rect" id="node11" href="$class_c_chart_container.html#a58f734d20645d1812668dd16a01e5d9a" title="CChartContainer::Replace\lContainerCharts" alt="" coords="671,70,843,111"/>
+</map>

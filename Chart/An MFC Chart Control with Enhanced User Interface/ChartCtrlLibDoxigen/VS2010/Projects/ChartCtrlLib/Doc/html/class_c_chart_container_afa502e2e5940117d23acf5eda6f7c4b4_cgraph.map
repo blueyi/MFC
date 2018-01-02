@@ -1,0 +1,6 @@
+<map id="CChartContainer::ToggleChartVisibility" name="CChartContainer::ToggleChartVisibility">
+<area shape="rect" id="node3" href="$class_c_chart.html#ad438e7ec02b96c556dae346cae29bf17" title="CChart::HasData" alt="" coords="283,5,403,32"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#a5a2dbb9f5faec6dbe6050fb07f967bfa" title="CChart::IsChartSelected" alt="" coords="261,56,424,83"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#a32bc24447d6c6d7d77f0cd2368ff8064" title="CChart::SelectChart" alt="" coords="273,107,412,133"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a512877c17fe6cb989050c4d3ad65b0b9" title="CChart::ToggleChartVisibility" alt="" coords="249,157,437,184"/>
+</map>

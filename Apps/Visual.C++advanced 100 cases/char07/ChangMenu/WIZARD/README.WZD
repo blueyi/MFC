@@ -1,0 +1,21 @@
+/////////////////////////////////////////////////////////////////////
+// Modify the Application Class.
+/////////////////////////////////////////////////////////////////////
+
+// 1) create a new document type and create a new icon, menu, Document Class
+// and View Class.
+
+// 2) use these new classes to create a new document template in the Application Class
+	pDocTemplate = new CMultiDocTemplate(
+		IDR_WZD2TYPE,
+		RUNTIME_CLASS(CWzdDoc),
+		RUNTIME_CLASS(CChildFrame), // custom MDI child frame
+		RUNTIME_CLASS(CWzd2View));
+	AddDocTemplate(pDocTemplate);
+
+
+/////////////////////////////////////////////////////////////////////
+// From: Visual C++ MFC Programming by Example by John E. Swanke
+// Copyright (C) 1998 jeswanke. All rights reserved.
+/////////////////////////////////////////////////////////////////////
+

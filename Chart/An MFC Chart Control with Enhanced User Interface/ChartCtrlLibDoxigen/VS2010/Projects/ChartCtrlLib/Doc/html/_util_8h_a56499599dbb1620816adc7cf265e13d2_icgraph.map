@@ -1,0 +1,5 @@
+<map id="CreateRoundedRect" name="CreateRoundedRect">
+<area shape="rect" id="node3" href="$class_c_page_ctrl.html#aae85f0947d94d42ba15496e890b7fb57" title="CPageCtrl::DrawArrow" alt="" coords="205,5,355,32"/>
+<area shape="rect" id="node5" href="$class_c_data_wnd.html#a5547c4c5fb3571957b42046d8635f703" title="CDataWnd::DrawDataWnd" alt="" coords="192,56,368,83"/>
+<area shape="rect" id="node7" href="$class_c_data_wnd.html#a360debc7262bb7043975518f69a79343" title="CDataWnd::OnPaint" alt="" coords="210,107,350,133"/>
+</map>

@@ -1,0 +1,7 @@
+; ReDoUtil.def : Declares the module parameters for the DLL.
+
+;LIBRARY      "ReDoUtil"
+DESCRIPTION  'ReDoUtil Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,9 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by ZoomIn.rc
+//
+#define HIDC_BITMAP                     0x806603ee    // IDD_PROPERTIES_DIALOG
+#define HIDC_CHECK_PERSIST              0x806603ef    // IDD_PROPERTIES_DIALOG
+#define HIDC_FACTOR                     0x806603ea    // IDD_PROPERTIES_DIALOG
+#define HIDC_HOTKEY                     0x806603e9    // IDD_PROPERTIES_DIALOG
+#define HIDC_STATIC                     0x8067ffff    // IDD_ABOUT_DIALOG
+#define HIDC_WIDTH                      0x806603ec    // IDD_PROPERTIES_DIALOG

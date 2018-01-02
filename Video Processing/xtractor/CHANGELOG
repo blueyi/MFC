@@ -1,0 +1,173 @@
+v0.24
+	Added support for creating subdirectories in the output
+	file naming algorithm.  It is now possible to include a 
+	backslash ('\') character in the filename macro, which will
+	cause a subdirectory to be formed.
+        
+        Updated to Lame 3.93.1
+        
+        Fixed bug displaying ampersand (&) in track window
+
+v0.23:
+	Updated vorb_enc.dll to v1.0 release of Ogg Vorbis.
+
+	Added UTF-8 support to Ogg Vorbis comment tags.
+
+	New "Netscape-style" preferences dialog, with TreeView control on
+	left.
+
+	Fixed DGENRE bug for Freedb level 5.
+	
+	Updated makefiles and source for gcc-2.95.3.
+
+v0.22:
+	Updated Ogg Vorbis version to use the 1.0rc3 release.
+
+	Now prompts before overwriting files that already exist.
+
+	Now uses large buffers up to the size of available physical
+	memory when ripping.
+
+	Support for Freedb protocol level 5 (DGENRE and DYEAR)
+	lines in the cddb entry.
+
+	Added normalization of ripped tracks.  The tracks are
+	first scanned and then during the rip, the normalization
+	is applied directly.  Between 10%-100% (configurable)
+	of the audio track is scanned and analyzed to find the
+	peak level.
+
+	Added HTTP proxy authentication
+
+	No longer truncates album title and artist name to 30
+	characters (relic from old ID3 code).
+
+	Added option to abort ripping at end of current track in
+	rip dialog.
+
+v0.21:
+	Switched to new Help format (MS HTML Help).
+
+	Fixed M3U file generation if invalid characters present in the
+	filename.
+
+	Numerous fixes to freedb submission.  Completely dropped all
+	mentions of cddb.cddb.com.  
+  
+	Now accepts up to 32 inexact matches from freedb.
+
+v0.20:
+	Includes track number in ID3v1 tag.
+
+	Can now set submit CGI script.
+
+	Changed to a smaller font in the options property sheet dialogs.
+	
+v0.19:
+	Added new modes for Ogg Vorbis encoding (from the libvorbis beta 2
+	release).
+	
+	Tuned the buffer allocation sizes for ripping WAV and RAW.
+
+	Data tracks can no longer be checked.
+
+	Fixed bug in akrip32.dll in the code that generates the index
+	for CDPLAYER.INI for CD's with data at the end.  It would greatly
+	help if MS would actually document the algorithm, instead of making
+	us guess (or reverse engineer).
+
+	Fixed bug in the Rip Segment dialog that kept the tic mark for the
+	beginning of the last track from being added.
+
+	Added menu option to write current CD info to CDPLAYER.INI
+
+	HTTP proxy port now defaults to port 80.
+	
+v0.18a:
+	Sheesh.  Left in a duplicate call to xtOpenOutput(), which slowed
+	things down and confused the WAV header generation.
+	
+v0.18:
+	Added a generalized encoder interface DLL, xtenc.dll, to make
+	including new encoder DLLs a simpler process.  Currently supported
+	encoders are raw data (no encoder), WAV, lame_enc.dll, blade_enc.dll
+	and vorb_enc.dll.  ID3 tagging, VBR headers, etc. are handled
+	automatically by xtenc.dll.
+
+	Wrote a BladeEnc-style DLL wrapper for the Ogg Vorbis encoder.
+	vorbis_dll.c must be linked against libvorbisfile.a vorbisfile.a,
+	available at http://www.xiph.org.
+
+	Converted all of the .jpg files in the help documentation to .png.
+	
+v0.17:
+	Now actually writes VBR header when option is selected for lame_enc
+
+	Added option to make rip and encode threads "nice".  This will mainly
+	help cancelling rip/encode under NT (not that I'm saying NT's 
+	scheduler is brain-dead).
+
+	Merged changes from multiple people to get compilation under
+	MSVC to work
+	
+v0.16:
+	Toolbar automatically redraws itself when switching to/from hi-color
+	buttons.
+
+	CDDB default servers updated to cddb.cddb.com and freedb.freedb.org.
+
+	No longer displays "Track 0" when started up with no CD present.
+
+v0.15:
+	Added "flat" style to toolbar, plus the ability to switch between
+	16-color and 24-bit bitmaps on the toolbar.
+
+	Automatically detects 16-bpp color display or better, and uses the
+	hicolor bitmaps.
+	
+v0.14.1:
+	Rereleased source archive for v0.14, making sure that all binary
+	files (*.ico,*.bmp,*.jpg) were marked as binary in CVS.
+
+v0.14:
+	Merged in changes from Blair Thompson -- time remaining indicator
+	on rip dialog, use of CDPLAYER.INI (in akrip32.dll) when CDDB not
+	available.
+
+	Improved NT/2000 support in akrip32.dll.  Synched dll source code
+	with v0.94.
+	
+v0.13:
+	Added "rip segment" functionality, including a nifty custom 
+	dual-slider range selection control.  Clicking to the left or
+	right of either slider causes the slider to "snap" to the start/end
+	of the next/previous track.  Can also be used to rip multiple tracks
+	as one (or the whole CD for that matter).
+	
+	Enabled the CDDB get site list functionality in the CDDB options
+	dialog.
+
+	Fixed the focus error for the album and artist title never giving
+	up focus (or rather the other components not taking it).
+
+v0.12:
+	Added basic support for LAME_ENC.DLL.
+	
+	Improved response time for hitting "Cancel" during rip operations
+	on slower CPUs.
+	
+v0.11:
+        Added CDDB support.  If enabled, when the refresh button is pushed,
+	a thread is started to run the CDDB query.  If the CDDB query returns
+	multiple matches, the program reacts according to what it is doing.
+	If in the middle of ripping a track, it simply uses the first match.
+	If it is not, it pops up a dialog box, and requests that the user
+	select one of the inexact matches.
+	
+	Changed read loop to always read maxRip frames, and then to truncate
+	the last frame if necessary.  The CDR_READ10_2 function seemed to
+	have problems on certain drives when the number of frames requested
+	for the last frame changed.
+	
+        Added "status" text to the trackwnd items (OK, time, rip speed)
+	

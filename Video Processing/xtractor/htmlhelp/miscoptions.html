@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+  <TITLE>Misc Options</TITLE>
+  <link rel="stylesheet" href="xtractorhelp.css">
+</HEAD>
+<BODY>
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="Filename macros">
+	<param name="Keyword" value="M3U">
+	<param name="Keyword" value="Miscellaneous options">
+	<param name="Keyword" value="playlist">
+</OBJECT>
+  <!-- Help Item title -->
+  <H2>Misc Options</H2>
+  <HR>
+  <CENTER><IMG SRC="misc-options.png" HEIGHT=435 WIDTH=416></CENTER><BR><BR>
+  <TABLE WIDTH="100%" BORDER="1">
+    <CAPTION ALIGN="top">M3U Playlist</CAPTION>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Enabled</B></TD>
+      <TD>When checked, an M3U playlist file (used by WinAmp) will be generated containing all of the tracks extracted.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Use Album Name As Filename</B></TD>
+      <TD>When selected, the M3U file will use the album name as it's filename, with the .M3U extension, in the same directory as the files being extracted.</TD>
+    </TR>
+    <TR>
+      <TD WIDTH="20%" VALIGN="top"><B>Specify Filename</B></TD>
+      <TD>When selected, you can specify the file to use for M3U files.</TD>
+    </TR>
+  </TABLE>
+  <H3>Filename Macros</H3>
+  You can specify how the output files will be named.  The mechanism works thusly:
+  <OL>
+    <LI>If a macro is entered in the provided edit box, it will be used.  "$T" will be replaced with the track number, "$N" with the track name, "$A" with the artist, and "$L" with the album title.  Note: if an item is not supplied, it will be simply be skipped, so you must ensure that all items are supplied.
+    <LI>If no macro is supplied, but the file has been renamed (either by CDDB or manually), that name will be used
+    <LI>Otherwise the track will be named "Track x.ext", where x is the track number and .ext is the extension for the configured output format.
+  </OL>
+</BODY>
+</HTML>

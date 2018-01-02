@@ -1,0 +1,14 @@
+<map id="find_border_pnts" name="find_border_pnts">
+<area shape="rect" id="node3" href="$class_c_chart.html#af24f5990f1ad41fc0e426bfbe16d3700" title="CChart::GetStartEndDataIterators" alt="" coords="171,113,387,140"/>
+<area shape="rect" id="node25" href="$class_c_chart_container.html#a32ebaec264ffed98a945aa1a53f823e1" title="CChartContainer::Replace\lChartData" alt="" coords="193,165,365,206"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#a60ac7421fbbc5ba1a2ef1674dc61bae7" title="CChart::TruncateChartData" alt="" coords="439,29,617,56"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a0b411e3506e858e6445dbafe714a8499" title="CChart::ConvertChartData" alt="" coords="443,113,613,140"/>
+<area shape="rect" id="node23" href="$class_c_chart_container.html#a6add2f68ca7f3ee07e4f7c8f99347856" title="CChartContainer::HasVisible\lPntsDInYBand" alt="" coords="435,165,621,206"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#ae29633beb938289174eebb382a86f785" title="CChartContainer::Truncate\lChart" alt="" coords="679,5,854,46"/>
+<area shape="rect" id="node11" href="$class_c_chart.html#aa8faa11c7ea0059d8dad686eae6d2578" title="CChart::DrawChartCurve" alt="" coords="685,71,848,97"/>
+<area shape="rect" id="node19" href="$class_c_chart_container.html#a4b386abcf30b63aa14ff11c28db8442e" title="CChartContainer::SelectChart\lByMouseClick" alt="" coords="670,122,863,163"/>
+<area shape="rect" id="node21" href="$class_c_chart_container.html#a5b2370283c4e79de59fc14546b5c8f7f" title="CChartContainer::DrawData\lViewPntsD" alt="" coords="676,187,857,229"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#a9b7dd8e9f149c604ad1ab72543a399de" title="CChartContainer::DrawContainer\lToBmp" alt="" coords="913,5,1122,46"/>
+<area shape="rect" id="node15" href="$class_c_chart_container.html#a99f1268f20a5a887359bdd4490621d81" title="CChartContainer::PrintCharts" alt="" coords="922,71,1113,97"/>
+<area shape="rect" id="node17" href="$class_c_chart_container.html#ad343bedea4432cba6bac8cf9ba5bc604" title="CChartContainer::OnPaint" alt="" coords="931,121,1103,148"/>
+</map>

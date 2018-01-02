@@ -1,0 +1,754 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "PGL\PGLResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "PGL\\PGLResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PGL.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_PGL_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,40
+ PRODUCTVERSION 2,0,0,40
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "de Halleux Jonathan\0"
+            VALUE "FileDescription", "Plot Graphic Library DLL\0"
+            VALUE "FileVersion", "2, 0, 0, 40\0"
+            VALUE "InternalName", "PGL\0"
+            VALUE "LegalCopyright", "FreeWare\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PGL.DLL\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PGL Dynamic Link Library\0"
+            VALUE "ProductVersion", "2, 0, 0, 40\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PGL_PROPPAGE_LINE DIALOG DISCARDABLE  0, 0, 224, 148
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Line"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PGL_EDIT_LINE_WIDTH,56,10,30,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PGL_EDIT_POINT_WIDTH,167,12,30,14,ES_AUTOHSCROLL
+    CONTROL         "none",IDC_PGL_RADIO_LINE_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,55,41,32,10
+    CONTROL         "-------",IDC_PGL_RADIO_LINE_CONT,"Button",
+                    BS_AUTORADIOBUTTON,55,51,30,10
+    CONTROL         "- - - -",IDC_PGL_RADIO_LINE_BARBAR,"Button",
+                    BS_AUTORADIOBUTTON,55,61,30,10
+    CONTROL         "-.-.-.-",IDC_PGL_RADIO_LINE_BARPOINT,"Button",
+                    BS_AUTORADIOBUTTON,55,71,30,10
+    CONTROL         ". . . .",IDC_PGL_RADIO_LINE_POINTPOINT,"Button",
+                    BS_AUTORADIOBUTTON,55,81,30,10
+    CONTROL         "step",IDC_PGL_RADIO_INTERPOLATION_STEP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,54,96,29,10
+    CONTROL         "linestrip",IDC_PGL_RADIO_INTERPOLATION_LINEAR,"Button",
+                    BS_AUTORADIOBUTTON,54,106,39,10
+    CONTROL         "line segments",IDC_PGL_RADIO_INTERPOLATION_NURBS,"Button",
+                    BS_AUTORADIOBUTTON,54,116,54,10
+    CONTROL         "none",IDC_PGL_RADIO_POINT_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,157,30,32,10
+    CONTROL         "simple (point)",IDC_PGL_RADIO_POINT_SIMPLE,"Button",
+                    BS_AUTORADIOBUTTON,157,40,57,10
+    CONTROL         "o",IDC_PGL_RADIO_POINT_CONTOUR,"Button",
+                    BS_AUTORADIOBUTTON,157,50,20,10
+    CONTROL         "triangle",IDC_PGL_RADIO_POINT_TRIANGLE,"Button",
+                    BS_AUTORADIOBUTTON,157,60,39,10
+    CONTROL         "square",IDC_PGL_RADIO_POINT_SQUARE,"Button",
+                    BS_AUTORADIOBUTTON,157,70,37,10
+    GROUPBOX        "Point",IDC_STATIC,117,1,100,142
+    LTEXT           "Width",IDC_STATIC,11,13,30,10
+    LTEXT           "Type",IDC_STATIC,10,41,36,8
+    LTEXT           "Width",IDC_STATIC,122,12,35,8
+    LTEXT           "Interpolation",IDC_STATIC,8,93,39,8
+    LTEXT           "Type",IDC_STATIC,122,30,32,8
+    GROUPBOX        "Line",IDC_STATIC,5,0,109,143
+    CONTROL         "Filled",IDC_PGL_CHECK_FILL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,27,33,10
+    LTEXT           "Strip size (>2)",IDC_STATIC,10,129,41,8
+    EDITTEXT        IDC_EDIT_STRIP_SIZE,65,128,40,12,ES_AUTOHSCROLL
+END
+
+IDD_PGL_PROPPAGE_LINE2DLOD DIALOG DISCARDABLE  0, 0, 166, 58
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "2DLine with Level Of Detail"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Tolerance",IDC_STATIC,3,42,33,8
+    LTEXT           "Original",IDC_STATIC,9,18,24,8
+    LTEXT           "Approx.",IDC_STATIC,81,18,25,8
+    GROUPBOX        "Nb. of Points",IDC_STATIC,3,5,155,31
+    EDITTEXT        IDC_PGL_EDIT_NBPORIG,38,17,40,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_PGL_EDIT_NBPAPPROX,111,17,40,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_PGL_EDIT_TOL,41,39,40,14,ES_AUTOHSCROLL
+    CONTROL         "Preview",IDC_PGL_CHECK_PREVIEW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,85,42,41,10
+END
+
+IDD_PGL_PROPPAGE_COBJECT DIALOG DISCARDABLE  0, 0, 339, 67
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "PGL object"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PGL_EDIT_NAME,5,3,328,14,ES_AUTOHSCROLL
+    CONTROL         "Selected",IDC_PGL_CHECK_SELECTED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,23,44,10
+    CONTROL         "Visible",IDC_PGL_CHECK_VISIBLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,32,36,10
+    PUSHBUTTON      "Change RGB",IDC_PGL_BUTTON_CHANGE_COLOR,5,48,60,15
+    EDITTEXT        IDC_PGL_EDIT_ALPHA,95,47,40,14,ES_AUTOHSCROLL
+    LTEXT           "Alpha",IDC_STATIC,71,47,19,8
+END
+
+IDD_PGL_DIALOG_GRAPH DIALOG DISCARDABLE  0, 0, 292, 201
+STYLE DS_3DLOOK | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+CAPTION "PlotGL"
+MENU IDR_PGL_MENU_GRAPHDLG
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_PGL_JPEG_PROP DIALOG DISCARDABLE  0, 0, 126, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Jpeg Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PGL_EDIT_JPEG_PROP,79,7,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,69,25,50,14
+    LTEXT           "Jpeg Quality (0-100)",IDC_STATIC,7,7,64,8
+END
+
+IDD_PGL_PROPPAGE_TEXT DIALOG DISCARDABLE  0, 0, 331, 79
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Text"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PGL_EDIT_STRIN_TEXT,7,7,317,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose Font",IDC_PGL_BUTTON_CHOOSE_FONT,7,28,50,14
+    CONTROL         "Left",IDC_PGL_RADIO_LEFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,69,33,27,10
+    CONTROL         "Center",IDC_PGL_RADIO_CENTER,"Button",
+                    BS_AUTORADIOBUTTON,69,45,36,10
+    CONTROL         "Right",IDC_PGL_RADIO_RIGHT,"Button",BS_AUTORADIOBUTTON,
+                    69,57,32,10
+    EDITTEXT        IDC_PGL_EDIT_ANGLE,139,34,40,14,ES_AUTOHSCROLL
+    LTEXT           "Angle",IDC_STATIC,117,37,19,8
+    GROUPBOX        "Layout",IDC_STATIC,63,24,124,48
+END
+
+IDD_PGL_PROPPAGE_MAP DIALOG DISCARDABLE  0, 0, 281, 159
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "2D Map"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "nx",IDC_STATIC,7,7,8,8
+    LTEXT           "ny",IDC_STATIC,7,20,8,8
+    LTEXT           "dx",IDC_STATIC,7,82,8,8
+    LTEXT           "dy",IDC_STATIC,7,97,8,8
+    EDITTEXT        IDC_PGL_EDIT_NY,37,19,31,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_PGL_EDIT_NX,37,7,31,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_PGL_EDIT_DX,28,81,40,14,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    EDITTEXT        IDC_PGL_EDIT_DY,28,97,40,14,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    LTEXT           "nx x ny",IDC_STATIC,7,33,23,8
+    EDITTEXT        IDC_PGL_EDIT_NXTIMSNY,37,33,30,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "Left",IDC_STATIC,7,50,12,8
+    LTEXT           "Top",IDC_STATIC,7,65,19,8
+    EDITTEXT        IDC_PGL_EDIT_LEFT,28,49,40,14,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    EDITTEXT        IDC_PGL_EDIT_TOP,28,65,40,14,ES_AUTOHSCROLL | NOT 
+                    WS_TABSTOP
+    CONTROL         130,ID_STATIC,"Static",SS_BITMAP,74,7,200,145
+END
+
+IDD_PGL_PROPPAGE_MAP_Z DIALOG DISCARDABLE  0, 0, 168, 26
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Height Map"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Color map",IDC_PGL_STATIC,7,7,32,8
+    COMBOBOX        IDC_PGL_COMBO_COLORMAP,51,7,110,116,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PGL_PROPPAGE_AXE2D DIALOG DISCARDABLE  0, 0, 248, 259
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Axis 2D properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Top",IDC_PGL_TOP_LABEL_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,21,29,10
+    EDITTEXT        IDC_PGL_EDIT_TOP_LABEL,53,20,184,14,ES_AUTOHSCROLL
+    CONTROL         "Bottom",IDC_PGL_BOTTOM_LABEL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,37,37,10
+    EDITTEXT        IDC_PGL_EDIT_BOTTOM_LABEL,53,35,184,14,ES_AUTOHSCROLL
+    CONTROL         "x - Auto",IDC_PGL_XNUMBER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,65,99,40,10
+    EDITTEXT        IDC_PGL_XNUMBER_EDIT,86,140,40,12,ES_AUTOHSCROLL
+    CONTROL         "y - Auto",IDC_PGL_YNUMBER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,65,116,40,10
+    EDITTEXT        IDC_PGL_YNUMBER_EDIT,86,156,40,12,ES_AUTOHSCROLL
+    CONTROL         "horizontal",IDC_PGL_HORGRID_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,144,40,10
+    CONTROL         "vertical",IDC_PGL_VERTGRID_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,158,39,10
+    GROUPBOX        "Labels",IDC_STATIC,7,7,234,79
+    GROUPBOX        "Grids",IDC_STATIC,7,132,52,44
+    GROUPBOX        "Numbering",IDC_STATIC,60,87,181,89
+    LTEXT           "dx",IDC_STATIC,65,141,16,8
+    LTEXT           "dy",IDC_STATIC,66,160,16,8
+    GROUPBOX        "Log scales",IDC_STATIC,7,87,52,44
+    CONTROL         "x axis",IDC_PGL_CHECK_LOGX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,102,33,10
+    CONTROL         "y axis",IDC_PGL_CHECK_LOGY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,115,33,10
+    CONTROL         "Left",IDC_PGL_LEFT_LABEL_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,52,27,10
+    EDITTEXT        IDC_PGL_EDIT_LEFT_LABEL,53,50,184,14,ES_AUTOHSCROLL
+    CONTROL         "Right",IDC_PGL_RIGHT_LABEL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,67,32,10
+    EDITTEXT        IDC_PGL_EDIT_RIGHT_LABEL,53,65,184,14,ES_AUTOHSCROLL
+    CONTROL         "Top",IDC_PGL_CHECK_NUMBER_TOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,141,104,29,10
+    CONTROL         "Bottom",IDC_PGL_CHECK_NUMBER_BOTTOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,141,120,37,10
+    CONTROL         "Left",IDC_PGL_CHECK_NUMBER_LEFT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,141,142,27,10
+    CONTROL         "Right",IDC_PGL_CHECK_NUMBER_RIGHT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,141,158,32,10
+    CONTROL         "Slider1",IDC_PGL_SLIDER_NUMBER_TOP,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,180,104,54,10
+    LTEXT           "Bottom              Top",IDC_STATIC,180,94,56,8
+    CONTROL         "Slider1",IDC_PGL_SLIDER_NUMBER_BOTTOM,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,180,119,54,10
+    CONTROL         "Slider1",IDC_PGL_SLIDER_NUMBER_LEFT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,180,142,54,10
+    CONTROL         "Slider1",IDC_PGL_SLIDER_NUMBER_RIGHT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,180,157,54,10
+    LTEXT           "Left                  Right",IDC_STATIC,180,131,54,8
+    GROUPBOX        "Time Label",IDC_STATIC,7,177,234,75
+    CONTROL         "Active",IDC_PGL_CHECK_TIME_LABEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,193,35,10
+    CONTROL         "DateTimePicker1",IDC_PGL_DATETIMEPICKER_TIMEORIGIN,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,99,190,
+                    54,15
+    LTEXT           "Origin date",IDC_STATIC,53,194,34,8
+    LTEXT           "Time unit",IDC_STATIC,53,219,28,8
+    EDITTEXT        IDC_PGL_EDIT_TIMESTEP_DAYS,105,216,33,14,ES_AUTOHSCROLL
+    LTEXT           "Days",IDC_STATIC,88,219,17,8
+    CONTROL         "DateTimePicker3",IDC_PGL_DATETIMEPICKER_TIMESTEP_HOURS,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    WS_TABSTOP | 0x8,178,216,60,15
+    LTEXT           "Hours",IDC_STATIC,153,218,19,8
+    CONTROL         "DateTimePicker4",IDC_PGL_DATETIMEPICKER_TIMEORIGIN_HOUR,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    WS_TABSTOP | 0x8,178,190,59,15
+    LTEXT           "Format",IDC_STATIC,54,238,22,8
+    EDITTEXT        IDC_PGL_EDIT_TIMEFORMAT,105,235,131,14,ES_AUTOHSCROLL
+END
+
+IDD_PGL_PROPPAGE_LINE2D DIALOG DISCARDABLE  0, 0, 263, 103
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "2D Line"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "number of points",IDC_STATIC,133,83,53,8
+    EDITTEXT        IDC_PGL_EDIT_NPOINTS,192,84,40,14,ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+    GROUPBOX        "Start Arrow",IDC_STATIC,3,5,120,59
+    CONTROL         "Show",IDC_PGL_CHECK_START_ARROW_SHOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,16,34,10
+    LTEXT           "Head Thick (pix)",IDC_STATIC,9,30,53,8
+    EDITTEXT        IDC_PGL_EDIT_START_ARROW_THICK,76,27,40,14,
+                    ES_AUTOHSCROLL
+    LTEXT           "Head Length (pix)",IDC_STATIC,9,44,57,8
+    EDITTEXT        IDC_PGL_EDIT_START_ARROW_LENGTH,76,43,40,14,
+                    ES_AUTOHSCROLL
+    GROUPBOX        "End Arrow",IDC_STATIC,135,5,120,59
+    CONTROL         "Show",IDC_PGL_CHECK_END_ARROW_SHOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,141,16,34,10
+    LTEXT           "Head Thick (pix)",IDC_STATIC,141,30,53,8
+    EDITTEXT        IDC_PGL_EDIT_END_ARROW_THICK,208,27,40,14,ES_AUTOHSCROLL
+    LTEXT           "Head Length (pix)",IDC_STATIC,141,44,57,8
+    EDITTEXT        IDC_PGL_EDIT_END_ARROW_LENGTH,208,43,40,14,
+                    ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_PGL_CHECK_FILL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,79,42,10
+    GROUPBOX        "Filling",IDC_STATIC,3,66,120,32
+END
+
+IDD_PGL_PROPPAGE_MAP_VECTORFIELD DIALOG DISCARDABLE  0, 0, 91, 29
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Vector Field"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Line width",IDC_STATIC,7,10,30,8
+    EDITTEXT        IDC_PGL_EDIT_LINEWIDTH,44,7,40,14,ES_AUTOHSCROLL
+END
+
+IDD_PGL_PROPPAGE_REGION DIALOG DISCARDABLE  0, 0, 210, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Region"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: layout property page",IDC_STATIC,51,33,90,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_PGL_MENU_GRAPHDLG MENU DISCARDABLE 
+BEGIN
+    POPUP "&Figure"
+    BEGIN
+        MENUITEM "&Open...",                    ID_PGL_FIGURE_OPEN
+        MENUITEM "&Export...",                  ID_PGL_FIGURE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "C&ut \tCtrl+X",               ID_PGL_EDIT_CUT
+        MENUITEM "&Copy \tCtrl+C",              ID_PGL_EDIT_COPY
+        MENUITEM "&Paste \t Ctrl+V",            ID_PGL_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     ID_PGL_EDIT_DELETE
+        MENUITEM "Copy To Cl&ipboard",          ID_PGL_EDIT_COPYTOCLIPBOARD
+    END
+    POPUP "&Selection"
+    BEGIN
+        MENUITEM "&Select All",                 ID_PGL_SELECTION_SELECTALL
+        MENUITEM "&Clear Selection",            ID_PGL_SELECTION_UNSELECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide",                       ID_PGL_SELECTION_HIDESELECTION
+
+        MENUITEM "U&nhide All",                 ID_PGL_SELECTION_UNHIDEALL
+        MENUITEM SEPARATOR
+        POPUP "&Order..."
+        BEGIN
+            MENUITEM "To &Front",                   ID_PGL_SELECTION_ORDER_TOFRONT
+
+            MENUITEM "To &Back",                    ID_PGL_SELECTION_ORDER_TOBACK
+
+            MENUITEM "Move &Up",                    ID_PGL_SELECTION_ORDER_MOVEUP
+
+            MENUITEM "Move &Down",                  ID_PGL_SELECTION_ORDER_MOVEDOWN
+
+        END
+    END
+    POPUP "T&ools"
+    BEGIN
+        MENUITEM "&Select",                     ID_PGL_TOOLS_SELECT
+        MENUITEM "Add &Text",                   ID_PGL_TOOLS_ADDTEXT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Select",                     ID_PGL_VIEW_SELECT
+        MENUITEM "Zoom &All",                   ID_PGL_VIEW_ZOOMALL
+        MENUITEM "&Zoom",                       ID_PGL_VIEW_ZOOM
+        MENUITEM "Pa&n",                        ID_PGL_VIEW_PAN
+        MENUITEM "A&xe Properties...",          ID_PGL_AXE_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_PGL_VIEW_PROPERTIES
+    END
+END
+
+IDR_PGL_MENU_VIEW MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Export...",                  ID_PGL_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+    END
+    POPUP "&Objects"
+    BEGIN
+        MENUITEM "&Explorer",                   ID_PGL_OBJECTS_EXPLORER
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Zoom &All",                   ID_PGL_VIEW_ZOOMALL
+        MENUITEM "&Zoom In",                    ID_PGL_VIEW_ZOOMIN
+        MENUITEM "&Zoom Out",                   ID_PGL_VIEW_ZOOMOUT
+        MENUITEM "&Zoom Box",                   ID_PGL_VIEW_ZOOMBOX
+        MENUITEM "&Pan",                        ID_PGL_VIEW_PAN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PGL_PROPPAGE_LINE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 217
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_PGL_PROPPAGE_LINE2DLOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 158
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_PGL_PROPPAGE_COBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 333
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_PGL_PROPPAGE_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 324
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_PGL_PROPPAGE_MAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        VERTGUIDE, 74
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_PGL_PROPPAGE_MAP_Z, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 19
+    END
+
+    IDD_PGL_PROPPAGE_AXE2D, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        VERTGUIDE, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+        HORZGUIDE, 93
+        HORZGUIDE, 109
+        HORZGUIDE, 123
+    END
+
+    IDD_PGL_PROPPAGE_LINE2D, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 255
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_PGL_PROPPAGE_MAP_VECTORFIELD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 84
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_PGL_PROPPAGE_REGION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PGL_PROPPAGE_MAP_Z DLGINIT
+BEGIN
+    IDC_PGL_COMBO_COLORMAP, 0x403, 4, 0
+0x5348, 0x0056, 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 7, 0
+0x6f43, 0x7070, 0x7265, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 5, 0
+0x6f42, 0x656e, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 7, 0
+0x7553, 0x6d6d, 0x7265, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 7, 0
+0x6957, 0x746e, 0x7265, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 7, 0
+0x7053, 0x6972, 0x676e, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 7, 0
+0x7541, 0x7574, 0x6e6d, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 5, 0
+0x6950, 0x6b6e, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 4, 0
+0x6f48, 0x0074, 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 5, 0
+0x6f43, 0x6c6f, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 5, 0
+0x7247, 0x7961, "\000" 
+    IDC_PGL_COMBO_COLORMAP, 0x403, 4, 0
+0x654a, 0x0074, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PGL_LINE2D_BITMAP   BITMAP  DISCARDABLE     "res\\pgl_line2D.bmp"
+IDB_PGL_MAPZ_BITMAP     BITMAP  DISCARDABLE     "res\\pgl_mapz.bmp"
+IDB_PGL_MAPVECTOR_BITMAP BITMAP  DISCARDABLE     "res\\pgl_mapv.bmp"
+IDB_PGL_AXE2D_BITMAP    BITMAP  DISCARDABLE     "res\\pgl_axe2.bmp"
+IDB_PGL_OBJMG_BITMAP    BITMAP  DISCARDABLE     "res\\pgl_objmg.bmp"
+IDB_PGL_GRAPH_BITMAP    BITMAP  DISCARDABLE     "res\\pgl_grap.bmp"
+IDB_PGL_TEXT_BITMAP     BITMAP  DISCARDABLE     "res\\pgl_text.bmp"
+IDB_PGL_SELECT_BITMAP   BITMAP  DISCARDABLE     "res\\pgl_select.bmp"
+IDB_PGL_LINE2DLOD_BITMAP BITMAP  DISCARDABLE     "res\\pgl_line2Dlod.bmp"
+IDB_PGL_BITMAP_MAP_GRID BITMAP  DISCARDABLE     "res\\pglmapgrid.bmp"
+IDB_PGL_REGION_BITMAP   BITMAP  DISCARDABLE     "res\\pgl_regi.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PGL_FIGURE_OPEN      "Open a PGL graph\nOpen"
+    ID_PGL_FIGURE_SAVEAS    "Save current graph\nSave As"
+    ID_PGL_VIEW_PROPERTIES  "Properties of the graph\nProperties"
+    ID_PGL_VIEW_ZOOM        "Zoom in or out with Ctrl\nZoom"
+    ID_PGL_VIEW_PAN         "Move view\nMove"
+    ID_PGL_AXE_PROPERTIES   "Shows the Axe properties dialog\nAxe properties"
+    ID_PGL_SELECTION_ORDER_TOFRONT "Move object to front\nTo Front"
+    ID_PGL_SELECTION_ORDER_TOBACK "Move object to back\nTo back"
+    ID_PGL_SELECTION_ORDER_MOVEUP "Move object one step up\nMove Up"
+    ID_PGL_SELECTION_ORDER_MOVEDOWN "Move object one step down\nMove down"
+    ID_PGL_TOOLS_SELECT     "Selection moden\nSelect"
+    ID_PGL_TOOLS_ADDTEXT    "Insert text box\nText"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PGL_SELECTION_SELECTALL "Select all objects\nSelect All"
+    ID_PGL_SELECTION_UNSELECT "Unselect all\nUnselect All"
+    ID_PGL_SELECTION_HIDESELECTION "Hide selected objects\nHide selected"
+    ID_PGL_SELECTION_UNHIDEALL "Unhide all objects\nUnhide All"
+    ID_PGL_FIGURE_EXPORTTOJPEG "Create a JPeg file of the window\nTo JPEG"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PGL_VIEW_ZOOMALL     "Zoom extent of the datas\nZoom All"
+    ID_PGL_EDIT_DELETE      "Delete current selection\nDelete"
+    ID_PGL_EDIT_COPY        "Copy current selection to clipboard\nCopy"
+    ID_PGL_EDIT_PASTE       "Paste clipboard in document\nPaste"
+    ID_PGL_EDIT_CUT         "Cuts current selection\nCut"
+    ID_PGL_FIGURE_EXPORTTOEPS "Create an EPS file of the graph\nTO EPS"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Belgium) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_BELGIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PGL_ALL_PROPS_DIALOG DIALOGEX 0, 0, 525, 298
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Graph and objects properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_PGL_OBJECTTREE,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_DISABLEDRAGDROP | WS_BORDER | WS_TABSTOP,7,7,148,258,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Static",IDC_PGL_STATIC_PROPSHEET,163,7,355,212,NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "Close",IDC_PGL_BUTTON_CLOSE,7,277,148,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PGL_ALL_PROPS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 518
+        VERTGUIDE, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 291
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (Belgium) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\PGL.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

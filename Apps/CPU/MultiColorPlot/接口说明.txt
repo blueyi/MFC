@@ -1,0 +1,21 @@
+// 设置网格间距
+void SetGridResolutionX(int nGridReluX);
+// 设置网格间距
+void SetGridResolutionY(int nGridReluY);
+// 设置网格滚动速度,正值为从左向右滚动,0不动
+void SetGridScrollSpeedX(int nSpeedX);
+// 正值为从上到下滚动,0不动
+void SetGridScrollSpeedY(int nSpeedY);
+// 网格线宽度
+void SetGridLineWidth(int nWidth);
+// 背景色
+void SetGridBackClr(COLORREF clr);
+// // 锁定数据显示范围
+void LockRang(bool bfLock = true);
+// 锁定数据显示范围
+void LockRang(float fMin, float fMax);
+// 设置数据
+void SetData(float fData);
+// 曲线颜色
+void SetLineColor(COLORREF clrLine = RGB ( 0 , 255 , 0 ));
+void SetLineWidth(int nWidth = 1);

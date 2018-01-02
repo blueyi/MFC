@@ -1,0 +1,6 @@
+EXPORTS
+beInitStream
+beEncodeChunk
+beDeinitStream
+beCloseStream
+beVersion

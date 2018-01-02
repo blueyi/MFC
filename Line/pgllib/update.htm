@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<!-- HTML for article "Plot Graphic Library" by Jonathan de Halleux
+     URL: http://www.codeproject.com/miscctrl/pgllib.asp
+
+     Article content copyright Jonathan de Halleux
+     All formatting, additions and alterations Copyright © CodeProject, 2002
+-->
+		<!----------------------------- Ignore ----------------------------->
+		<link rel="stylesheet" type="text/css" href="http://www.codeproject.com/styles/global.css">
+		<p><b>Please choose 'View Source' in your browser to view the HTML, or File | Save to 
+				save this file to your hard drive for editing.</b></p>
+		<hr size="1" noshade>
+		<!----------------------------- Ignore ----------------------------->
+		<!----------------------------- Article Starts ----------------------------->
+		<ul class="download">
+			<li>
+				<a href='pgllib/pgllib_src.zip'>Download source - 321 Kb</a></li>
+			<li>
+				<a href='pgllib/pgllib_demo.zip'>Download demo application - 143 Kb</a></li>
+		</ul>
+		<p><IMG alt="Snapshot" hspace="0" src="pgllib/pglmfclib.png" width="500" align="middle" useMap="" border="0" height="313"></p>
+		<h2>Description</h2>
+		<p><code>PGL</code> is a library that encapsulates plot capabilities in a MFC 
+			project for <b>VC6 and VC7</b>. It is designed to be able to easily plot data 
+			generated in a project without the need of any external software. In fact, with <u>CView</u>
+			and <u>CDialog derived classes</u>, you can have your app display chart in 5 
+			minutes.</p>
+		<p>The aim of <code>PGL</code> is not to have a user-friendly environment but 
+			rather being able to generate any plot from the source code.</p>
+		<p><code>PGL</code> was originally using <code>OpenGL</code> to raster graphics but 
+			now it uses <code>GDI+</code> (so you need to install Microsoft SDK to compile <code>
+				PGL</code>).</p>
+		<h2>Licensing</h2>
+		The source available on CodeProject is licensed under LGPL. However, the next 
+		releases are not free anymore (Ooops, sorry). You can check the latest 
+		development at <a href="http://www.pelikhan.com">PGL Home Page</a>. Anyway, 
+		enjoy beautiful charting.
+		<h2>Features</h2>
+		<ul>
+			<li>
+				line strip, fully customisable:
+				<ul>
+					<li>
+						color (RGBA),</li>
+					<li>
+						line dashing,</li>
+					<li>
+						point type (circle, box, triangle, etc...)</li>
+					<li>
+						line width,</li>
+					<li>
+						filled,</li>
+					<li>
+						line shadow,</li>
+					<li>
+						multiple line strip,</li>
+					<li>
+						etc...</li>
+				</ul>
+			<li>
+				line strip with level of detail capabilities (based on Douglas-Peukler line 
+				simplification algorithm),</li>
+			<li>
+				Vector map,</li>
+			<li>
+				Height map,</li>
+			<li>
+				Text,
+				<ul>
+					<li>
+						variable scale,</li>
+					<li>
+						multiple fonts,</li>
+					<li>
+						orientable,</li>
+				</ul>
+			<li>
+				Unlimited sub-plotting,</li>
+			<li>
+				Automatic axis,</li>
+			<li>
+				Time labelling,</li>
+			<li>
+				Export to EPS, SVG, JPEG, TIFF, PNG,</li>
+			<li>
+				CView derived class for fast integration in existing project,</li>
+			<li>
+				CDialog derived class,</li>
+			etc...
+		</ul>
+		<h2>UML</h2>
+		A UML diagram is available in pdf <a href="pgllib/pgluml_pdf.zip">here</a>. It 
+		is not complete but it should help you in understanding the library.
+		<h2>Installation</h2>
+		Here are the installation steps to use <code>PGL</code> in one of your 
+		projects:
+		<ol>
+			<li>
+				Install <code>GDI+</code>
+			(part of Microsoft SDK).
+			<li>
+			Download Gdiplus.dll and make sure it is in the path,
+			<li>
+				Recompile the source, it will build .lib in the lib directory and the .dll in 
+				the bin directory</li>
+			<li>
+				Add the directory with <code>PGL</code> binaries to your path. (by default it 
+				is C:\Program Files\PGL\bin)</li>
+			<li>
+				Add the include directory and lib directory to Visual C++ include/lib 
+				directories.</li>
+			<li>
+				Make sure the headers are available</li>
+		</ol>
+		<p>That's it!
+			<h2>Getting your project started</h2>
+			<ol>
+				<li>
+					Add the following in your StdAfx.h file :
+					<pre>
+#include "PGL.h"
+</pre>
+				<li>
+					Since <code>PGL</code> is using <code>GDI+</code>, you must initialize it :
+					<ul>
+						<li>
+							Add the following variable to your <u>CWinApp</u> derived class<pre>ULONG_PTR m_ulGdiplusToken;
+</pre>
+						<li>
+							Add the following to the CWinApp::OnInitInstance function to initialize <code>GDI+</code>
+							<pre>// initialize &lt;code&gt;GDI+ (gdi+ is in Gdiplus namespace)
+Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+Gdiplus::GdiplusStartup(&amp;m_ulGdiplusToken, &amp;gdiplusStartupInput, NULL);
+</pre>
+						<li>
+							Add the following to the CWinApp::OnExitInstance function to clean up <code>GDI+</code>.<pre>// shutdown GDI+
+Gdiplus::GdiplusShutdown(m_ulGdiplusToken);
+	</pre>
+					</ul>
+				</li>
+			</ol>
+			Your project should work fine now.
+			<h3>Examples</h3>
+		All these examples are accessible in the source. See the example menu of 
+		TestPGL.
+		<p>&nbsp;</p>
+		<h4>Example 1 : Drawing a simple line</h4>
+		This is a first explanatory example. We suppose that the points (x,y) of the 
+		line have been generated and are stored in two array <code>pX,pY</code> of size <code>
+			nPoints</code> ( note that you can also pass data as <code>std::vector&lt;double&gt;</code>
+		to <code>PGL</code>).
+		<p><IMG alt="Snapshot" hspace="0" src="pgllib/example1.png" align="middle" useMap="" border="0" width="393" height="235"></p>
+		<p>Here's the code I used to generate the data: a simple sinusoid. Note that the y 
+			are in [-1.1, 1.1] but <code>PGL</code> will handle axe labelling the have nice 
+			units.</p>
+		<pre>// generate data
+int nPoints = 50;
+double* pX=new double[nPoints];
+double* pY=new double[nPoints];
+for (UINT i=0;i&lt; nPoints;i++)
+{
+	pX[i]=i;
+	pY[i]=sin(i/(double)nPoints*2*3.14)*1.1;
+}
+</pre>
+		<ol>
+			<li>
+				First, create a graph object:
+				<pre>
+CPGLGraph* pGraph = new CPGLGraph;
+</pre>
+				Note that you can check all <code>PGL</code> object with <code>ASSERT_VALID</code>
+				since they all inherit from <code>CObject</code>.
+			<li>
+				Create a 2D line:
+				<pre>
+CPGLLine2D* pLine = new CPGLLine2D;
+</pre>
+			<li>
+				Attach the data to the line. <code>PGL</code> will handle the memory 
+				afterwards. That is, it will delete the pointers of data at the object 
+				destruction. This means <code>pX,pY</code> MUST have been allocated on the heap 
+				!
+				<pre>
+pLine-&amp;gtSetDatas( nPoints /* number of points */, pX /* x(i) */, pY /* y(i) */);
+</pre>
+			<li>
+				(Optional)Change some properties of the line: pLine-&gt;SetLineWidth(2);<br>
+				<br>
+			<li>
+				Add the line to the graph (note that an object can be added to only one graph):
+				<pre>
+pGraph-&gt;AddObject(pLine);
+</pre>
+			<li>
+				Make <code>PGL</code> scale the plot (automatically)
+				<pre>
+pGraph-&gt;ZoomAll();
+</pre>
+			<li>
+				Create a dialog box and display the plot:
+				<pre>
+CPGLGraphBitDlg graphdlg(this, pGraph);
+graphdlg.DoModal();
+</pre>
+		</ol>
+		You should have the same as the image above. Note that this image (PNG) has 
+		been generated by <code>PGL</code>.
+		<p>&nbsp;</p>
+		<h4>Example 2 : Adding a line with level of detail control</h4>
+		You may have to plot line with thousands of points. This can become very heavy 
+		and especially if you export it to EPS, the files can become very large. To 
+		overcome this problem, you can use a line with LOD included in <code>PGL</code>.
+		<p><IMG alt="Snapshot" hspace="0" src="pgllib/example2.png" align="middle" useMap="" border="0" width="504" height="267"></p>
+		In this examples, we approximate the previous line. Starting from the previous 
+		example,
+		<ol>
+			<li>
+				Change the line of code
+				<pre>
+CPGLLine2D* pLine = new CPGLLine2D;
+</pre>
+				to
+				<pre>
+CPGLLine2DLOD* pLine = new CPGLLine2DLOD;
+</pre>
+			</li>
+			<li>
+				Change tolerance of level of detail
+				<pre>
+pLine-&gt;SetTol(0.05);
+</pre>
+			</li>
+			<li>
+				Shrink the number of points by a desired compression ratio (here to 10% with 2% 
+				threshold)
+				<pre>
+pLine-&gt;ShrinkNorm(0.1,0.02);
+</pre>
+			</li>
+		</ol>
+		On the figure above, you can see the original line and the approximated one. 
+		You can gain a serious amount of points using this technique!
+		<p>&nbsp;</p>
+		<h4>Example 3: Customizing axis, labeling, etc...</h4>
+		As you can see in the previous image, all the parameters of the objects are 
+		changeable in the code. In this example, we shall
+		<ul>
+			<li>
+			change the title text,
+			<li>
+			turn off horizontal grid,
+			<li>
+			show right label,
+			<li>
+			change number of ticks on the top axis,
+			<li>
+			switch to time labelling for the x-axis,
+			<li>
+			and more...
+		</ul>
+		<p><IMG alt="Snapshot" hspace="0" src="pgllib/example3.png" align="middle" useMap="" border="0" width="464" height="291"></p>
+		We start from the second example and add the following line of code before 
+		calling <code>ZoomAll()</code>.
+		<ol>
+			<li>
+				Get a pointer the axis object (there a huge mistake of English but in French 
+				it's ok :)(axe -> axis))
+				<pre>
+CPGLAxe2D* pAxis = pGraph-&amp;gtGetAxe();
+</pre>
+			<li>
+				Change the title text and color
+				<pre>
+pAxis-&gt;SetTitle(str);
+</pre>
+				or
+				<pre>
+pAxis-&gt;GetTitle()-&gt;SetString(str);
+</pre>
+				<pre>
+pAxis-&gt;GetTitle()-&gt;SetColor(0 /* red */,0.5f /* green */,0 /* blue*/ /* alpha optional */);
+</pre>
+			<li>
+				Turn off vertical grid, (vertical -> 0, horizontal -> 1)
+				<pre>
+pAxis-&amp;gtSetShowGrid(1,FALSE);
+</pre>
+			<li>
+				Show and change right label,
+				<pre>
+pAxis-&amp;gtGetRightLabel()-&amp;gtShow(TRUE);
+pAxis-&amp;gtGetRightLabel()-&amp;gtSetString("This is the right label");
+</pre>
+			<li>
+				Show right numbering
+				<pre>
+pAxis-&gt;GetRightNumber()-&gt;Show();
+</pre>
+			<li>
+				Changing number of ticks on the top axis,
+				<pre>
+pAxis-&gt;SetTopSecondTicksNb(5);
+</pre>
+			<li>
+				Switch to time labelling the x-axis,
+				<pre>
+// enable time labelling
+pAxis-&amp;gtSetTimeLabel(TRUE);
+// set origin, time step and format (see COleDateTime.Format for details)
+pAxis-&amp;gtSetTimeLabelFormat(COleDateTime::GetCurrentTime() /* Time at zero. */, 
+			COleDateTimeSpan(0,0,30,0)	/* Time per unit */,
+			"%H:%M:%S" /* String format */);
+</pre>
+		</ol>
+		I've also disabled the line drawing and set the tolerance to 0.025 for the LOD 
+		line. Of course, you can do much more. This is just an example.
+		<h4>Example 4: Sub-plotting !</h4>
+		What about putting multiple plots on a figure: that's possible in <code>PGL</code>
+		in many ways. In fact you can add plots to plots, and so on.
+		<p><IMG alt="Snapshot" hspace="0" src="pgllib/example4.png" align="middle" useMap="" border="0" width="500" height="359"></p>
+		The class <u>CPGLGraph</u> is inherited from a generic plot class : <u>CPGLRegion</u>. 
+		You can either
+		<ul>
+			<li>
+				use the function <code>Divide(m,n)</code> to divide the region in an array of m 
+				rows and n columns (Note that this method erase all object in the region). 
+				After that, you can access the elements with <code>GetChilds(i)</code> (the 
+				regions are created row by row). You can get the number of children with <code>GetNChilds()</code>:
+				<pre>
+// allocated somewhere
+CPGLRegion* pRegion;
+// dividing
+pRegion-&gt;Divide(m,n);
+// accessing region at row 2 and column 1 (zero based index)
+CPGLRegion* pChildRegion = pRegion-&gt;GetChild(2*n+1);
+</pre>
+			<li>
+				Create an add directly a region using <code>AddRegion</code>. To use this 
+				method you must <code>SetNormBBox(...)</code> to set the bounding box (in 
+				Normalized coordinates with respect to the parent region)
+				<pre>
+CPGLRegion* pChildRegion = pRegion-&gt;AddRegion();
+pChildRegion-&gt;SetNormBBox(0.1 /* llx */ , 0.2 /* lly */ , 
+                          0.7 /* urx */ , 0.8 /* ury */);
+</pre>
+		</ul>
+		Of course, you can divide child regions and so on.
+		<p>&nbsp;</p>
+		<h4>Example 5: Changing properties of objects at runtime</h4>
+		You can explore the object hierarchy by right clicking the view or dialog. 
+		Unfortunately, serialization is not working yet. So it is lost work...
+		<p><IMG alt="Snapshot" hspace="0" src="pgllib/objects.png" align="middle" useMap="" border="0" width="500" height="356"></p>
+		<h2>Reference</h2>
+		The documentation is generated with Doxygen and Doxygen studio. See Plot 
+		Graphic Library.dow file. Otherwize, it is shipped with the Microsoft 
+		Installer.
+		<h2>Download</h2>
+		You can download the Microsoft installer at the <A href="http://www.pelikhan.com">PGL 
+			Home Page</A>
+		<h2>Compiling the sources</h2>
+		<p>The sources of <code>PGL</code> are provided. Open the workspace
+		</p>
+		<ul>
+			<li>
+				"Plot Graphic Library.dsw" for VC6 users</li>
+			<li>
+				"Plot Graphic LibraryNET.dsw" for VC7 users</li></ul>
+		<p>It contains 6 projects :</p>
+		<ul>
+			<li>
+			AlgoTools. Collection of Algorithmic classes. This project contains the 
+			algorithm for line approximation.
+			<li>
+				IGfx. Graphic library used by <code>PGL</code>. Multi-layer graphic 
+			interface to export in multiple graphic format such as EPS or SVG.
+			<li>
+			IGfxTest. Test project for IGfx.
+			<li>
+			OGLTools. A useful library to handle OpenGL with Windows. Not used anymore but 
+			useful anyway.
+			<li>
+				<code>PGL</code>. The graphic library.
+			<li>
+			Testpgl. An demo application.
+		</ul>
+		Compile the sources. The .lib will be located in the lib directory, and dlls in 
+		bin directory.
+		<h2>History</h2>
+		<ul>
+			<li>
+				<b>6-11-2002</b> Added VC7 build, fixed some stuff and updated DPHull.</li>
+			<li>
+				<b>15 July 2002</b>: Fixed ressource missing, change CP_THREAD_ACP to CP_ASP, 
+				fixed, export bug and text strip bug.</li>
+			<li>
+				<b>5 June 2002</b> Updated downloads</li>
+			<li>
+				<b>29 March 2002</b> Big Update !</li>
+			<li>
+				<b>7 November 2001</b> Initial release.
+			</li>
+		</ul>
+		<!----------------------------- Article Ends ----------------------------->
+	</body>
+</html>

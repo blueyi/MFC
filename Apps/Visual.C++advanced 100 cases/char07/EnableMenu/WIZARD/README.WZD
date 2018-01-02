@@ -1,0 +1,27 @@
+/////////////////////////////////////////////////////////////////////
+// Modify any class.
+/////////////////////////////////////////////////////////////////////
+
+// 1) use the ClassWizard to add a UPDATE_COMMAND_UI handler for a menu command
+void CWzdView::OnUpdateWzdType(CCmdUI* pCmdUI) 
+{
+
+// 2) use CCmdUI::Enable to enable/disable the command
+	// m_bWzd determines whether menu item should be enabled
+	pCmdUI->Enable(m_bWzd);
+}
+
+// 3) to enable all menu commands, add the following to your application's CMainFrame
+// class's constructor:
+CMainFrame::CMainFrame()
+{
+	// enables all menu commands--even those without a function handler
+	m_bAutoMenuEnable=FALSE;
+}
+
+
+/////////////////////////////////////////////////////////////////////
+// From: Visual C++ MFC Programming by Example by John E. Swanke
+// Copyright (C) 1998 jeswanke. All rights reserved.
+/////////////////////////////////////////////////////////////////////
+

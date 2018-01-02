@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pizza", "Pizza.vcproj", "{06D3BFC2-AA9C-4840-ADB3-4127E12D57CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestPage", "..\pagewnd\TestPage.vcproj", "{30FFB6C0-9CCC-436D-A413-F377E195935E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06D3BFC2-AA9C-4840-ADB3-4127E12D57CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06D3BFC2-AA9C-4840-ADB3-4127E12D57CF}.Debug|Win32.Build.0 = Debug|Win32
+		{06D3BFC2-AA9C-4840-ADB3-4127E12D57CF}.Release|Win32.ActiveCfg = Release|Win32
+		{06D3BFC2-AA9C-4840-ADB3-4127E12D57CF}.Release|Win32.Build.0 = Release|Win32
+		{30FFB6C0-9CCC-436D-A413-F377E195935E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30FFB6C0-9CCC-436D-A413-F377E195935E}.Debug|Win32.Build.0 = Debug|Win32
+		{30FFB6C0-9CCC-436D-A413-F377E195935E}.Release|Win32.ActiveCfg = Release|Win32
+		{30FFB6C0-9CCC-436D-A413-F377E195935E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+// CMouse.cpp: implementation of the CMouse class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "PGL/PGLMouse.h"

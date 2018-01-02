@@ -1,0 +1,623 @@
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <META NAME="Author" CONTENT="SoftechSoftware">
+  <TITLE>CButtonST documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<FONT Face="Verdana,Arial" Size=2>
+
+<CENTER>
+  <FONT SIZE=+4>CButtonST v2.3</FONT><BR>
+  Copyright (C) 1998 by SoftechSoftware<BR>
+  Thank you for use this SoftechSoftware! Thanks very much!
+</CENTER>
+
+<BR><BR>
+<FONT SIZE=+2>Contact addresses</FONT><BR><BR>
+SoftechSoftware E-Mail: <BR>
+<A HREF="mailto:davide_calabro@yahoo.com">davide_calabro@yahoo.com</A>
+<BR>
+SoftechSoftware homepage: <BR>
+<A HREF="http://members.tripod.com/~SoftechSoftware/index.html">http://members.tripod.com/~SoftechSoftware/index.html</A>
+<BR>
+CButtonST homepage: <BR>
+<A HREF="http://members.tripod.com/~SoftechSoftware/cbtnst.html">http://members.tripod.com/~SoftechSoftware/cbtnst.html</A>
+
+<BR><BR><BR>
+<FONT SIZE=+2>Description</FONT>
+<BR><BR>
+CButtonST is a class derived from MFC CButton class.<BR>
+With this class your applications can have standard buttons
+or new and modern buttons with "flat" style!
+
+<BR><BR>
+CButtonST features: <BR>
+<UL>
+<LI>Standard CButton properties
+<LI>Text and icon buttons
+<LI>Only text or only icon buttons
+<LI>16 and 256 colors icon support
+<LI>Standard or new "flat" button style
+<LI>Change runtime from "flat" to standard styles
+<LI>Button can have two icons. One when the mouse is over the button<BR>
+and one when the mouse is off (only for "flat" buttons)
+<LI>Every color can be customized
+<LI>Can be used via DDX_ calls
+<LI>Can be used in DLLs
+<LI>Each button can have its own mouse pointer
+<LI>Button is hilighted also when the window is inactive, like happens<BR>
+in Internet Explorer (this is user configurable)
+<LI>Written in Visual C++ v5.0
+<LI>Full source code included!
+<LI>It's free!
+</UL>
+<BR>
+You are encouraged to use this class everywhere you want; there is no fee
+required for CButtonST. Freely add modifications and/or fix bugs, but please,
+send any of these to
+<A HREF="mailto:davide_calabro@yahoo.com">SoftechSoftware</A>!
+
+<BR><BR><BR>
+<FONT SIZE=+2>How to integrate CButtonST in your application</FONT>
+<BR><BR>
+<PRE>
+    In your project include the following files:
+    <FONT COLOR="#990000">
+        BtnST.h
+        BtnST.cpp
+    </FONT>
+    With dialog editor create a standard button called, for example, IDOK
+    (you don't need to make it owner drawn) and create a member variable for this button:
+    <FONT COLOR="#990000">
+        CButtonST m_btnOk;
+    </FONT>
+    Now, with resource editor, create an icon called, for example, IDI_OK256
+    You can also import it from one that already exists, such as, one included
+    in the sample project (i.e. 32x32x256_Ok.ico).
+
+    Remember to use 32x32 pixel icons. Even if there is support for icons wich
+    dimension is not 32x32 they can be drawn incorrectly.
+
+    Now attach the button to CButtonST. In your OnInitDialog procedure:
+    <FONT COLOR="#990000">
+        // Call the base method
+        CDialog::OnInitDialog();
+
+        // Create the IDOK button
+        m_btnOk.SubclassDlgItem(IDOK, this);
+        // Assign the icon
+        m_btnOk.SetIcon(IDI_OK256);
+    </FONT>
+    You may use two icons for the same button. First icon will be displayed when
+    the mouse pointer is over the button. Second icon will be displayed when the
+    mouse pointer is outside the button. If you design two same icons but one
+    with colors and one black & white you can have a great visual effect!
+    <FONT COLOR="#990000">
+        // Assign two icons
+        m_btnOk.SetIcon(IDI_OK256, IDI_OK256_BW);
+    </FONT>
+    Please note that two icons must have the same size!
+
+    By default the button will have the icon on the left and the text on
+    the right. If you want a button with the icon on the top and the text
+    on the bottom, you must set the alignment of the button:
+    <FONT COLOR="#990000">
+        // Align icon vertically
+        m_btnOk.SetAlign(CButtonST::ST_ALIGN_VERT);
+    </FONT>
+    Again, by default, the button will have the new "flat" style. If you want
+    a standard button just use the following piece of code:
+    <FONT COLOR="#990000">
+        // Draw the button as a standard button
+        m_btnOk.SetFlat(FALSE);
+    </FONT>
+    The following applies only with "flat" buttons: by default when the mouse
+    pointer passes over the button, this highlights itself. If you don't want
+    this just disable it. (In the demo program look what happens at the button
+    with the CD-ROM inside it!)
+    <FONT COLOR="#990000">
+        // Don't draw border for this button
+        m_btnOk.DrawBorder(FALSE);
+    </FONT>
+    Every button's color can be customized.
+    Background color is the button's face color while foreground color is the
+    text color. Inactive colors are that colors shown when the mouse is off the
+    button while active colors are that colors shown when the mouse is over.
+    <FONT COLOR="#990000">
+        // Set some color effect
+        COLORREF crStandard = ::GetSysColor(COLOR_BTNFACE);
+        m_btnOk.SetInactiveBgColor(crStandard - RGB(20,20,20));
+        m_btnOk.SetActiveBgColor(crStandard + RGB(20,20,20));
+        m_btnOk.SetInactiveFgColor(RGB(0,255,0));
+        m_btnOk.SetActiveFgColor(RGB(255,0,0));
+    </FONT>
+    Each button can have its own mouse pointer.
+    For example a button that runs an internet browser could change the pointer
+    to a hand when the user moves the mouse on it!
+    <FONT COLOR="#990000">
+         // Set a hand cursor
+        m_btnOk.SetBtnCursor(IDC_HAND);
+    </FONT>
+    Your button is now a CButtonST!
+
+    Look inside the demo program to learn more about CButtonST. This is the best way!
+</PRE>
+
+<BR><BR><BR>
+<FONT SIZE=+2>CButtonST members</FONT>
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetIcon(int nIconInId, int nIconOutId = NULL, BYTE cx = 32, BYTE cy = 32)
+</FONT>
+<BR>
+Set icon(s) for the button
+<UL>
+<LI>nIconInId<BR>
+The icon resource (when the mouse pointer is inside)
+<LI>nIconOutId<BR>
+The icon resource (when the mouse pointer is outside)<BR>
+If NULL the first icon will be used instead
+<LI>cx, cy<BR>
+The icon size. You can use 16x16, 32x32 or 48x48 icons but the best are 32x32
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetIcon(IDI_OK256);<BR>
+m_btnOk.SetIcon(IDI_OK256, IDI_OK256_BW);<BR>
+m_btnOk.SetIcon(NULL);  // To get a button without icon(s)
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetAlign(int nAlign)
+</FONT>
+<BR>
+Set icon position (if one is defined)
+<BR><BR>
+Input values:
+<UL>
+<LI>ST_ALIGN_HORIZ<BR>
+Icon on the left and text on the right (default)
+<LI>ST_ALIGN_VERT<BR>
+Icon on top and text on bottom
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetAlign(CButtonST::ST_ALIGN_VERT);
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+int GetAlign()
+</FONT>
+<BR>
+Get current icon position (see SetAlign for possible return values)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+int nRetValue = m_btnOk.GetAlign();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetFlat(BOOL bState = TRUE)
+</FONT>
+<BR>
+Set button style ("flat" or standard)
+<BR><BR>
+Input values:
+<UL>
+<LI>TRUE<BR>
+Button is drawn as "flat" (default)
+<LI>FALSE<BR>
+Button is drawn as standard
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetFlat();<BR>
+m_btnOk.SetFlat(FALSE);
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+BOOL GetFlat()
+</FONT>
+<BR>
+Return current button style (see SetFlat for possible return values)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+int nRetValue = m_btnOk.GetFlat();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void DrawBorder(BOOL bEnable = TRUE)
+</FONT>
+<BR>
+Set highlight ON/OFF (only for "flat" buttons)
+<BR><BR>
+Input values:
+<UL>
+<LI>TRUE<BR>
+Button highlights itself (default)
+<LI>FALSE<BR>
+Button doesn't highlight itself
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.DrawBorder();<BR>
+m_btnOk.DrawBorder(FALSE);
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+static const short GetVersionI()<BR>
+static const char* GetVersionC()
+</FONT>
+<BR>
+Return CButtonST version
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+int nVer = CButtonST::GetVersionI();  // Divide by 10 to get actual version<BR>
+char szVer[20];<BR>
+strcpy(szVer, CButtonST::GetVersionC());
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetShowText(BOOL bShow = TRUE)
+</FONT>
+<BR>
+Add or remove text (caption) from button at runtime
+<BR><BR>
+Input values:
+<UL>
+<LI>TRUE<BR>
+Text is displayed
+<LI>FALSE<BR>
+Text is not displayed (but still exists!)
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetShowText();<BR>
+m_btnOk.SetShowText(FALSE);
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+BOOL GetShowText()
+</FONT>
+<BR>
+Return current text status (displayed or not)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+int nRetValue = m_btnOk.GetShowText();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetDefaultActiveFgColor()
+</FONT>
+<BR>
+Sets to the system default the text's color (when the mouse is over the button)<BR>
+This is automatically called when a button is created.
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetDefaultActiveFgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetDefaultActiveBgColor()
+</FONT>
+<BR>
+Sets to the system default the button's color (when the mouse is over it)<BR>
+This is automatically called when a button is created.
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetDefaultActiveBgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetDefaultInactiveFgColor()
+</FONT>
+<BR>
+Sets to the system default the text's color (when the mouse is outside the button)<BR>
+This is automatically called when a button is created.
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetDefaultInactiveFgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetDefaultInactiveBgColor()
+</FONT>
+<BR>
+Sets to the system default the button's color (when the mouse is outside it)<BR>
+This is automatically called when a button is created.
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetDefaultInactiveBgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetActiveFgColor(COLORREF crNew, BOOL bRepaint = FALSE)
+</FONT>
+<BR>
+Sets the text's color (when the mouse is over the button)
+<BR><BR>
+Input values:
+<UL>
+<LI>crNew<BR>
+The new color
+<LI>bRepaint<BR>
+If TRUE the button is immediately redrawn
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetActiveFgColor(RGB(255, 255, 0));
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetActiveBgColor(COLORREF crNew, BOOL bRepaint = FALSE)
+</FONT>
+<BR>
+Sets the button's color (when the mouse is over it)
+<BR><BR>
+Input values:
+<UL>
+<LI>crNew<BR>
+The new color
+<LI>bRepaint<BR>
+If TRUE the button is immediately redrawn
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetActiveBgColor(RGB(128, 128, 128));<BR>
+m_btnOk.SetActiveBgColor(::GetSysColor(COLOR_BTNFACE), TRUE);
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetInactiveFgColor(COLORREF crNew, BOOL bRepaint = FALSE)
+</FONT>
+<BR>
+Sets the text's color (when the mouse is outside the button)
+<BR><BR>
+Input values:
+<UL>
+<LI>crNew<BR>
+The new color
+<LI>bRepaint<BR>
+If TRUE the button is immediately redrawn
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetInactiveFgColor(RGB(255, 255, 255));
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetInactiveBgColor(COLORREF crNew, BOOL bRepaint = FALSE)
+</FONT>
+<BR>
+Sets the button's color (when the mouse is outside it)
+<BR><BR>
+Input values:
+<UL>
+<LI>crNew<BR>
+The new color
+<LI>bRepaint<BR>
+If TRUE the button is immediately redrawn
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetInactiveBgColor(RGB(128, 128, 128));
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+const COLORREF GetActiveFgColor()
+</FONT>
+<BR>
+Returns the current text's color (when the mouse is over the button)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+COLORREF crCurrent = m_btnOk.GetActiveFgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+const COLORREF GetActiveBgColor()
+</FONT>
+<BR>
+Returns the current button's color (when the mouse is over it)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+COLORREF crCurrent = m_btnOk.GetActiveBgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+const COLORREF GetInactiveFgColor()
+</FONT>
+<BR>
+Returns the current text's color (when the mouse is outside the button)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+COLORREF crCurrent = m_btnOk.GetInactiveFgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+const COLORREF GetInactiveBgColor()
+</FONT>
+<BR>
+Returns the current button's color (when the mouse is outside it)
+<BR><BR>
+Example:<BR>
+<FONT COLOR="#990000">
+COLORREF crCurrent = m_btnOk.GetInactiveBgColor();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+void SetFlatFocus(BOOL bDrawFlatFocus, BOOL bRepaint = FALSE)
+</FONT>
+<BR>
+Enable/Disable the drawing of the focus rectangle<BR>
+This is valid ONLY for "flat" buttons; standard buttons always have the focus rectangle.
+<BR><BR>
+Input values:
+<UL>
+<LI>bDrawFlatFocus<BR>
+When TRUE the "flat" buttons will have the focus rectangle<BR>
+By default "flat" buttons have not the focus rectangle
+<LI>bRepaint<BR>
+If TRUE the button is immediately redrawn
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+m_btnOk.SetFlatFocus(TRUE);<BR>
+m_btnOk.SetFlatFocus(FALSE, TRUE);
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+BOOL GetFlatFocus()
+</FONT>
+<BR>
+Returns the state of the focus rectangle<BR>
+This is valid ONLY for "flat" buttons; standard buttons always have the focus rectangle.
+<BR><BR>
+Return value:
+<UL>
+<LI>TRUE<BR>
+Focus rectangle will be drawn
+<LI>FALSE<BR>
+Focus rectangle will not be drawn
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+BOOL bDrawFlatFocus = m_btnOk.GetFlatFocus();
+</FONT>
+
+<BR><BR>
+<FONT COLOR="#990000" SIZE=+1>
+BOOL SetBtnCursor(int nCursorId = -1)
+</FONT>
+<BR>
+Assign a cursor to the button<BR>
+The mouse pointer will change when over the button.
+<BR><BR>
+Input values:
+<UL>
+<LI>nCursorId<BR>
+The cursor resource identifier
+</UL>
+Output value:
+<UL>
+<LI>TRUE<BR>
+Cursor assigned
+<LI>FALSE<BR>
+Cannot load cursor resource
+</UL>
+Example:<BR>
+<FONT COLOR="#990000">
+BOOL bRetValue = m_btnOk.SetBtnCursor(IDC_HAND);<BR>
+m_btnOk.SetBtnCursor(); // To remove the assigned cursor
+</FONT>
+
+<BR><BR><BR>
+<FONT SIZE=+2>History</FONT>
+<BR><BR>
+<UL><LI>
+CButtonST v2.3<BR>
+The class should now work from within a DLL<BR>
+The "Spacebar-Bug" should be fixed<BR>
+Added RedrawWindow() as the last line of <B>SetIcon</B> member<BR>
+The focus rectangle is now the last thing drawn<BR>
+The focus rectangle can now be drawn also for "flat" buttons<BR>
+Added <B>SetFlatFocus, GetFlatFocus</B> members<BR>
+Added <B>SetBtnCursor</B> member<BR>
+Flat buttons can now work like in IE
+<LI>
+CButtonST v2.2<BR>
+Removed <B>SubclassDlgItem</B> member (this is transparent for the user)<BR>
+Added <B>PreSubclassWindow</B> member (this allows DDX_ calls)<BR>
+Added <B>SetDefaultActiveFgColor, SetActiveFgColor, GetActiveFgColor</B> members<BR>
+Added <B>SetDefaultActiveBgColor, SetActiveBgColor, GetActiveBgColor</B> members<BR>
+Added <B>SetDefaultInactiveFgColor, SetInactiveFgColor, GetInactiveFgColor</B> members<BR>
+Added <B>SetDefaultInactiveBgColor, SetInactiveBgColor, GetInactiveBgColor</B> members<BR>
+When the mouse is over a button the focus now remains to the control that owns it!<BR>
+The flat buttons now work properly also in windows not derived from CDialog!<BR>
+A memory DC (CMemDC) is used to draw the button.
+This should speeds up the graphic operations.
+<LI>
+CButtonST v2.1<BR>
+Support for two icons<BR>
+Modified <B>SetIcon</B> member<BR>
+Added <B>SetShowText/GetShowText</B> members<BR>
+Fixed a bug dealing with the left mouse button<BR>
+Little optimizations
+<LI>
+CButtonST v2.0<BR>
+Changed the class name for name convention<BR>
+Support for 256 colors icons<BR>
+Removed a stupid memory leak!<BR>
+Removed support for CImagelists<BR>
+Documentation in HTML format
+<LI>
+ST_CButton v1.1<BR>
+Some minor changes
+<LI>
+ST_CButton v1.0<BR>
+First release
+</UL>
+
+<BR>
+<FONT SIZE=+2>Things to do</FONT>
+<BR><BR>
+<UL>
+<LI>Support for bitmaps (under development)
+<LI>Any suggestion?
+</UL>
+
+<BR>
+<FONT SIZE=+2>Special thanks</FONT>
+<BR><BR>
+CButtonST is now receiving many suggestions from the users.<BR>
+This section want to be the right place to say a THANK! to all of them for their precious help.
+<BR><BR>
+<A HREF="mailto:A.Mendle@alcatel.de">Armin Mendle</A><BR>
+<A HREF="mailto:Chris.Maunder@cbr.clw.csiro.au">Chris Maunder</A> (CHyperLink class)<BR>
+<A HREF="mailto:jmd@jvf.co.uk">Jeremy Davis</A> (Suggestions about focus rectangles)<BR>
+<A HREF="mailto:keithr@europa.com">Keith Rule</A> (CMemDC class)<BR>
+<A HREF="mailto:msantoro@telerama.lm.com">Michael Santoro</A> (For the ideas his CSXButton class given me!)<BR>
+<A HREF="mailto:Mike.Turner@rli.co.uk">Mike Turner</A><BR>
+<A HREF="mailto:mg@tatramed.sk">Milan Gardian</A> (Suggestions about color customization)<BR>
+<A HREF="mailto:Sandman@BIGnet.com.lb">Ralph Varjabedian</A> (For his many bug fixes!)<BR>
+
+<P>
+<HR>
+<I>Copyright &copy; 1998 by SoftechSoftware.</I> <BR>
+<A HREF="mailto:davide_calabro@yahoo.com">davide_calabro@yahoo.com</A><BR>
+
+</FONT>
+</BODY></HTML>

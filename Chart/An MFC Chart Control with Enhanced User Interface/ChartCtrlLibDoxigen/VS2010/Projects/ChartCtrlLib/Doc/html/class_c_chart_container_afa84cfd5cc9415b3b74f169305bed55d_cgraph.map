@@ -1,0 +1,6 @@
+<map id="CChartContainer::UpdateChartLocScaleY" name="CChartContainer::UpdateChartLocScaleY">
+<area shape="rect" id="node3" href="$class_c_chart.html#a673cb9cb8a70acf61aed59c37311403c" title="CChart::GetLocScaleY" alt="" coords="251,5,405,32"/>
+<area shape="rect" id="node5" href="$class_c_chart.html#ad438e7ec02b96c556dae346cae29bf17" title="CChart::HasData" alt="" coords="268,56,388,83"/>
+<area shape="rect" id="node7" href="$class_c_chart.html#a89628f49307611cd81ec50b14c718586" title="CChart::IsChartVisible" alt="" coords="253,107,403,133"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a97e56feceb121673a9ab33ca8eea4469" title="CChart::SetLocScaleY" alt="" coords="251,157,405,184"/>
+</map>

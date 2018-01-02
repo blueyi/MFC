@@ -1,0 +1,13 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\ExToolBar.Document = ExTool Document
+HKEY_CLASSES_ROOT\ExToolBar.Document\CLSID = {298735F3-FF1C-11D1-8A9F-000000000000}
+
+HKEY_CLASSES_ROOT\CLSID\{298735F3-FF1C-11D1-8A9F-000000000000} = ExTool Document
+HKEY_CLASSES_ROOT\CLSID\{298735F3-FF1C-11D1-8A9F-000000000000}\ProgId = ExToolBar.Document
+HKEY_CLASSES_ROOT\CLSID\{298735F3-FF1C-11D1-8A9F-000000000000}\LocalServer32 = EXTOOLBAR.EXE

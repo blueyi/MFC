@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="win32-common-settings"
+	OutputDirectory="$(PlatformName)\$(ConfigurationName)"
+	IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"	
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		UsePrecompiledHeader="2"
+		PrecompiledHeaderThrough="stdafx.h"
+		PrecompiledHeaderFile="$(IntDir)/$(TargetName).pch"
+		DebugInformationFormat="0"		
+		PreprocessorDefinitions="_VC80_UPGRADE=0x0600"
+	/>
+	<Tool
+		Name="VCResourceCompilerTool"
+		PreprocessorDefinitions="_VC80_UPGRADE=0x0600"
+	/>
+</VisualStudioPropertySheet>

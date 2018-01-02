@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////////////////
+// Example files...
+/////////////////////////////////////////////////////////////////////
+
+WzdSplsh.cpp -- a window class that draws a bitmap
+WzdSplsh.h
+WzdBtmap.cpp -- a bitmap class that supports its own palette
+WzdBtmap.h
+
+/////////////////////////////////////////////////////////////////////
+// Modify the Application Class.
+/////////////////////////////////////////////////////////////////////
+
+// 1) at the start of the InitInstance() override, create splash class
+BOOL CWzdApp::InitInstance()
+{
+	CWzdSplash wndSplash;
+	wndSplash.Create(IDB_WZDSPLASH);
+	wndSplash.UpdateWindow(); //send WM_PAINT
+
+		:	:	:
+
+
+// 2) add at end of InitInstance() if splash screen too short
+	Sleep(2000);
+
+// 3) end InitInstance as usual, splash class will automaticaly destroy
+/ the splash window when it deconstructs
+
+	//The main window has been initialized, so show and update it.
+	pMainFrame->ShowWindow(m_nCmdShow);
+	pMainFrame->UpdateWindow();
+
+	return TRUE;
+}
+
+/////////////////////////////////////////////////////////////////////
+// From: Visual C++ MFC Programming by Example by John E. Swanke
+// Copyright (C) 1998 jeswanke. All rights reserved.
+/////////////////////////////////////////////////////////////////////
+

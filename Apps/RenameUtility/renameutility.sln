@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenameUtility", "RenameUtility.vcproj", "{F3431C0A-F737-463A-AF30-46071E8A65F8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BulkRename", "dll\BulkRename\BulkRename.vcproj", "{0EFB0343-6EDD-4FBC-AAB6-BEBD1C7F3293}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{F3431C0A-F737-463A-AF30-46071E8A65F8}.0 = {0EFB0343-6EDD-4FBC-AAB6-BEBD1C7F3293}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F3431C0A-F737-463A-AF30-46071E8A65F8}.Debug.ActiveCfg = Debug|Win32
+		{F3431C0A-F737-463A-AF30-46071E8A65F8}.Debug.Build.0 = Debug|Win32
+		{F3431C0A-F737-463A-AF30-46071E8A65F8}.Release.ActiveCfg = Release|Win32
+		{F3431C0A-F737-463A-AF30-46071E8A65F8}.Release.Build.0 = Release|Win32
+		{0EFB0343-6EDD-4FBC-AAB6-BEBD1C7F3293}.Debug.ActiveCfg = Debug|Win32
+		{0EFB0343-6EDD-4FBC-AAB6-BEBD1C7F3293}.Debug.Build.0 = Debug|Win32
+		{0EFB0343-6EDD-4FBC-AAB6-BEBD1C7F3293}.Release.ActiveCfg = Release|Win32
+		{0EFB0343-6EDD-4FBC-AAB6-BEBD1C7F3293}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

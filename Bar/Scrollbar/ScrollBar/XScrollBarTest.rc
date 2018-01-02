@@ -1,0 +1,301 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+IDR_MANIFEST            24      MOVEABLE PURE   "res\\app.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\hans.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_HORIZONTAL_SCROLLBAR_LEFTARROW BITMAP  DISCARDABLE     "res\\HorizontalScrollBarLeftArrow.bmp"
+IDB_HORIZONTAL_SCROLLBAR_RIGHTARROW BITMAP  DISCARDABLE     "res\\HorizontalScrollBarRightArrow.bmp"
+IDB_HORIZONTAL_SCROLLBAR_CHANNEL BITMAP  DISCARDABLE     "res\\HorizontalScrollBarChannel.bmp"
+IDB_HORIZONTAL_SCROLLBAR_THUMB BITMAP  DISCARDABLE     "res\\HorizontalScrollBarThumb.bmp"
+IDB_HORIZONTAL_SCROLLBAR_THUMB_NO_COLOR BITMAP  DISCARDABLE     "res\\HorizontalScrollBarThumbNoColor.bmp"
+IDB_VERTICAL_SCROLLBAR_UPARROW BITMAP  DISCARDABLE     "res\\VerticalScrollBarUpArrow.bmp"
+IDB_VERTICAL_SCROLLBAR_DOWNARROW BITMAP  DISCARDABLE     "res\\VerticalScrollBarDownArrow.bmp"
+IDB_VERTICAL_SCROLLBAR_CHANNEL BITMAP  DISCARDABLE     "res\\VerticalScrollBarChannel.bmp"
+IDB_VERTICAL_SCROLLBAR_THUMB BITMAP  DISCARDABLE     "res\\VerticalScrollBarThumb.bmp"
+IDB_VERTICAL_SCROLLBAR_THUMB_NO_COLOR BITMAP  DISCARDABLE     "res\\VerticalScrollBarThumbNoColor.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_XSCROLLBARTEST_DIALOG DIALOGEX 0, 0, 140, 98
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "XScrollBarTest"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Horizontal",IDC_BUTTON_HORZ,30,20,80,22
+    PUSHBUTTON      "Vertical",IDC_BUTTON_VERT,30,56,80,22,BS_MULTILINE
+END
+
+IDD_HORIZONTAL DIALOGEX 0, 0, 322, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Horizontal XScrollBar"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_SAMPLE_HORZ,10,10,100,123,WS_BORDER
+    GROUPBOX        "RGB",IDC_STATIC,120,6,192,74
+    CONTROL         "Thumb Color",IDC_THUMB_COLOR_HORZ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,126,19,56,10
+    CONTROL         "Thumb Gripper",IDC_THUMB_GRIPPER_HORZ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,184,19,63,10
+    CONTROL         "Channel Color",IDC_CHANNEL_COLOR_HORZ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,249,19,60,10
+    LTEXT           "R",IDC_STATIC,126,38,8,8
+    LTEXT           "",IDC_SCROLL1_RECT_HORZ,135,38,142,8,WS_BORDER
+    CTEXT           "",IDC_RED_HORZ,281,37,24,10,SS_SUNKEN
+    LTEXT           "G",IDC_STATIC,126,51,8,8
+    LTEXT           "",IDC_SCROLL2_RECT_HORZ,135,51,142,8,WS_BORDER
+    CTEXT           "",IDC_GREEN_HORZ,281,50,24,10,SS_SUNKEN
+    LTEXT           "B",IDC_STATIC,126,64,8,8
+    LTEXT           "",IDC_SCROLL3_RECT_HORZ,135,64,142,8,WS_BORDER
+    CTEXT           "",IDC_BLUE_HORZ,281,63,24,10,SS_SUNKEN
+    GROUPBOX        "Saturation and Luminance",IDC_STATIC,120,89,192,43
+    LTEXT           "S",IDC_STATIC,126,103,8,8
+    LTEXT           "",IDC_SCROLL4_RECT_HORZ,135,103,142,8,WS_BORDER
+    CTEXT           "",IDC_SATURATION_HORZ,281,102,24,10,SS_SUNKEN
+    LTEXT           "L",IDC_STATIC,126,116,8,8
+    LTEXT           "",IDC_SCROLL5_RECT_HORZ,135,116,142,8,WS_BORDER
+    CTEXT           "",IDC_LUMINANCE_HORZ,281,115,24,10,SS_SUNKEN
+END
+
+IDD_VERTICAL DIALOGEX 0, 0, 328, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Vertical XScrollBar"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_SAMPLE_VERT,10,10,96,207,WS_BORDER
+    GROUPBOX        "RGB",IDC_STATIC,116,6,96,210
+    CONTROL         "Thumb Color",IDC_THUMB_COLOR_VERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,133,19,56,10
+    CONTROL         "Thumb Gripper",IDC_THUMB_GRIPPER_VERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,132,30,63,10
+    CONTROL         "Channel Color",IDC_CHANNEL_COLOR_VERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,132,41,60,10
+    CTEXT           "R",IDC_STATIC,129,56,8,8
+    LTEXT           "",IDC_SCROLL1_RECT_VERT,129,66,8,130,WS_BORDER
+    CTEXT           "",IDC_RED_VERT,121,202,24,10,SS_SUNKEN
+    CTEXT           "G",IDC_STATIC,157,56,8,8
+    LTEXT           "",IDC_SCROLL2_RECT_VERT,157,66,8,130,WS_BORDER
+    CTEXT           "",IDC_GREEN_VERT,149,202,24,10,SS_SUNKEN
+    CTEXT           "B",IDC_STATIC,185,56,8,8
+    LTEXT           "",IDC_SCROLL3_RECT_VERT,185,66,8,130,WS_BORDER
+    CTEXT           "",IDC_BLUE_VERT,177,202,24,10,SS_SUNKEN
+    GROUPBOX        "Saturation and Luminance",IDC_STATIC,222,6,96,210
+    LTEXT           "S",IDC_STATIC,251,56,8,8
+    LTEXT           "",IDC_SCROLL4_RECT_VERT,251,66,8,130,WS_BORDER
+    CTEXT           "",IDC_SATURATION_VERT,243,202,24,10,SS_SUNKEN
+    LTEXT           "L",IDC_STATIC,279,56,8,8
+    LTEXT           "",IDC_SCROLL5_RECT_VERT,279,66,8,130,WS_BORDER
+    CTEXT           "",IDC_LUMINANCE_VERT,271,202,24,10,SS_SUNKEN
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 270, 131
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About XScrollBarTest"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,14,20,20,SS_CENTERIMAGE | 
+                    WS_BORDER
+    LTEXT           "XScrollBarTest Version 1.1",IDC_STATIC,40,13,140,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2004 Hans Dietrich",IDC_STATIC,40,27,165,8
+    LTEXT           "This software is released into the public domain.  You are free to use it in any way you like, except that you may not sell this source code.",
+                    IDC_STATIC,40,41,165,24
+    LTEXT           "This software is provided ""as is"" with no expressed or implied warranty.  I accept no liability for any damage or loss of business that this software may cause. ",
+                    IDC_STATIC,40,71,165,32
+    LTEXT           "Send email to Hans Dietrich",IDC_ABOUT_EMAIL,90,113,90,
+                    8,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "OK",IDOK,209,9,50,14,WS_GROUP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "E-mail", "hdietrich@gmail.com\0"
+            VALUE "Article", "http://www.codeproject.com\0"
+            VALUE "FileDescription", "XScrollBarTest.exe\0"
+            VALUE "FileVersion", "1, 1, 0, 0\0"
+            VALUE "LegalCopyright", "Copyright © 2004 Hans Dietrich\0"
+            VALUE "ProductName", "XScrollBarTest\0"
+            VALUE "ProductVersion", "1, 1, 0, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_XSCROLLBARTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 133
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_VERTICAL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 326
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About XScrollBarTest..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

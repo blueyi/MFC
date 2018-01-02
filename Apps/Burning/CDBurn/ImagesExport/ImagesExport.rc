@@ -1,0 +1,292 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ImagesExport.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ImagesExport DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ImagesExport\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2005\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ImagesExport.DLL\0"
+            VALUE "ProductName", "ImagesExport Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SET_BACKUP_PARAMS DIALOG DISCARDABLE  0, 0, 299, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Backup Parameters"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,157,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,175,157,50,14
+    CONTROL         "Hard Disk",IDC_RADIO_DISK,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,28,51,8
+    CONTROL         "CD",IDC_RADIO_CD,"Button",BS_AUTORADIOBUTTON,11,48,79,8
+    CONTROL         "DVD",IDC_RADIO_DVD,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,11,68,79,8
+    CONTROL         "Copy",IDC_RADIO_COPY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,113,79,8
+    CONTROL         "Move",IDC_RADIO_MOVE,"Button",BS_AUTORADIOBUTTON,11,130,
+                    79,8
+    EDITTEXT        IDC_EDIT_RESTORE_DISCPATH,67,24,202,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_DISC,271,24,17,12
+    GROUPBOX        "Mode",IDC_STATIC,7,96,285,51
+    GROUPBOX        "Medium Type",IDC_STATIC,7,10,285,74
+    CONTROL         "COPY",IDC_RADIO_MCOPY,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_DISABLED,173,107,51,13
+    CONTROL         "MOVE",IDC_RADIO_MMOVE,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_DISABLED,173,126,51,13
+END
+
+IDD_DIALOG_SET_RESTORE_PARAMS DIALOG DISCARDABLE  0, 0, 263, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Restore Parameters"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,56,66,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,158,66,50,14
+    EDITTEXT        IDC_EDIT_RESTORE_PATH,16,33,207,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_RESTOREPATH,232,33,17,12
+    LTEXT           "Backup Path:",IDC_STATIC,16,17,83,8
+END
+
+IDD_DIALOG_FILE_OPERATER DIALOG DISCARDABLE  0, 0, 187, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Operating："
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Complete",IDCANCEL,113,46,50,14,NOT WS_VISIBLE
+    LTEXT           "File:",IDC_STATIC_INFO,18,13,156,11
+    CONTROL         "Progress1",IDC_PROGRESS_FILE_INFO,"msctls_progress32",
+                    WS_BORDER,15,30,159,10
+    DEFPUSHBUTTON   "Start",ID_BTN_START,23,46,50,14,NOT WS_VISIBLE
+END
+
+IDD_DIALOG_EXPORT_SETTING_DLG DIALOG DISCARDABLE  0, 0, 163, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Dialog:"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,13,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,99,88,50,14
+    EDITTEXT        IDC_EDIT1,13,36,114,14,ES_AUTOHSCROLL | WS_DISABLED
+    CTEXT           "FileType:",IDC_STATIC,13,10,32,11,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO1,56,11,93,66,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select Export Directory:",IDC_STATIC,13,24,91,8
+    PUSHBUTTON      "...",IDC_BUTTON1,134,37,15,13
+    GROUPBOX        "Save Methed:",IDC_STATIC,13,55,136,27
+    CONTROL         "Default",IDC_RADIO_DEFAULT_SAVE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,21,66,48,9
+    CONTROL         "By Folder",IDC_RADIO_BY_FOLDER,"Button",
+                    BS_AUTORADIOBUTTON,91,66,48,9
+END
+
+IDD_DIALOG_WAITING_EXPORT DIALOG DISCARDABLE  0, 0, 190, 19
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " Please wait..."
+FONT 10, "System"
+BEGIN
+    CONTROL         2009,IDD_PIC_EXPORT_WAITING,"Static",SS_BITMAP,7,7,176,5
+END
+
+IDD_DIALOG_PRO_TIP DIALOG DISCARDABLE  0, 0, 187, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,64,77,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_PRO,"msctls_progress32",
+                    WS_BORDER,7,42,173,23
+    LTEXT           "Static",IDC_STATIC_TIP_FILE_NAME,45,7,94,26
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_SET_BACKUP_PARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_DIALOG_SET_RESTORE_PARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_DIALOG_FILE_OPERATER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_DIALOG_EXPORT_SETTING_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_DIALOG_WAITING_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 12
+    END
+
+    IDD_DIALOG_PRO_TIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_WAITING_BMP         BITMAP  DISCARDABLE     "res\\dynaline.bmp"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ImagesExport.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

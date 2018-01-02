@@ -1,0 +1,13 @@
+<map id="CChart::GetMaxValX" name="CChart::GetMaxValX">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#ab68421cc2d27ae20e5eb87da4802bcab" title="CChartContainer::AddChart" alt="" coords="221,52,400,79"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#aa0a543ecfc0021ce768048e838a7b0ee" title="CChartContainer::AppendChartData" alt="" coords="197,103,424,129"/>
+<area shape="rect" id="node15" href="$class_c_charts_x_m_l_serializer.html#a711af25b8293ad91a0a7c3b967c92995" title="CChartsXMLSerializer\l::ChartDataToXML" alt="" coords="237,154,385,195"/>
+<area shape="rect" id="node19" href="$class_c_chart_container.html#a639857415bdabfe807d63137a47335b4" title="CChartContainer::GetMinMaxExtX" alt="" coords="201,220,420,247"/>
+<area shape="rect" id="node21" href="$class_c_chart_container.html#a419723dac14082e5d811cb1443d37c29" title="CChartContainer::HasChart\lDifferentPnts" alt="" coords="221,271,400,313"/>
+<area shape="rect" id="node23" href="$class_c_chart_container.html#a04f27b71881bc52b285a9c7f7f2bebdd" title="CChartContainer::ShowChart\lPoints" alt="" coords="217,337,405,378"/>
+<area shape="rect" id="node5" href="$class_c_charts_x_m_l_serializer.html#a951a73bd9b36e566619b5a497ceb1794" title="CChartsXMLSerializer\l::XMLToCharts" alt="" coords="503,5,651,46"/>
+<area shape="rect" id="node9" href="$class_c_charts_x_m_l_serializer.html#a8c8b6b9e1cb84d441872d8e60cf1ee49" title="CChartsXMLSerializer\l::ReplaceChartsFromXMLFile" alt="" coords="482,70,673,111"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a4a108cf29847b286e026e1218cab1f1c" title="CChartContainer::LoadCharts" alt="" coords="731,12,922,39"/>
+<area shape="rect" id="node11" href="$class_c_chart_container.html#a58f734d20645d1812668dd16a01e5d9a" title="CChartContainer::Replace\lContainerCharts" alt="" coords="741,70,913,111"/>
+<area shape="rect" id="node17" href="$class_c_chart_container.html#af07be5bd92e8a5d5e829fef6b221f5b5" title="CChartContainer::SaveChartData" alt="" coords="472,161,683,188"/>
+</map>

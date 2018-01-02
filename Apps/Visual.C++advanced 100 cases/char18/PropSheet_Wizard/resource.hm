@@ -1,0 +1,24 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by PropSheet Wizard.rc
+//
+#define HIDCANCEL                       0x80aa0002    // IDD_DIALOG_PAGE
+#define HIDC_CHECK_ABOUT                0x808103ef    // IDD_CUSTOM1
+#define HIDC_CHECK_BITMAP_PAGES         0x808103f0    // IDD_CUSTOM1
+#define HIDC_CHECK_MINIMIZEBOX          0x808103ec    // IDD_CUSTOM1
+#define HIDC_CHECK_SEND_TO_TASKBAR      0x808103ed    // IDD_CUSTOM1
+#define HIDC_CHECK_STANDARDBUTTONS      0x808103f4    // IDD_CUSTOM1
+#define HIDC_CHECK_START_ON_TASKBAR     0x808103ee    // IDD_CUSTOM1
+#define HIDC_CHECK_TOOLTIPS             0x808103f1    // IDD_CUSTOM1
+#define HIDC_EDIT_CAPTION               0x80aa03ff    // IDD_DIALOG_PAGE
+#define HIDC_EDIT_CLASS                 0x80aa0400    // IDD_DIALOG_PAGE
+#define HIDC_EDIT_TITLE                 0x808203eb    // IDD_CUSTOM2
+#define HIDC_FRAME_TOOLBAR              0x808203ed    // IDD_CUSTOM2
+#define HIDC_LIST_PAGES                 0x808203f0    // IDD_CUSTOM2
+#define HIDC_RADIO_DLL                  0x808103f2    // IDD_CUSTOM1
+#define HIDC_RADIO_LARGEPAGES           0x808203ea    // IDD_CUSTOM2
+#define HIDC_RADIO_MEDIUMPAGES          0x808203e9    // IDD_CUSTOM2
+#define HIDC_RADIO_MODAL                0x808103ea    // IDD_CUSTOM1
+#define HIDC_RADIO_MODELESS             0x808103eb    // IDD_CUSTOM1
+#define HIDC_RADIO_SMALLPAGES           0x808203e8    // IDD_CUSTOM2
+#define HIDC_RADIO_STATICALLY           0x808103f3    // IDD_CUSTOM1
+#define HIDOK                           0x80aa0001    // IDD_DIALOG_PAGE

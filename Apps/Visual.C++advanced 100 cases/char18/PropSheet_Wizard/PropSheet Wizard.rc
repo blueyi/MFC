@@ -1,0 +1,360 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Romanian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ROM)
+#ifdef _WIN32
+LANGUAGE LANG_ROMANIAN, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Romanian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Property Sheet  AppWizard\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "PROPSHEET WIZARD\0"
+            VALUE "LegalCopyright", "Copyright Bogdan Matasaru© 1994\0"
+            VALUE "OriginalFilename", "PROPSHEET WIZARD.DLL\0"
+            VALUE "ProductName", "Property Sheet AppWizard\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CUSTOM1 DIALOGEX 0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,125,0,1,197
+    LTEXT           "What style would you like your sheet to have ?",
+                    IDC_STATIC,133,12,157,11
+    CONTROL         "&Modal property sheet",IDC_RADIO_MODAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,148,23,82,10,
+                    0,HIDC_RADIO_MODAL
+    CONTROL         "Modeless &property sheet",IDC_RADIO_MODELESS,"Button",
+                    BS_AUTORADIOBUTTON,148,35,93,10,0,HIDC_RADIO_MODELESS
+    LTEXT           "What features would you like to property include ?",
+                    IDC_STATIC,135,50,157,11
+    CONTROL         "Has an about bo&x dialog",IDC_CHECK_ABOUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,61,93,10,0,
+                    HIDC_CHECK_ABOUT
+    CONTROL         "Pages have &images",IDC_CHECK_BITMAP_PAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,73,78,10,0,
+                    HIDC_CHECK_BITMAP_PAGES
+    CONTROL         "T&ooltips",IDC_CHECK_TOOLTIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,85,78,10,0,HIDC_CHECK_TOOLTIPS
+    CONTROL         "Standard &buttons",IDC_CHECK_STANDARDBUTTONS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,97,142,10,0,
+                    HIDC_CHECK_STANDARDBUTTONS
+    CONTROL         "&Has minimize box",IDC_CHECK_MINIMIZEBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,150,109,70,10,0,
+                    HIDC_CHECK_MINIMIZEBOX
+    CONTROL         "Minimi&ze the application to the system taskbar",
+                    IDC_CHECK_SEND_TO_TASKBAR,"Button",BS_AUTOCHECKBOX | 
+                    BS_TOP | BS_MULTILINE | WS_TABSTOP,150,121,130,17,0,
+                    HIDC_CHECK_SEND_TO_TASKBAR
+    CONTROL         "&Start on the taskbar",IDC_CHECK_START_ON_TASKBAR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,139,78,10,0,
+                    HIDC_CHECK_START_ON_TASKBAR
+    LTEXT           "How would you like to use the MFC library ?",IDC_STATIC,
+                    132,154,157,11
+    CONTROL         "As a shared &DLL",IDC_RADIO_DLL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,147,165,82,10,
+                    0,HIDC_RADIO_DLL
+    CONTROL         "As a statically linked &library",IDC_RADIO_STATICALLY,
+                    "Button",BS_AUTORADIOBUTTON,147,177,114,10,0,
+                    HIDC_RADIO_STATICALLY
+END
+
+IDD_CUSTOM2 DIALOGEX 0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,125,0,1,197
+    LTEXT           "Please enter a &title for your property sheet :",
+                    IDC_STATIC,133,5,138,11
+    EDITTEXT        IDC_EDIT_TITLE,143,16,137,13,ES_AUTOHSCROLL,0,
+                    HIDC_EDIT_TITLE
+    LTEXT           "What size would you like your pages to be ?",IDC_STATIC,
+                    135,34,148,8
+    CONTROL         "&Small pages",IDC_RADIO_SMALLPAGES,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,150,45,108,10,
+                    0,HIDC_RADIO_SMALLPAGES
+    CONTROL         "&Medium pages",IDC_RADIO_MEDIUMPAGES,"Button",
+                    BS_AUTORADIOBUTTON,150,58,108,10,0,
+                    HIDC_RADIO_MEDIUMPAGES
+    CONTROL         "&Large pages",IDC_RADIO_LARGEPAGES,"Button",
+                    BS_AUTORADIOBUTTON,150,69,108,10,0,HIDC_RADIO_LARGEPAGES
+    LTEXT           "List of &pages in the sheet:",IDC_STATIC,133,84,90,8
+    CONTROL         "",IDC_FRAME_TOOLBAR,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,227,82,70,11,0,HIDC_FRAME_TOOLBAR
+    CONTROL         "List1",IDC_LIST_PAGES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,133,95,163,96,0,
+                    HIDC_LIST_PAGES
+END
+
+IDD_DIALOG_PAGE DIALOGEX 0, 0, 171, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New/Modify Page"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Caption",IDC_STATIC,7,10,24,8
+    EDITTEXT        IDC_EDIT_CAPTION,49,7,115,14,ES_AUTOHSCROLL,0,
+                    HIDC_EDIT_CAPTION
+    LTEXT           "Class &Name",IDC_STATIC,7,26,39,8
+    EDITTEXT        IDC_EDIT_CLASS,49,23,115,14,ES_AUTOHSCROLL,0,
+                    HIDC_EDIT_CLASS
+    DEFPUSHBUTTON   "OK",IDOK,49,45,50,14,WS_DISABLED,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,114,45,50,14,0,0,HIDCANCEL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEMPLATE
+//
+
+NEWPROJ.INF             TEMPLATE DISCARDABLE    "template\\newproj.inf"
+CONFIRM.INF             TEMPLATE DISCARDABLE    "template\\confirm.inf"
+MAINSHEET.CPP           TEMPLATE DISCARDABLE    "Template\\MainSheet.cpp"
+MAINSHEET.H             TEMPLATE DISCARDABLE    "Template\\MainSheet.h"
+STDAFX.H                TEMPLATE DISCARDABLE    "Template\\StdAfx.h"
+PROPSHEETTEMPLATE.H     TEMPLATE DISCARDABLE    "Template\\PropSheetTemplate.h"
+README.TXT              TEMPLATE DISCARDABLE    "Template\\ReadMe.txt"
+RESOURCE.H              TEMPLATE DISCARDABLE    "Template\\resource.h"
+STDAFX.CPP              TEMPLATE DISCARDABLE    "Template\\StdAfx.cpp"
+PROPSHEETTEMPLATE.CPP   TEMPLATE DISCARDABLE    "Template\\PropSheetTemplate.cpp"
+PAGEICON.BMP            TEMPLATE DISCARDABLE    "Template\\res\\PageIcon.bmp"
+PROPSHEETTEMPLATE.ICO   TEMPLATE DISCARDABLE    "Template\\res\\PropSheetTemplate.ico"
+PROPSHEETTEMPLATE.RC2   TEMPLATE DISCARDABLE    "Template\\res\\PropSheetTemplate.rc2"
+PROPSHEETTEMPLATE.RC    TEMPLATE DISCARDABLE    "Template\\PropSheetTemplate.rc"
+PROPSHEETTEMPLATE.CLW   TEMPLATE DISCARDABLE    "Template\\PropSheetTemplate.clw"
+PAGE.CPP                TEMPLATE DISCARDABLE    "Template\\Page.cpp"
+PAGE.H                  TEMPLATE DISCARDABLE    "Template\\Page.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PROPSHEETWIZARD     ICON    DISCARDABLE     "res\\PropSheet Wizard.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP  DISCARDABLE     "res\\ToolBar.bmp"
+IDB_YELLOW_PATTERN      BITMAP  DISCARDABLE     "res\\yellowpn.bmp"
+IDB_BITMAP_STEP         BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_STEP1_STANDARDBUTTONS BITMAP  DISCARDABLE     "res\\bitmap_s.bmp"
+IDB_TOOLTIPS            BITMAP  DISCARDABLE     "res\\tooltips.bmp"
+IDB_BITMAP_PAGES        BITMAP  DISCARDABLE     "res\\bitmap_p.bmp"
+IDB_MINIMIZE_BOX        BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_NO_SEND_TO_TASKBAR  BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+IDB_SEND_TO_TASKBAR     BITMAP  DISCARDABLE     "res\\send_to_.bmp"
+IDB_ABOUT               BITMAP  DISCARDABLE     "res\\about.bmp"
+IDB_STEP2SMALL          BITMAP  DISCARDABLE     "res\\step2.bmp"
+IDB_STEP2MEDIUM         BITMAP  DISCARDABLE     "res\\step3.bmp"
+IDB_STEP2LARGE          BITMAP  DISCARDABLE     "res\\step4.bmp"
+IDB_STEP1_NOSTANDARDBUTTONS BITMAP  DISCARDABLE     "res\\bmp00003.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CLASS_EXIST         "Class with the name %1 exists !\nPlease choose a different name."
+    IDS_FILE_EXIST          "File ""%1"" will be generated for class %2 !\nPlease choose a different name."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CUSTOM1_RADIO_MODAL_TIP 
+                            "The property sheet acts like a modal dialog box"
+    IDS_CUSTOM1_RADIO_MODELESS_TIP 
+                            "The property sheet acts like a modeless dialog box"
+    IDS_CUSTOM1_CHECK_ABOUT_TIP 
+                            "The system menu has an item that displays information about the application"
+    IDS_CUSTOM1_CHECK_BITMAP_PAGES_TIP 
+                            "The pages have attached a small image in the tab control"
+    IDS_CUSTOM1_CHECK_TOOLTIPS_TIP 
+                            "Tooltips are displayed when the mouse is over the controls in the pages of the property sheet"
+    IDS_CUSTOM1_CHECK_STANDARDBUTTONS_TIP 
+                            "The  standard buttons (Ok, Cancel, Apply, Help) of a property sheet are displayed"
+    IDS_CUSTOM1_CHECK_MINIMIZEBOX_TIP 
+                            "Display the minimize box on the caption bar"
+    IDS_CUSTOM1_CHECK_SEND_TO_TASKBAR_TIP 
+                            "When the property sheet is minimized, a small icon appears on the system taskbar."
+    IDS_CUSTOM1_CHECK_START_ON_TASKBAR_TIP 
+                            "The application starts minimized on the system taskbar"
+    IDS_CUSTOM1_RADIO_DLL_TIP "The MFC library is used as a shared DLL"
+    IDS_CUSTOM1_RADIO_STATICALLY_TIP 
+                            "The MFC library is statically linked to your application"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CUSTOM2_EDIT_TITLE_TIP 
+                            "The title displayed on the caption of the property sheet"
+    IDS_CUSTOM2_RADIO_SMALLPAGES_TIP 
+                            "The property sheet has small pages (195 x 127)"
+    IDS_CUSTOM2_RADIO_MEDIUMPAGES_TIP 
+                            "The property sheet has medium pages (210 x 154)"
+    IDS_CUSTOM2_RADIO_LARGEPAGES_TIP 
+                            "The property sheet has large pages 235 x 156)"
+    IDS_CUSTOM2_LIST_PAGES_TIP 
+                            "The list of pages to be included in the property sheet"
+    IDS_CUSTOM2_PAGE_NEW_TIP "Add a new page to the property sheet"
+    IDS_CUSTOM2_PAGE_MODIFY_TIP "Modify a page from the property sheet"
+    IDS_CUSTOM2_PAGE_DELETE_TIP "Delete a page from the property sheet"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CUSTOM2_PAGE_MOVEUP_TIP "Move the page one position above"
+    IDS_CUSTOM2_PAGE_MOVEDOWN_TIP "Move the page one position below"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PAGEDLG_EDIT_CAPTION_TIP "The title of the page in the tab control"
+    IDS_PAGEDLG_EDIT_CLASS_TIP "The name of the class attached to the page"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

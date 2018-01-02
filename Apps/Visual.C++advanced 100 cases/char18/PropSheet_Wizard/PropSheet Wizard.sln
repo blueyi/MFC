@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PropSheet Wizard", "PropSheet Wizard.vcproj", "{FA03167A-E298-4581-975F-72426E17F127}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Pseudo-Debug|Win32 = Pseudo-Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA03167A-E298-4581-975F-72426E17F127}.Pseudo-Debug|Win32.ActiveCfg = Pseudo-Debug|Win32
+		{FA03167A-E298-4581-975F-72426E17F127}.Pseudo-Debug|Win32.Build.0 = Pseudo-Debug|Win32
+		{FA03167A-E298-4581-975F-72426E17F127}.Release|Win32.ActiveCfg = Release|Win32
+		{FA03167A-E298-4581-975F-72426E17F127}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+<map id="CChart::GetLocScaleY" name="CChart::GetLocScaleY">
+<area shape="rect" id="node3" href="$class_c_chart_container.html#a3a1162c3e30cbda36672d163381d4e7e" title="CChartContainer::DrawSelLine" alt="" coords="208,5,405,32"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#ada6c2047b4b4141ef4afec912bc31045" title="CChartContainer::DrawSel\lPntsD" alt="" coords="220,57,393,98"/>
+<area shape="rect" id="node10" href="$class_c_chart_container.html#a53667ec3a00772b3ae6961e2ae3e88dd" title="CChartContainer::GetLocSc\lYDelta" alt="" coords="215,122,398,163"/>
+<area shape="rect" id="node12" href="$class_c_chart_container.html#ab1ffb11582b667d9b21115b2cf462370" title="CChartContainer::GetSelVal\lString" alt="" coords="215,187,399,229"/>
+<area shape="rect" id="node15" href="$class_c_chart_container.html#a6add2f68ca7f3ee07e4f7c8f99347856" title="CChartContainer::HasVisible\lPntsDInYBand" alt="" coords="213,253,400,294"/>
+<area shape="rect" id="node17" href="$class_c_chart_container.html#acaaea0a253cc4013aded7380d2a2643c" title="CChartContainer::Prepare\lDataLegend" alt="" coords="221,318,392,359"/>
+<area shape="rect" id="node19" href="$class_c_chart_container.html#afa84cfd5cc9415b3b74f169305bed55d" title="CChartContainer::UpdateChart\lLocScaleY" alt="" coords="208,383,405,425"/>
+<area shape="rect" id="node21" href="$class_c_chart_container.html#abe60584f910936dc7fef695c30c87271" title="CChartContainer::UpdateData\lLegend" alt="" coords="210,449,403,490"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#a99f1268f20a5a887359bdd4490621d81" title="CChartContainer::PrintCharts" alt="" coords="454,64,645,91"/>
+</map>

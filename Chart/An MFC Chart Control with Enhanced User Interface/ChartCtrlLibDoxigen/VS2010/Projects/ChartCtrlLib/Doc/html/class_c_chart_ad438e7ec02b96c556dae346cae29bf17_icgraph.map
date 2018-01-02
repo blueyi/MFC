@@ -1,0 +1,12 @@
+<map id="CChart::HasData" name="CChart::HasData">
+<area shape="rect" id="node3" href="$class_c_charts_x_m_l_serializer.html#a711af25b8293ad91a0a7c3b967c92995" title="CChartsXMLSerializer\l::ChartDataToXML" alt="" coords="205,5,353,46"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a570814ede6edab2bac09a8a8f2071d2f" title="CChartContainer::GetVisible\lChart" alt="" coords="186,70,371,111"/>
+<area shape="rect" id="node9" href="$class_c_chart.html#a157cdcbf7114035c6a89890c08b228ea" title="CChart::GetVisibleChartName\lAndVisuals" alt="" coords="181,135,376,177"/>
+<area shape="rect" id="node11" href="$class_c_chart_container.html#a4b386abcf30b63aa14ff11c28db8442e" title="CChartContainer::SelectChart\lByMouseClick" alt="" coords="182,201,375,242"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#afa502e2e5940117d23acf5eda6f7c4b4" title="CChartContainer::ToggleChart\lVisibility" alt="" coords="181,266,376,307"/>
+<area shape="rect" id="node15" href="$class_c_chart_container.html#ae29633beb938289174eebb382a86f785" title="CChartContainer::Truncate\lChart" alt="" coords="450,350,625,391"/>
+<area shape="rect" id="node17" href="$class_c_chart.html#a60ac7421fbbc5ba1a2ef1674dc61bae7" title="CChart::TruncateChartData" alt="" coords="189,383,368,409"/>
+<area shape="rect" id="node20" href="$class_c_chart_container.html#afa84cfd5cc9415b3b74f169305bed55d" title="CChartContainer::UpdateChart\lLocScaleY" alt="" coords="180,434,377,475"/>
+<area shape="rect" id="node22" href="$class_c_chart_data_view.html#a2f8dca7bd2d4f82c4a539badf7e39bed" title="CChartDataView::UpdateParams" alt="" coords="173,500,384,527"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#af07be5bd92e8a5d5e829fef6b221f5b5" title="CChartContainer::SaveChartData" alt="" coords="432,12,643,39"/>
+</map>

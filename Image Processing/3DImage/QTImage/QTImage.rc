@@ -1,0 +1,557 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\QTImage.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\QTImage.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 QTImage"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "QTImage 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_QTIMAGE_DIALOG DIALOGEX 0, 0, 320, 202
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+END
+
+IDD_IMAGE_VIEW2D DIALOG DISCARDABLE  0, 0, 188, 109
+STYLE WS_CHILD | WS_CAPTION
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_SLICE,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_NOTICKS | WS_TABSTOP,23,82,116,14
+END
+
+IDD_IMAGE_CTRL2D DIALOG DISCARDABLE  0, 0, 188, 98
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_IMAGE_LIST DIALOG DISCARDABLE  0, 0, 188, 98
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "List1",IDC_LIST_IMAGE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,45,18,102,53
+END
+
+IDD_IMAGE_VR DIALOG DISCARDABLE  0, 0, 314, 230
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_IMAGE_VRCTRL DIALOGEX 0, 0, 532, 410
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "MIP",IDC_RADIO_MIP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,75,10,27,12
+    CONTROL         "Volume Rending",IDC_RADIO_COMPOSITE,"Button",
+                    BS_AUTORADIOBUTTON,111,10,62,12
+    CONTROL         "Hardware",IDC_RADIO_HARDWARE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,180,8,46,10
+    CONTROL         "Fix Point",IDC_RADIO_FIXPOINT,"Button",
+                    BS_AUTORADIOBUTTON,180,18,42,10
+    CONTROL         "Software",IDC_RADIO_SOFTWARE,"Button",
+                    BS_AUTORADIOBUTTON,180,28,42,10
+    CONTROL         "Slider1",IDC_SLIDER_LOD,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_NOTICKS | WS_TABSTOP,93,28,85,12
+    CONTROL         "Shade",IDC_CHECK_SHADE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,231,11,33,11
+    CONTROL         "Gradient",IDC_CHECK_GRADON,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHT | WS_TABSTOP,231,25,40,12
+    COMBOBOX        IDC_COMBO_OPACITY,309,7,87,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO_GRAD,309,26,87,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "",IDC_STATIC_OPACITY,6,167,274,38,SS_NOTIFY,
+                    WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT_OPACITY_PIXEL,139,146,28,14,ES_AUTOHSCROLL
+    LTEXT           "Pixel",IDC_TEXT_PIXEL,119,149,16,12
+    LTEXT           "Opacity",IDC_TEXT_OPACITY,169,149,26,12
+    EDITTEXT        IDC_EDIT_OPACITY,197,146,28,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Opacity Update",IDC_BTN_OPACITY,59,146,58,14
+    PUSHBUTTON      "Grad Update",IDC_BUTTON_GRAD,66,310,51,14
+    EDITTEXT        IDC_EDIT_GRAD_OPACITY_PIXEL,139,311,28,14,ES_AUTOHSCROLL
+    LTEXT           "Gradient",IDC_STATIC,107,314,28,10
+    LTEXT           "Opacity",IDC_STATIC,169,314,26,9
+    EDITTEXT        IDC_EDIT_GRAD_OPACITY,197,311,28,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_GRAD_OPACITY,7,331,274,38,SS_NOTIFY,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Load...",IDC_BUTTON_LOAD,14,24,53,14
+    PUSHBUTTON      "Save...",IDC_BUTTON_SAVE,13,6,54,14
+    RTEXT           "Opacity",IDC_STATIC,277,9,26,10
+    LTEXT           "LOD",IDC_STATIC,77,29,15,9
+    RTEXT           "Gradient",IDC_STATIC,278,27,28,10
+END
+
+IDD_IMAGE_VRVIEW DIALOG DISCARDABLE  0, 0, 187, 99
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+END
+
+IDD_CONTOUR_CONFIG DIALOGEX 0, 0, 232, 118
+STYLE DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Contour Surface"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "",IDC_STATIC_COLOR,7,57,218,53,SS_NOTIFY,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Pixel Color Mapping",IDC_STATIC,9,12,82,9
+    EDITTEXT        IDC_EDIT_COLOR_PIXEL,197,39,28,12,ES_AUTOHSCROLL
+    LTEXT           "Pixel",IDC_STATIC_PIXEL,177,42,16,12
+    PUSHBUTTON      "Update",IDC_BTN_UPDATE,7,28,36,12
+    CONTROL         "Largest Region",IDC_CHECK_LARGEST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,110,30,64,9
+    PUSHBUTTON      "Surface Render",IDC_BUTTON_MESH,46,28,60,12
+END
+
+IDD_PIXELEDIT DIALOGEX 0, 0, 310, 333
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Histogram"
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_STATIC_OPACITY,124,7,179,38,SS_NOTIFY,
+                    WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT_OPACITY_PIXEL,25,33,29,12,ES_AUTOHSCROLL
+    LTEXT           "Pixel",IDC_STATIC,7,35,16,10
+    LTEXT           "Opacity",IDC_STATIC,59,35,25,10
+    EDITTEXT        IDC_EDIT_OPACITY,87,33,29,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update",IDC_BTN_UPDATE,7,10,49,12
+    CONTROL         "",IDC_STATIC_IMAGE,"Static",SS_BLACKFRAME,7,52,296,233
+END
+
+IDD_DIALOG_MPR DIALOGEX 0, 0, 239, 170
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER_1,"msctls_trackbar32",TBS_VERT | 
+                    TBS_TOP | TBS_NOTICKS | WS_TABSTOP,103,50,12,48,
+                    WS_EX_STATICEDGE
+    CONTROL         "Slider1",IDC_SLIDER_2,"msctls_trackbar32",TBS_VERT | 
+                    TBS_TOP | TBS_NOTICKS | WS_TABSTOP,137,55,12,48,
+                    WS_EX_STATICEDGE
+    CONTROL         "Slider1",IDC_SLIDER_3,"msctls_trackbar32",TBS_VERT | 
+                    TBS_TOP | TBS_NOTICKS | WS_TABSTOP,176,55,12,48,
+                    WS_EX_STATICEDGE
+END
+
+IDD_IMAGE_SRCTRL DIALOG DISCARDABLE  0, 0, 187, 100
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_IMAGE_SRVIEW DIALOG DISCARDABLE  0, 0, 187, 100
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_IMAGE_SR DIALOG DISCARDABLE  0, 0, 188, 103
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_DIALOG_SEGMENT DIALOGEX 0, 0, 281, 326
+STYLE WS_CHILD
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Options",IDC_STATIC_OPTION,13,225,31,18
+    COMBOBOX        IDC_COMBO_ROI,70,227,79,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Static",IDC_STATIC_OPACITY,15,259,18,8
+    CONTROL         "Slider1",IDC_SLIDER_ROI_OPACITY,"msctls_trackbar32",
+                    TBS_NOTICKS | WS_BORDER | WS_TABSTOP,59,257,51,11
+    PUSHBUTTON      "Add ROI",IDC_BUTTON_ADDROI,46,281,36,15
+    EDITTEXT        IDC_EDIT_ROINAME,91,282,24,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_BUTTON_CROSS,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    27,25,20,18
+    CONTROL         "",IDC_BUTTON_MANUAL_SEG,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,60,29,20,18
+    CONTROL         "",IDC_BUTTON_BRUSH_SEG,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,100,28,20,18
+    CONTROL         "",IDC_BUTTON_AUTO_SEG,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,137,30,20,18
+    CONTROL         "",IDC_BUTTON_MESH,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    170,34,20,18
+    PUSHBUTTON      "Apply",IDC_BUTTON_APPLY,41,116,30,13
+    COMBOBOX        IDC_COMBO_METHOD,69,78,69,125,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Algorithm",IDC_STATIC_ALGORITHM,31,78,22,9
+    LTEXT           ".",IDC_STATIC_LOG,22,305,232,14,0,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC_BTN_BOX,198,67,45,21
+    PUSHBUTTON      "Update",IDC_BUTTON_UPDATE,87,119,24,11
+END
+
+IDD_SCALE_CTRL DIALOGEX 0, 0, 187, 100
+STYLE WS_CHILD
+FONT 8, "Tahoma", 0, 0, 0x1
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,33,34,65,11,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_VALUE,120,33,19,13,ES_AUTOHSCROLL
+    LTEXT           "Static",IDC_STATIC_TEXT,39,18,28,7
+END
+
+IDD_IMAGE_SR_FRAME DIALOG DISCARDABLE  0, 0, 312, 214
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "Tahoma"
+BEGIN
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "QTImage Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "QTImage\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "QTImage.EXE\0"
+            VALUE "ProductName", "QTImage 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_IMAGE_VIEW2D, DIALOG
+    BEGIN
+        RIGHTMARGIN, 187
+    END
+
+    IDD_IMAGE_CTRL2D, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_IMAGE_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_IMAGE_VR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_IMAGE_VRCTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 403
+    END
+
+    IDD_IMAGE_VRVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_CONTOUR_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+    END
+
+    IDD_PIXELEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 326
+    END
+
+    IDD_DIALOG_MPR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_IMAGE_SRCTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_IMAGE_SRVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_IMAGE_SR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DIALOG_SEGMENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 319
+    END
+
+    IDD_SCALE_CTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_IMAGE_SR_FRAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Import Series...",           IDM_FILE_IMPORT_SERIES
+        MENUITEM "&Save...",                    IDM_FILE_SAVE_SERIES
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Pixel",                      ID_EDIT_PIXELEDIT
+    END
+    POPUP "&ROI"
+    BEGIN
+        MENUITEM "2D/3D Segmentation",          ID_ROI_SEGMENT
+    END
+    POPUP "2DViewer"
+    BEGIN
+        MENUITEM "&Background Color",           ID_VIEW2D_GROUND_COLOR
+        MENUITEM "&Reset Window-Level",         ID_VIEW2D_RESET_WINDOWLEVEL
+        MENUITEM SEPARATOR
+        MENUITEM "MPR 2D",                      ID_VIEW2D_MPR
+    END
+    POPUP "3DViewer"
+    BEGIN
+        MENUITEM "&Volume Render",              ID_VIEW3D_VOL_RENDER
+        MENUITEM "&Background Color",           ID_VIEW3D_GROUND_COLOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Contour Surface",            ID_VIEW2D_CONTOURLINE
+        MENUITEM SEPARATOR
+        POPUP "Points Cloud to Mesh"
+        BEGIN
+            MENUITEM "Delaunay",                    ID_VIEW3D_DELAUNAY
+            MENUITEM "PowerCrust",                  ID_VIEW3D_POWERCRUST
+            MENUITEM "Solid Surface",               ID_VIEW3D_SOLID_SURFACE
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_AUTOSEG      BITMAP  DISCARDABLE     "res\\AutoSeg.bmp"
+IDB_BITMAP_BRUSH        BITMAP  DISCARDABLE     "res\\Brush.bmp"
+IDB_BITMAP_CROSS        BITMAP  DISCARDABLE     "res\\Cross.bmp"
+IDB_BITMAP_MANUAL       BITMAP  DISCARDABLE     "res\\Manual.bmp"
+IDB_BITMAP_MESH         BITMAP  DISCARDABLE     "res\\Mesh.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 QTImage(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\QTImage.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

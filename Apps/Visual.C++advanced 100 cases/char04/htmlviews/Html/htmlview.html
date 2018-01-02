@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Zafir Anjum">
+   <TITLE>Doc / View - Using HtmlView apart from Tecno Preview</TITLE>
+</HEAD>
+<body background="../fancyhome/back.gif" bgcolor="#FFFFFF" link="#B50029" vlink="#8E2323" alink="#FF0000" bgproperties="fixed">
+<table WIDTH="100%">
+<tr WIDTH="100%">
+<td align=center><!--#exec cgi="/cgi/ads.cgi"--><td>
+</tr>
+</table>
+
+
+<CENTER>
+<H3>
+<FONT COLOR="#AOAO99">Doc / View - Using HtmlView apart from Tecno Preview</FONT></H3></CENTER>
+
+<CENTER>
+<H3>
+
+<HR></H3></CENTER>
+This article was contributed by <A HREF="mailto:warch@tin.it">Iuri Apollonio</A>. 
+<P>
+<P><A HREF="testprintform.zip">Download demo code</A> 124K<br>
+<br>
+
+In the upcoming Visual C++ 6.0, we'll have a view class wrapper for the Internet Explorer, providing
+us with an html view.<br>
+While waiting for VC6.0, we can have the HtmlView downloading the huge Tecno Preview from Microsoft.<br>
+For those of you who needs, of all the Tecno Preview, only the HtmlView, I've "ported" it here. In the
+demo there is a CHView class which is basically the CHtmlView from tecno preview.<br>
+
+<H4>How to use it</H4>
+You simply need to add the CHView files (ViewH.cpp and ViewH.h files) to your project; then copy the
+directory "fromTecno" of the project in yours and add to your project the fromTecno\uuid.lib file.<br>
+You'll need the 2 files in the fromTecno directory or the app won't compile (they are from the tecno preview).<br>
+You'll also need to provide the command identifier for the HtmlView basic functions, ID_WEBBACK, 
+ID_WEBFORWARD, .. look at the CHView message map); a fast way is to delete the IDR_MAINFRAME toolbar
+of your app and put the one of the demo instead.<br>
+
+Then derive manually the CView based view of your project from the CHView (use search / replace for
+CView to CHView in your view header and cpp files).<br>
+<br>
+I added to the CHView a CString variable, csHomePage, holding the "homepage" to be opened at start; in the demo, 
+I puttet this article you are reading in the "html" directory; to find the right path, I get the
+startup directory in the app OnInitInstance, put it in a global CString csAppDir variable, find out
+the path of the home page in the CHView contructor and load the html page in the CHView OnInitialUpdate.<br>
+<br>
+To load a page in the view, use the view Navigate2(url) function.<br>
+Remember that is works only with Internet Explorer 4 installed on your system!<br>
+<br>
+If you want to know more about HtmlView and Tecno Preview, try at <A HREF="http://www.microsoft.com/visualc">Microsoft Visual C++</A> 
+pages. 
+
+
+<br>
+<p>Last updated: 2 July 1998 </p>
+
+<P>
+<HR>
+<TABLE BORDER=0 WIDTH="100%" >
+<TR>
+<TD WIDTH="33%"><FONT SIZE=-1><A HREF="http://www.codeguru.com">Goto HomePage</A></FONT></TD>
+
+<TD WIDTH="33%">
+<CENTER><FONT SIZE=-2>&copy; 1998 Zafir Anjum</FONT>&nbsp;</CENTER>
+</TD>
+
+<TD WIDTH="34%">
+<DIV ALIGN=right><FONT SIZE=-1>Contact me: <A HREF="mailto:zafir@home.com">zafir@home.com</A>&nbsp;</FONT></DIV>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>
+

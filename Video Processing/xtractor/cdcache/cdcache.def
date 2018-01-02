@@ -1,0 +1,13 @@
+EXPORTS
+  cddbNewEntry;
+  cddbFreeEntry;
+  cddbSetEntry;
+  cddbParseEntry;
+  cddbGetArtist;
+  cddbGetTitle;
+  cddbSetOption;
+  cddbGetTrackTitle;
+  cddbGetNumTracks;
+  cddbGetEntryVersion;
+  cddbGetDGenre;
+  cddbGetDYear;

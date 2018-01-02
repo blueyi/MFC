@@ -1,0 +1,483 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p align="left"><font color="#000000" face="Verdana" size="6"><strong>CTrayNotifyIcon</strong></font></p>
+
+<p><font color="#000000" face="Arial" size="3">Welcome to CTrayNotifyIcon, A freeware MFC
+class to encapsulate the tray notification API in 95,98 and NT 4.</font></p>
+
+<p>&nbsp;</p>
+
+<table>
+<TBODY>
+  <tr>
+    <td><font face="Arial"><a href="#Features">Features</a></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#History">History</a></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#APIReference">API Reference</a></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial"><a href="#Contact">Contacting the Author</a></font></td>
+  </tr>
+</TBODY>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="Features"></a><big><strong><big>Features</big></strong></big>
+</font>
+
+<ul>
+  <li><font color="#000000" face="Arial" size="3">Simple and clean C++ interface.</font> </li>
+  <li><font color="#000000" face="Arial" size="3">The classes are fully Unicode compliant and
+    include Unicode built options in the workspace file.</font> </li>
+  <li><font face="Arial">All code compiles cleanly at warning level 4</font></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><big><a name="History"></a></big><font color="#000000" size="5"><strong>History</strong></font></font></p>
+
+<p><font color="#000000" face="Arial" size="3"><strong>V1.3 (22 July 1998)</strong></font>
+
+<ul>
+  <li><font face="Arial">Code now compiles cleanly at warning level 4</font></li>
+  <li><font face="Arial">Code is now UNICODE enabled + build configurations are provided</font></li>
+  <li><font face="Arial">The documentation for the class has been completely revamped</font></li>
+</ul>
+
+<p><strong><font face="Arial">v1.2 (23 June 1998)</font></strong>
+
+<ul>
+  <li><font face="Arial">Class now supports the new Taskbar Creation Notification message
+    which comes with IE 4. This allows the tray icon to be recreated whenever the explorer
+    restarts (Crashes!!)</font></li>
+</ul>
+
+<p><strong><font face="Arial">v1.1 (25 November 1997)</font></strong>
+
+<ul>
+  <li><font face="Arial">Addition of HideIcon(), ShowIcon() &amp; MoveToExtremeRight </font></li>
+  <li><font face="Arial">Support for animated tray icons</font></li>
+</ul>
+
+<p><strong><font face="Arial">v1.0 (14 May 1997)</font></strong>
+
+<ul>
+  <li><font face="Arial">Initial Public release.</font></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p class="crt"><font face="Arial"><a name="APIReference"></a><big><big><strong>API
+Reference</strong></big></big></font></p>
+
+<p><font color="#000000" face="Arial" size="3">Instantiate a CTrayNotifyIcon where it will
+be around for the lifetime of your icon. The sample program does this in the mainframe as
+the icon will be available for the lifetime of the application. In the sample program this
+is done in the mainframe class. The API consists of the the following public functions of
+the class CTrayNotifyIcon</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a href="#CTrayNotifyIcon">CTrayNotifyIcon::CTrayNotifyIcon</a><br>
+<a href="#~CTrayNotifyIcon">CTrayNotifyIcon::~CTrayNotifyIcon</a><br>
+<a href="#Create">CTrayNotifyIcon::Create</a><br>
+<a href="#SetTooltipText">CTrayNotifyIcon::SetTooltipText</a><br>
+<a href="#GetTooltipText">CTrayNotifyIcon::GetTooltipText</a><br>
+<a href="#SetIcon">CTrayNotifyIcon::SetIcon</a><br>
+<a href="#SetStandardIcon">CTrayNotifyIcon::SetStandardIcon</a><br>
+<a href="#GetIcon">CTrayNotifyIcon::GetIcon</a><br>
+<a href="#UsingAnimatedIcon">CTrayNotifyIcon::UsingAnimatedIcon</a><br>
+<a href="#SetNotificationWnd">CTrayNotifyIcon::SetNotificationWnd</a><br>
+<a href="#GetNotificationWnd">CTrayNotifyIcon::GetNotificationWnd</a><br>
+<a href="#HideIcon">CTrayNotifyIcon::HideIcon</a><br>
+<a href="#SetIcon">CTrayNotifyIcon::ShowIcon</a><br>
+<a href="#RemoveIcon">CTrayNotifyIcon::RemoveIcon</a><br>
+<a href="#MoveToExtremeRight">CTrayNotifyIcon::MoveToExtremeRight</a><br>
+<a href="#OnTrayNotification">CTrayNotifyIcon::OnTrayNotification</a><br>
+<a href="#IsShowing">CTrayNotifyIcon::IsShowing</a><br>
+<a href="#IsHidden">CTrayNotifyIcon::IsHidden</a></font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="CTrayNotifyIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::CTrayNotifyIcon</font></strong></big></p>
+
+<p><font face="Arial"><strong>CTrayNotifyIcon::CTrayNotifyIcon();</strong></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Standard constructor, just initialises all member variables to safe
+values.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="~CTrayNotifyIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::~CTrayNotifyIcon</font></strong></big></p>
+
+<p><font face="Arial"><strong>CTrayNotifyIcon::~CTrayNotifyIcon();</strong></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Standard destructor. Internally this will call RemoveIcon to remove
+the icon from the UI.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="Create"></a><big><strong><font face="Arial">CTrayNotifyIcon::Create</font></strong></big></p>
+
+<p><font face="Arial"><strong>BOOL CTrayNotifyIcon::Create(CWnd* pNotifyWnd, UINT nID,
+LPCTSTR pszTooltipText, HICON hIcon, UINT nNotifyMessage);</strong></font></p>
+
+<p><font face="Arial"><strong>BOOL CTrayNotifyIcon::Create(CWnd* pNotifyWnd, UINT uID,
+LPCTSTR pszTooltipText, HICON* phIcons, int nNumIcons, DWORD dwDelay, UINT
+nNotifyMessage);</strong></font></p>
+
+<p><strong><font face="Arial">Return Value</font></strong></p>
+
+<p class="t"><font face="Arial">TRUE if the tray icon was successfully created otherwise
+FALSE.</font></p>
+
+<p><font face="Arial"><strong>Parameters</strong></font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>pNotifyWnd</em>: The window to send
+notification messages to. This can be changed later by using the SetNotificationWnd
+method.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>uID</em>: An application defined value
+to associate with each tray icon. This allows you to display multiple icons from one app.
+CTrayNotifyIcon also overrides its meaning such that it is used as the menu resource id
+for the context menu.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>pszTooltipText</em>: Initial tooltip
+text to display. This can be changed later using the SetTooltipText method.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>hIcon</em>: The icon to display. This
+can be changed later using the SetIcon method.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>nNotifyMessage</em>: This is the
+notification message to use to inform the window about mouse messages. This should be
+defined as some WM_USER message and handled in the notification windows message map using
+the ON_MESSAGE macro. To see how to hook this up have a look at the mainfrm.cpp</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>phIcons</em>: pointer to an array of
+icon handles to use to do the icon animation.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>nNumIcons</em>: The number of icons
+phIcons points to.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>dwDelay</em>: interval in milliseconds
+between icon animation frames.</font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Creates a tray notification icon.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="SetTooltipText"></a><big><strong><font face="Arial">CTrayNotifyIcon::SetTooltipText</font></strong></big></p>
+
+<p><font face="Arial"><strong>BOOL CTrayNotifyIcon::SetTooltipText(LPCTSTR
+pszTooltipText);</strong></font></p>
+
+<p><font face="Arial"><strong>BOOL CTrayNotifyIcon::SetTooltipText(UINT nID);</strong></font></p>
+
+<p><strong><font face="Arial">Return Value</font></strong></p>
+
+<p><font face="Arial">TRUE if the tooltip text was changed successfully otherwise FALSE</font></p>
+
+<p><font face="Arial"><strong>Parameters</strong></font></p>
+
+<p><font face="Arial"><em>pszTooltipText</em> The text to set</font></p>
+
+<p><font face="Arial"><em>nID</em> A windows string resource ID of the text to set</font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Sets the tooltip text associated with the tray icon</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="GetTooltipText"></a><big><strong><font face="Arial">CTrayNotifyIcon::GetTooltipText</font></strong></big></p>
+
+<p><font face="Arial"><strong>CString CTrayNotifyIcon::GetTooltipText() const</strong></font></p>
+
+<p><strong><font face="Arial">Return Value</font></strong></p>
+
+<p><font face="Arial">The current tooltip text </font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="SetIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::SetIcon</font></strong></big></p>
+
+<p><strong><font face="Arial">BOOL SetIcon(HICON hIcon);</font></strong></p>
+
+<p><strong><font face="Arial">BOOL SetIcon(LPCTSTR lpIconName);</font></strong></p>
+
+<p><font face="Arial"><strong>BOOL SetIcon(UINT nIDResource);</strong></font></p>
+
+<p><font face="Arial"><strong>BOOL SetIcon(HICON* phIcons, int nNumIcons, DWORD dwDelay);</strong></font></p>
+
+<p><font face="Arial"><strong>Return Value</strong></font></p>
+
+<p><font face="Arial">TRUE if the icon was changed successfully otherwise FALSE</font></p>
+
+<p><font face="Arial"><strong>Parameters</strong></font></p>
+
+<p><font face="Arial"><em>hIcon</em> handle to the icon to set</font></p>
+
+<p><font face="Arial"><em>lpIconName</em> a Windows Icon resource string of the icon to
+use</font></p>
+
+<p><font face="Arial"><em>nIDResource</em> a Windows Icon resource ID of the icon to use</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>phIcons</em>: pointer to an array of
+icon handles to use to do the icon animation.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>nNumIcons</em>: The number of icons
+phIcons points to.</font></p>
+
+<p><font color="#000000" face="Arial" size="3"><em>dwDelay</em>: interval in milliseconds
+between icon animation frames.</font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Sets the icon associated with the tray icon</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="SetStandardIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::SetStandardIcon</font></strong></big></p>
+
+<p><strong><font face="Arial">BOOL CTrayNotifyIcon::SetStandardIcon(LPCTSTR lpIconName);</font></strong></p>
+
+<p><strong><font face="Arial">BOOL CTrayNotifyIcon::SetStandardIcon(UINT nIDResource);</font></strong></p>
+
+<p><font face="Arial"><strong>Parameters</strong></font></p>
+
+<p><font face="Arial"><em>lpIconName</em> a Windows Icon resource string of the icon to
+use</font></p>
+
+<p><font face="Arial"><em>nIDResource</em> a Windows Icon resource ID of the icon to use</font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Sets the icon associated with the tray icon using the standard icon
+identifiers. </font></p>
+
+<p><font face="Arial">To use one of the Windows predefined icons, <i>the lpIconName</i>
+parameter to one of the following values: </font></p>
+
+<table cellSpacing="4" cols="2">
+<TBODY>
+  <tr vAlign="top">
+    <th align="left" width="164"><font face="Arial">Value</font></th>
+    <th align="left" width="301"><font face="Arial">Description</font></th>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_APPLICATION</font></td>
+    <td width="301"><font face="Arial">Default application icon.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_ASTERISK</font></td>
+    <td width="301"><font face="Arial">Same as IDI_INFORMATION.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_ERROR</font></td>
+    <td width="301"><font face="Arial">Hand-shaped icon.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_EXCLAMATION</font></td>
+    <td width="301"><font face="Arial">Same as IDI_WARNING.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_HAND</font></td>
+    <td width="301"><font face="Arial">Same as IDI_ERROR. </font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_INFORMATION</font></td>
+    <td width="301"><font face="Arial">Asterisk icon.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_QUESTION</font></td>
+    <td width="301"><font face="Arial">Question mark icon.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_WARNING</font></td>
+    <td width="301"><font face="Arial">Exclamation point icon.</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td width="164"><font face="Arial">IDI_WINLOGO</font></td>
+    <td width="301"><font face="Arial">Windows logo icon.</font></td>
+  </tr>
+</TBODY>
+</table>
+
+<p>&nbsp;</p>
+
+<p><a name="GetIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::GetIcon</font></strong></big></p>
+
+<p><strong><font face="Arial">HICON CTrayNotifyIcon::GetIcon() const;</font></strong></p>
+
+<p><font face="Arial"><strong>Return Value</strong></font></p>
+
+<p><font face="Arial">Icon handle of the icon currently being displayed</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="UsingAnimatedIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::UsingAnimatedIcon</font></strong></big></p>
+
+<p><strong><font face="Arial">BOOL UsingAnimatedIcon() const;</font></strong></p>
+
+<p><strong><font face="Arial">Return Value</font></strong></p>
+
+<p><font face="Arial">TRUE if an animated icon is being show, FALSE if an ordinary static
+icon is being used.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="SetNotificationWnd"></a><font face="Arial"><big><strong>CTrayNotifyIcon::SetNotificationWnd</strong></big></font></p>
+
+<p><strong><font face="Arial">BOOL CTrayNotifyIcon::SetNotificationWnd(CWnd* pNotifyWnd);</font></strong></p>
+
+<p><strong><font face="Arial">Return Value</font></strong></p>
+
+<p><font face="Arial">TRUE if the notification window was successfully set otherwise FALSE</font></p>
+
+<p><font face="Arial"><strong>Parameters</strong></font></p>
+
+<p><font face="Arial"><em>pNotifyIcon</em> The window which is to be the notification
+window associated with this tray icon</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="GetNotificationWnd"></a><big><font face="Arial"><strong>CTrayNotifyIcon::GetNotificationWnd</strong></font></big></p>
+
+<p><font face="Arial"><strong>CWnd* GetNotificationWnd() const;</strong></font></p>
+
+<p><font face="Arial"><strong>Return Value</strong></font></p>
+
+<p><font face="Arial">The window which is the notification window associated with this
+tray icon</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="HideIcon"></a><big><font face="Arial"><strong>CTrayNotifyIcon::HideIcon</strong></font></big></p>
+
+<p><font face="Arial"><strong>void CTrayNotifyIcon::HideIcon();</strong></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Temporarily hides the tray notify icon</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="ShowIcon"></a><strong><big><font face="Arial">CTrayNotifyIcon::ShowIcon</font></big></strong></p>
+
+<p><strong><font face="Arial">void CTrayNotifyIcon::ShowIcon();</font></strong></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Shows the icon if it had previously been hidden</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="RemoveIcon"></a><big><strong><font face="Arial">CTrayNotifyIcon::RemoveIcon</font></strong></big></p>
+
+<p><strong><font face="Arial">void CTrayNotifyIcon::RemoveIcon();</font></strong></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Removes the tray icon entirely and resets the class member
+variables. This is the corollary function of </font><font face="Arial"><a href="#Create">CTrayNotifyIcon::Create</a></font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="MoveToExtremeRight"></a><big><font face="Arial"><strong>CTrayNotifyIcon::MoveToExtremeRight</strong></font></big></p>
+
+<p><font face="Arial"><strong>void MoveToExtremeRight();</strong></font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font face="Arial">Moves the tray icon to the extreme right of the tray notification
+area. This is achieved by first hiding the icon followed by re showing it.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="OnTrayNotification"></a><big><strong><font face="Arial">CTrayNotifyIcon::OnTrayNotification</font></strong></big></p>
+
+<p><font face="Arial"><strong>virtual LRESULT </strong><big>CTrayNotifyIcon::</big><strong>OnTrayNotification(WPARAM
+uID, LPARAM lEvent);</strong></font></p>
+
+<p><strong><font face="Arial">Return Value</font></strong></p>
+
+<p><font face="Arial">Standard result to return from the message handler</font></p>
+
+<p><strong><font face="Arial">Parameters</font></strong></p>
+
+<p><font face="Arial">uID the value you specified in the call to <a href="#Create">CTrayNotifyIcon::Create</a></font></p>
+
+<p><font face="Arial">lEvent is a mouse event (such as WM_LBUTTONDOWN).</font></p>
+
+<p><font face="Arial"><strong>Remarks</strong></font></p>
+
+<p><font color="#000000" face="Arial" size="3">When your handler gets control, WPARAM is
+the ID you specified when you created the CTrayNotifyIcon. LPARAM is the mouse event (for
+example,WM_LBUTTONDOWN). You can do whatever you like when you get the notification.
+NOTTEST does nothing and delegates all the work to the default implementation in
+CTrayNotifyIcon This virtual (so you can override it) function implements the default UI
+behaviour as outlined in the &quot;Windows Interface Guidelines for Software&quot;.</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="IsShowing"></a><big><font face="Arial"><strong>CTrayNotifyIcon::IsShowing</strong></font></big></p>
+
+<p><font face="Arial"><strong>BOOL CTrayNotifyIcon::IsShowing() const;</strong></font></p>
+
+<p><font face="Arial"><strong>Return Value</strong></font></p>
+
+<p><font face="Arial">TRUE if the tray icon is currently been shown else FALSE</font></p>
+
+<p>&nbsp;</p>
+
+<p><a name="IsHidden"></a><big><strong><font face="Arial">CTrayNotifyIcon::IsHidden</font></strong></big></p>
+
+<p><font face="Arial"><strong>BOOL CTrayNotifyIcon::IsHidden();</strong></font></p>
+
+<p><font face="Arial"><strong>Return Value</strong></font></p>
+
+<p><font face="Arial">TRUE if the tray icon is currently hidden else FALSE</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial"><a name="Contact"></a><font color="#000000" size="4"><strong>CONTACTING
+THE AUTHOR</strong></font></font></p>
+
+<p><font color="#000000" face="Arial" size="3">PJ Naughter<br>
+Email: <a href="mailto:pjn@indigo..ie">pjn@indigo.ie</a><br>
+Web: <a href="http://indigo.ie/~pjn">http://indigo.ie/~pjn</a><br>
+22 July 1998</font></p>
+</body>
+</html>

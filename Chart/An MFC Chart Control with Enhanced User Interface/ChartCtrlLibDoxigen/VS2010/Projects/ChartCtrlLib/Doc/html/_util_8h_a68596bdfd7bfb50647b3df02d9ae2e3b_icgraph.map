@@ -1,0 +1,11 @@
+<map id="SetAlpha" name="SetAlpha">
+<area shape="rect" id="node3" href="$class_c_chart.html#aa8faa11c7ea0059d8dad686eae6d2578" title="CChart::DrawChartCurve" alt="" coords="144,67,307,93"/>
+<area shape="rect" id="node11" href="$class_c_chart.html#a7fe5634d4b995d4d18a4a40473e53631" title="CChart::GetSelValString" alt="" coords="144,184,307,211"/>
+<area shape="rect" id="node17" href="$class_c_chart_container.html#ab1ffb11582b667d9b21115b2cf462370" title="CChartContainer::GetSelVal\lString" alt="" coords="133,118,317,159"/>
+<area shape="rect" id="node20" href="$class_c_chart.html#a157cdcbf7114035c6a89890c08b228ea" title="CChart::GetVisibleChartName\lAndVisuals" alt="" coords="128,235,323,277"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#a9b7dd8e9f149c604ad1ab72543a399de" title="CChartContainer::DrawContainer\lToBmp" alt="" coords="371,5,581,46"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a99f1268f20a5a887359bdd4490621d81" title="CChartContainer::PrintCharts" alt="" coords="381,123,571,149"/>
+<area shape="rect" id="node9" href="$class_c_chart_container.html#ad343bedea4432cba6bac8cf9ba5bc604" title="CChartContainer::OnPaint" alt="" coords="390,71,562,97"/>
+<area shape="rect" id="node13" href="$class_c_chart_container.html#acaaea0a253cc4013aded7380d2a2643c" title="CChartContainer::Prepare\lDataLegend" alt="" coords="391,175,561,217"/>
+<area shape="rect" id="node15" href="$class_c_chart_container.html#abe60584f910936dc7fef695c30c87271" title="CChartContainer::UpdateData\lLegend" alt="" coords="379,241,573,282"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="CChart::CChart" name="CChart::CChart">
+<area shape="rect" id="node3" href="$class_c_chart.html#a65b68d80b6c8617c1bd041871ac21112" title="CChart::CloneChart" alt="" coords="166,64,301,91"/>
+<area shape="rect" id="node5" href="$class_c_chart_container.html#ab8cb9990c976b9bcd7834c6fbfaf8f9a" title="CChartContainer::operator=" alt="" coords="354,5,534,32"/>
+<area shape="rect" id="node7" href="$class_c_chart_container.html#a73f5f5961d21b731ac8598a674cf7550" title="CChartContainer::CloneChart\lContainer" alt="" coords="349,57,539,98"/>
+<area shape="rect" id="node9" href="$class_c_chart_container.html#a87eadc09485ccd013156a66c1392441d" title="CChartContainer::CloneChart" alt="" coords="349,123,539,149"/>
+</map>

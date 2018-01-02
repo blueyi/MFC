@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0103)http://www.codeproject.com/script/Submit/ViewHTML.asp?guid=cgdiplusbitmap%2Fvcpp%2Fgdiplus1%2F21%2F2003 -->
+<!-- HTML for article "Loading JPG & PNG resources using GDI+" by Joe Woodbury,Joe Woodbury
+     URL: http://www.codeproject.com/vcpp/gdiplus/cgdiplusbitmap.asp
+
+     Article content copyright Joe Woodbury,Joe Woodbury
+     All formatting, additions and alterations Copyright © CodeProject, 1999-2004
+-->  <!----------------------------- Ignore -----------------------------><HTML><HEAD>
+		<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<LINK href="CGdiPlusBitmapTest_files/global.css" type="text/css" rel="stylesheet">
+			<META content="MSHTML 6.00.2800.1400" name="GENERATOR"></HEAD>
+	<BODY>
+		<P><B>Please choose 'View Source' in your browser to view the HTML, or File | Save to 
+				save this file to your hard drive for editing.</B></P>
+		<HR noShade SIZE="1">
+		<!----------------------------- Ignore -----------------------------> <!----------------------------- Article Starts ----------------------------->
+		<UL class="download">
+			<LI>
+				<A href="http://www.codeproject.com/vcpp/gdiplus/cgdiplusbitmap/cgdiplusbitmap_demo.zip">
+					Download demo project - 122 Kb</A>
+			<LI>
+				<A href="http://www.codeproject.com/vcpp/gdiplus/cgdiplusbitmap/cgdiplusbitmap_src.zip">
+					Download source - 1 Kb</A>
+			</LI>
+		</UL>
+		<H2>Introduction</H2>
+		<P>Recently, I needed to display some JPG and PNG files. I had an old copy of 
+			LeadTools and the open source libraries for both formats, but wanted my 
+			executable to be as small as possible. So I decided to give GDI+ a try. I 
+			quickly found GDI+ to be poorly designed and very quirky, but it worked well 
+			for my purposes until I discovered, to my horror, that GDI+ cannot load JPG or 
+			PNG images stored as resources!</P>
+		<P>Like, I'm sure, other developers facing this issue, I disbelieved the 
+			documentation and tried <CODE>Bitmap::FromResource</CODE> to no avail. While 
+			perusing the Bitmap methods available, I ran across <CODE>Bitmap::FromStream</CODE>.</P>
+		<P>After a bit of testing and several errors, due mostly to the horrible GDI+ 
+			documentation, I came up with working code. After a night of rest, I decided to 
+			encapsulate the code in a simple class to ensure memory got freed. The result 
+			were two classes: <CODE>CGdiPlusBitmap</CODE> and <CODE>CGdiPlusBitmapResource</CODE>.</P>
+		<H2>The Gotcha</H2>
+		<P>Before discussing the code itself, there is a caveat with GDI+ that must be 
+			addressed. With JPG, some TIFF and other formats, the original image 
+			information must be available at all times. In other words, if you open a 
+			bitmap using <CODE>Bitmap::FromFile</CODE>, you cannot delete or otherwise 
+			change that file while the image is open. This same restriction applies to <CODE>CGdiPlusBitmapResource</CODE>. 
+			(My testing found that PNG and BMP files don't seem to follow this 
+			generalization, though I don't know if this is standard behavior or just a 
+			fluke with my file set.)</P>
+		<H2>GDI+ Initialization</H2>
+		<P>GDI+ needs to be initialized before any GDI+ calls are made. I suggest adding 
+			the following data member to the class derived from <CODE>CWinApp</CODE>:</P>
+		<PRE>ULONG_PTR m_gdiplusToken;</PRE>
+		<P>In <CODE>InitInstance()</CODE>, add the following calls:</P>
+		<PRE>Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+Gdiplus::GdiplusStartup(&m_gdiplusToken, &gdiplusStartupInput, NULL);</PRE>
+		<P>In <CODE>ExitInstance()</CODE>, add the following:</P>
+		<PRE>Gdiplus::GdiplusShutdown(m_gdiplusToken);</PRE>
+		<H2>The Class</H2>
+		<P>I created two classes, with the base class being a very simple encapsulation of
+			<CODE>Bitmap</CODE> and the derived class encapsulating the global memory. I 
+			suppose that if I ever had the patience and desire, I could extend that class, 
+			but I have no need to do so. (If you're curious why I didn't simply derive from 
+			the ATL class <CODE>CImage</CODE>, it's because the code was used in a 
+			program that didn't use MFC or ATL. However, the code is so simple, it could 
+			easily be modified to use <CODE>CImage</CODE> as the base class.)</P>
+		<P>I'm not going to bother going over the <CODE>CGdiPlusBitmap</CODE> class except 
+			to say that it has a single, public, data member <CODE>Bitmap* m_pBitmap</CODE>. 
+			(In the class I prefaced the GDI+ objects with the <CODE>Gdiplus</CODE> namespace 
+			in case the developer doesn't want to declare <CODE>using namespace Gdiplus;</CODE>.)</P>
+		<P>The <CODE>CGdiPlusBitmapResource</CODE> class has several constructors and 
+			several overloaded <CODE>Load</CODE> functions. The overloaded functions simply 
+			allow lazy programmers, like myself, to not have to type <CODE>MAKEINTRESOURCE</CODE>. 
+			The main <CODE>Load</CODE> function takes the resource name and type as strings 
+			and is the key to the class. This code follows in its entirety:</P>
+		<PRE>inline
+bool CGdiPlusBitmapResource::Load(LPCTSTR pName, LPCTSTR pType, 
+                                  HMODULE hInst)
+{
+    Empty();
+
+    HRSRC hResource = ::FindResource(hInst, pName, pType);
+    if (!hResource)
+        return false;
+    
+    DWORD imageSize = ::SizeofResource(hInst, hResource);
+    if (!imageSize)
+        return false;
+
+    const void* pResourceData = ::LockResource(::LoadResource(hInst, 
+                                                              hResource));
+    if (!pResourceData)
+        return false;
+
+    m_hBuffer  = ::GlobalAlloc(GMEM_MOVEABLE, imageSize);
+    if (m_hBuffer)
+    {
+        void* pBuffer = ::GlobalLock(m_hBuffer);
+        if (pBuffer)
+        {
+            CopyMemory(pBuffer, pResourceData, imageSize);
+
+            IStream* pStream = NULL;
+            if (::CreateStreamOnHGlobal(m_hBuffer, FALSE, &amp;pStream) == S_OK)
+            {
+                m_pBitmap = Gdiplus::Bitmap::FromStream(pStream);
+                pStream-&gt;Release();
+				if (m_pBitmap)
+				{ 
+					if (m_pBitmap-&gt;GetLastStatus() == Gdiplus::Ok)
+						return true;
+
+					delete m_pBitmap;
+					m_pBitmap = NULL;
+				}
+            }
+            m_pBitmap = NULL;
+            ::GlobalUnlock(m_hBuffer);
+        }
+        ::GlobalFree(m_hBuffer);
+        m_hBuffer = NULL;
+    }
+    return false;
+}</PRE>
+		<P>I find the code very self explanatory, though those that know the return value 
+			of <CODE>::LoadResource</CODE> is an <CODE>HGLOBAL</CODE> may find the apparent 
+			double copy using <CODE>CopyMemory</CODE> confusing. In brief <CODE>CreateStreamOnHGlobal</CODE>
+			requires a <CODE>HGLOBAL</CODE> handle allocated by <CODE>GlobalAlloc</CODE> using 
+			the <CODE>GMEM_MOVEABLE</CODE> flag.</P>
+		<H2>The Demo</H2>
+		<P>The demo is a Visual Studio .NET 2003 project with ANSI and UNICODE builds. It 
+			allows you to load resampled JPG or PNG resources (For the curious, I took both 
+			photographs in Oahu, Hawaii for, and while filming content of, a multimedia 
+			product. One is of Laie Bay, the other is a sunset viewed from Waikiki.)</P>
+		<H2>GDI+ Disclaimer</H2>
+		<P>I am not a GDI+ expert, nor am I a big fan, even if I do find GDI+ occasionally 
+			very useful. Please don't ask me questions about it.</P>
+		<H2>Why not IPicture?</H2>
+		<P>I've been asked why I didn't use <CODE>IPicture</CODE>. The answer is threefold; 
+			first, <CODE>IPicture</CODE> does not support PNG images. Second, <CODE>IPicture</CODE>
+			is pretty much only an image loader, with little more capability than the 
+			standard GDI bitmap calls. Third, <CODE>IPicture</CODE> decodes the image data 
+			immediately. JPG and GIF images will use more memory than this class. </P>
+		<H2>Updates</H2>
+		<P>22 April 2004 <BLOCKQUOTE>
+				<P><CODE>CreateStreamOnHGlobal</CODE> now uses <CODE>FALSE</CODE> for the second 
+					argument since <CODE>Bitmap</CODE> requires that the memory be retained for at least JPG 
+					images and I decided to err on the side of caution. Interestingly, my testing 
+					showed this flag is often ignored, but I received reports that this wasn't 
+					always the case and <i>was</i> technically incorrect.</P>
+				<P>In addition, while fixing this bug I realized I wasn't clearing up the global 
+					memory on failure. That resulted in the code being rearranged as it is now.</P>
+			</BLOCKQUOTE>
+		<P>15 June 2004 <BLOCKQUOTE>
+				<P>If <CODE>Gdiplus::Bitmap::FromStream</CODE> fails, I added what I believe is 
+					redundant, but more correct code in handling <CODE>m_pBitmap</CODE>. 
+					(Unfortunately, the documentation is silent on the subject as to whether NULL 
+					will always be returned on failure.)</P>
+			</BLOCKQUOTE>
+		<P>3 September 2004 <BLOCKQUOTE>
+				<P>Added a section on GDI+ initialization.</P>
+				<P>Fixed a potential memory leak on image load failure in the sample application.</P>
+			</BLOCKQUOTE>
+		<!----------------------------- Article Ends -----------------------------></BODY></HTML>

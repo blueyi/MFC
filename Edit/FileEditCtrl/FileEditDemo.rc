@@ -1,0 +1,339 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\FileEditDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\FileEditDemo.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 205, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CFileEditCtrl Demo Application"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,14,20,20
+    LTEXT           "CFileEditCtrl Demo Application",IDC_STATIC,40,12,99,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2001  PJ Arends",IDC_STATIC,40,27,119,8
+    DEFPUSHBUTTON   "OK",IDOK,148,7,50,14,WS_GROUP
+    LTEXT           "",IDC_PJA,190,34,8,8
+END
+
+IDD_FILEEDITDEMO_DIALOG DIALOGEX 0, 0, 189, 270
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "T&he CFileEditCtrl Control",IDC_STATIC,6,7,77,8
+    EDITTEXT        IDC_EDIT1,13,19,159,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,38,175,1
+    CONTROL         "&Normal",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,53,38,10
+    CONTROL         "Read Onl&y",IDC_READ,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,15,65,49,10
+    CONTROL         "&Disabled",IDC_DISABLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,15,77,43,10
+    CONTROL         "Dra&g and Drop",IDC_DRAG,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,15,89,63,10
+    GROUPBOX        "Styles",IDC_STATIC,7,42,76,62,WS_GROUP
+    GROUPBOX        "PreBrowse Handler",IDC_STATIC,7,107,75,40
+    CONTROL         "Allow Bro&wse",IDC_BROWSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,15,118,58,10
+    CONTROL         "&Set Folder",IDC_CHECKSETDIR,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,23,131,48,10
+    GROUPBOX        "Button Image",IDC_STATIC,7,149,75,70
+    CONTROL         "&Use Image",IDC_IMAGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,159,50,10
+    CONTROL         "&Icon",IDC_MY_ICON,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_GROUP | WS_TABSTOP,23,170,30,10
+    CONTROL         "Bitma&p",IDC_BITMAP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_TABSTOP,23,181,37,10
+    CONTROL         "Transpa&rent",IDC_TRANSPARENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_GROUP | WS_TABSTOP,30,192,51,10
+    CONTROL         "Str&etch to fit",IDC_STRETCH,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_GROUP | WS_TABSTOP,23,204,54,10
+    GROUPBOX        "Flags",IDC_STATIC,86,42,96,145,WS_GROUP
+    CONTROL         "Browse for &File",IDC_FILE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,92,53,62,10
+    CONTROL         "Browse for F&older",IDC_FOLD,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,92,101,71,10
+    CONTROL         "&Multiple Files",IDC_MULTI,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,100,65,56,10
+    CONTROL         "&Allow Wildcards",IDC_WILD,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,100,77,64,10
+    CONTROL         "No Dereference *.ln&k",IDC_NODEREF,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,100,89,80,10
+    CONTROL         "&Add trailing slash",IDC_ADD,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_GROUP | WS_TABSTOP,101,113,69,10
+    CONTROL         "Enable &Button Tooltip",IDC_BUTTIP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,92,125,84,10
+    CONTROL         "Enable &Client Tooltip",IDC_CLITIP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,92,137,81,10
+    CONTROL         "Button on &Left Side",IDC_LEFT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,92,149,77,10
+    CONTROL         "Flat Style",IDC_FLAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,92,161,45,10
+    CONTROL         "Gray Scale",IDC_GRAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,101,173,51,10
+    CONTROL         "Button Width",IDC_SETBUTTONWIDTH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,92,191,57,12
+    EDITTEXT        IDC_EDIT3,152,189,30,12,ES_NUMBER | WS_DISABLED
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,167,206,9,
+                    14
+    CONTROL         "File must e&xist",IDC_VALIDATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,92,207,65,10
+    LTEXT           "Client Tooltip &Text",IDC_STATIC1,24,227,58,8,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    EDITTEXT        IDC_EDIT2,92,225,90,12,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,241,174,1
+    DEFPUSHBUTTON   "Display File",ID_DUMP,32,249,50,14,WS_GROUP
+    PUSHBUTTON      "Close",IDCANCEL,104,249,50,14,WS_GROUP
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 268, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CFileEditCtrl Demo File Dump"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,254,59,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,211,74,50,14
+    LTEXT           "",IDC_STATIC1,7,80,195,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "FileEditDemo MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "FileEditDemo\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "FileEditDemo.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "FileEditDemo Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_FILEEDITDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_FOLD                "FEC_FOLDER"
+    IDC_ADD                 "FEC_TRAILINGSLASH"
+    IDC_BUTTIP              "FEC_BUTTONTIP"
+    IDC_CLITIP              "FEC_CLIENTTIP"
+    IDC_DRAG                "WS_EX_ACCEPTFILES"
+    IDC_MULTI               "FEC_MULTIPLE or OFN_ALLOWMULTISELECT"
+    IDC_CHECKSETDIR         "Set browse folder to folder in control"
+    IDC_LEFT                "FEC_BUTTONLEFT"
+    IDC_VALIDATE            "Use DDV_FileEditCtrl() to verify file/folder exists"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_READ                "ES_READONLY"
+    IDC_DISABLE             "WS_DISABLED"
+    IDC_BROWSE              "FEC_NM_PREBROWSE handler returns zero"
+    IDC_FILE                "FEC_FILE"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CFileEditCtrl Demo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_WILD                "FEC_WILDCARDS"
+    IDC_NODEREF             "FEC_NODEREFERENCELINKS or OFN_NODEREFERENCELINKS"
+    IDC_MY_ICON             "PJAI_ICON"
+    IDC_BITMAP              "PJAI_BITMAP"
+    IDC_IMAGE               "Use SetButtonImage() to place image on button"
+    IDC_STRETCH             "PJAI_STRETCHED"
+    IDC_TRANSPARENT         "PJAI_TRANSPARENT"
+    IDC_SETBUTTONWIDTH      "SetButtonWidth()"
+    IDC_FLAT                "FEC_FLAT"
+    IDC_GRAY                "FEC_GRAYSCALE"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\FileEditDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,41 @@
+// ExToolBar.odl : type library source for ExToolBar.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (ExToolBar.tlb).
+
+[ uuid(298735F4-FF1C-11D1-8A9F-000000000000), version(1.0) ]
+library ExToolBar
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CExToolBarDoc
+	
+	[ uuid(298735F5-FF1C-11D1-8A9F-000000000000) ]
+	dispinterface IExToolBar
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CExToolBarDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CExToolBarDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CExToolBarDoc
+	
+	[ uuid(298735F3-FF1C-11D1-8A9F-000000000000) ]
+	coclass Document
+	{
+		[default] dispinterface IExToolBar;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

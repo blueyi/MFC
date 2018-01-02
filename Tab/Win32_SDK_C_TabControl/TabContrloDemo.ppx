@@ -1,0 +1,8 @@
+[Debugger]
+Watch symbols=status,m_lptc,hTab,tk,hwnd
+[TabCtrl.c]
+[Windows]
+File1=TabCtrl.c,-4,-23,899,550,1,1
+File2=main.rc,-4,-23,899,550,1,0
+File3=TabCtrl.h,22,22,886,448,0,0
+File4=main.c,-4,-23,899,550,1,0
