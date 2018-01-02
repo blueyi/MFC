@@ -1,0 +1,7 @@
+; Geometry.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Geometry"
+DESCRIPTION  'Geometry Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
